@@ -12,3 +12,4 @@ FMLPETER/output
 FMLP/output
 *.err
 SEQUER/checkpoints/generated_amazon-movies_0_sawer.txt
+.vscode
