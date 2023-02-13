@@ -20,7 +20,7 @@ endure_times: 5
 rating_reg: 0.1
 context_reg: 1.0
 text_reg: 1.0
-item_reg: 0
+item_reg: 1.0
 hist_len: 20
 user_len: 1
 item_len: 0
@@ -30,4 +30,4 @@ peter_mask: True
 seq_prediction: True
 context_prediction: True
 rating_prediction: True
-nextitem_prediction: False
+nextitem_prediction: True

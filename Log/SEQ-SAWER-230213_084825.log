@@ -137,3 +137,40 @@ nextitem_prediction                      False
 [2023-02-13 09:06:29 GPU 0]: Epoch 15 End | Time Used: 66.40
 
 [2023-02-13 09:06:29 GPU 0]: Epoch 16 Start
+[2023-02-13 09:07:36 GPU 0]: context ppl 542.9384 | text ppl 46.4047 | rating loss 1.1863 | seq loss 0.0000 | valid loss 589.4617 on validation
+[2023-02-13 09:07:36 GPU 0]: Endured 4 / 5 time(s) | Learning rate set to 0.00390625
+[2023-02-13 09:07:36 GPU 0]: Epoch 16 End | Time Used: 67.24
+
+[2023-02-13 09:07:36 GPU 0]: Epoch 17 Start
+[2023-02-13 09:08:43 GPU 0]: context ppl 542.6440 | text ppl 46.4170 | rating loss 1.1861 | seq loss 0.0000 | valid loss 589.1795 on validation
+[2023-02-13 09:08:43 GPU 0]: Endured 5 / 5 time(s)| Cannot endure it anymore | Exiting from early stop
+[2023-02-13 09:08:43 GPU 0]: Epoch 17 End | Time Used: 66.34
+
+[2023-02-13 09:08:43 GPU 0]: Training Finished | Time Used: 1203.37
+--------------------------------------------------------------------------------
+[2023-02-13 09:08:43 GPU 0]: Building model SAWER on device cuda
+[2023-02-13 09:08:44 GPU 0]: Save Mask to ./SEQUER/results/MASK-SAWER2_MaskBert.png
+[2023-02-13 09:08:44 GPU 0]: Resuming training from snapshot at Epoch 14, Num History 15
+=========================================================================================
+[2023-02-13 09:08:47 GPU 0]: context ppl 538.0456 | text ppl 46.4002 | rating loss 1.1708 | seq loss 0.0000 | loss 584.5629 on test |End of training
+[2023-02-13 09:08:47 GPU 0]: Generating text
+[2023-02-13 09:09:05 GPU 0]: RMSE↓  1.0820
+[2023-02-13 09:09:05 GPU 0]: MAE↓  0.8440
+[2023-02-13 09:09:06 GPU 0]: idss_predict 41240, tokens_predict 41240
+[2023-02-13 09:09:07 GPU 0]: BLEU_1↑ 19.5209
+[2023-02-13 09:09:09 GPU 0]: BLEU_4↑  2.8361
+[2023-02-13 09:09:36 GPU 0]: USR↑  0.2871 | USN↑   11842
+[2023-02-13 09:13:12 GPU 0]: DIV↓  1.2665
+[2023-02-13 09:13:13 GPU 0]: FCR↑  0.2199
+[2023-02-13 09:13:13 GPU 0]: FMR↑  0.7932
+[2023-02-13 09:13:16 GPU 0]: R1_F↑ 26.1332
+[2023-02-13 09:13:16 GPU 0]: R1_R↑ 23.8101
+[2023-02-13 09:13:16 GPU 0]: R1_P↑ 34.6802
+[2023-02-13 09:13:16 GPU 0]: R2_F↑  6.4247
+[2023-02-13 09:13:16 GPU 0]: R2_R↑  5.9598
+[2023-02-13 09:13:16 GPU 0]: R2_P↑  8.6519
+[2023-02-13 09:13:16 GPU 0]: RL_F↑ 19.6317
+[2023-02-13 09:13:16 GPU 0]: RL_R↑ 21.0129
+[2023-02-13 09:13:16 GPU 0]: RL_P↑ 28.1981
+[2023-02-13 09:13:16 GPU 0]: Saved result to ./SEQUER/results/results.csv
+[2023-02-13 09:13:16 GPU 0]: Generated text saved to ./SEQUER/checkpoints/generated_amazon-movies_0_sawer.txt
