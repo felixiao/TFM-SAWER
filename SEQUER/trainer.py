@@ -215,6 +215,8 @@ class Trainer:
             t_loss = self.text_criterion(pred['word'].view(-1, self.ntokens), labels['seq'][1:].reshape((-1,)))
         if pred.get('item', None) is not None:
             # Pred [2560, 7364]  ;  Label [2432] ;   20 * 128;  19 * 128
+            # log_info(f'[compute_loss] item loss: {pred["item"].view(-1, self.nitem).shape}')
+            #                                           [19, 128, 7361]  ->                                [128,20] -> [2560]
             # log_info(f'[compute_loss] item loss: Input {pred["item"].view(-1, self.nitem).shape} Target {labels["item_seq"].reshape((-1,)).shape}',gpu_id=self.gpu_id)
             i_loss = self.nextit_criterion(pred['item'].view(-1, self.nitem), labels['item_seq'].reshape((-1,)))
             

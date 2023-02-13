@@ -84,7 +84,7 @@ class SAWER(BaseModel):
         return rating
 
     def predict_next(self, hidden):
-        log_next_item = func.log_softmax(torch.matmul(hidden[:self.hist_len-1], self.item_embeddings.weight.T), dim=-1)
+        log_next_item = func.log_softmax(torch.matmul(hidden[:self.hist_len-1], self.fmlp_model.module.item_embeddings.weight.T), dim=-1)
         # print(f'next item:{log_next_item.shape}, {log_next_item}')
         return log_next_item
 
@@ -128,7 +128,7 @@ class SAWER(BaseModel):
 
         u_src = self.user_embeddings(user.unsqueeze(0))  # (1, batch_size, emsize)
         
-        h_src = self.fmlp_model(item).permute(1,0,2) # (batch_size, max_seq_len, emsize)       ---> (max_seq_len,batch_size,emsize) 
+        h_src = self.fmlp_model(item).permute(1,0,2)[:-1,:,:] # (batch_size, max_seq_len, emsize)       ---> (max_seq_len,batch_size,emsize) 
         if self.multi_gpu:
             i_src = self.fmlp_model.module.item_embeddings(item[:,-1:]).permute(1,0,2) # (batch_size, 1, emsize) ---> (1,          batch_size,emsize)
         else:

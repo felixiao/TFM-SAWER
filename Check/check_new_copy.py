@@ -19,7 +19,7 @@ from tqdm import tqdm
 BASE_PATH = './P5'
 DATA_PATHS = {'amazon-sports':'./Data/Amazon/SportsAndOutdoors',
                 'amazon-toys':'./Data/Amazon/ToysAndGames',
-                'amazon-beauty':'./Data/Amazon/Beauty'}
+                'amazon-movies':'./Data/Amazon/MoviesAndTV_New'}
 FEAT_COL = 'feature'
 ADJ_COL = 'adj'
 SCO_COL = 'sco'
@@ -88,51 +88,98 @@ def add_hist_feats(data, max_seq_len=20):
     print(f'Columns: {data.columns.tolist()}')
     return data
 
-
-def split_data(test_ratio=0.1):
+def split_data(datasets, test_ratio=0.1):
     val_ratio = test_ratio
 
-    dataset = 'amazon-sports'
-    peter_data = pd.read_pickle(os.path.join(DATA_PATHS[dataset], 'reviews_new.pickle'))
-    peter_data = pd.DataFrame.from_records(peter_data)
+    for dataset in datasets:
+        data = pd.read_pickle(os.path.join(DATA_PATHS[dataset], 'reviews_new.pickle'))
+        data = pd.DataFrame.from_records(data)
 
-    peter_data.sort_values(by=[U_COL, TIME_COL], inplace=True)
-    ucounts = peter_data[U_COL].value_counts().values
-    uoffsets = ucounts.cumsum()
-    split_ixs = np.zeros((peter_data.shape[0], ), dtype=int)
-    if isinstance(test_ratio, float):
-        assert isinstance(val_ratio, float)
-        assert test_ratio < 1.0
-        tst_start_ixs = uoffsets - (ucounts * test_ratio).astype(int)
-        val_start_ixs = tst_start_ixs - (ucounts * val_ratio).astype(int)
-    elif isinstance(test_ratio, int):
-        assert isinstance(val_ratio, int)
-        assert all(ucounts > (test_ratio + val_ratio))
-        tst_start_ixs = uoffsets - test_ratio
-        val_start_ixs = tst_start_ixs - val_ratio
-    else:
-        raise TypeError('test_ratio is neither int nor float')
-    for vix, tix, offset in zip(val_start_ixs, tst_start_ixs, uoffsets):
-        split_ixs[tix:offset] = 2
-        split_ixs[vix:tix] = 1
+        data = data.sort_values(by=[U_COL, TIME_COL]).reset_index(drop=True)
+        pd.to_pickle(data.to_dict(orient='records'), os.path.join(DATA_PATHS[dataset], 'reviews_new.pickle'))
+        ucounts = data.groupby(U_COL).size().values  # data[U_COL].value_counts().values
+        uoffsets = ucounts.cumsum()
+        split_ixs = np.zeros((data.shape[0], ), dtype=int)
+        if isinstance(test_ratio, float):
+            assert isinstance(val_ratio, float)
+            assert test_ratio < 1.0
+            tst_start_ixs = uoffsets - np.maximum(ucounts * test_ratio,1).astype(int)
+            val_start_ixs = tst_start_ixs - np.maximum(ucounts * val_ratio,1).astype(int)
+        elif isinstance(test_ratio, int):
+            assert isinstance(val_ratio, int)
+            assert all(ucounts > (test_ratio + val_ratio))
+            tst_start_ixs = uoffsets - test_ratio
+            val_start_ixs = tst_start_ixs - val_ratio
+        else:
+            raise TypeError('test_ratio is neither int nor float')
+        for vix, tix, offset in zip(val_start_ixs, tst_start_ixs, uoffsets):
+            split_ixs[tix:offset] = 2
+            split_ixs[vix:tix] = 1
 
-    np.savetxt(os.path.join(DATA_PATHS[dataset], '0', 'train.index'),
-               peter_data.index.values[split_ixs == 0],
-               delimiter=' ', fmt="%d")
+        if not os.path.exists(os.path.join(DATA_PATHS[dataset], '0')):
+            os.mkdir(os.path.join(DATA_PATHS[dataset], '0'))
+        np.savetxt(os.path.join(DATA_PATHS[dataset], '0', 'train.index'),
+                   # data.index.values[split_ixs == 0],
+                   np.argwhere(split_ixs == 0).squeeze(),
+                   delimiter=' ', fmt="%d")
 
-    np.savetxt(os.path.join(DATA_PATHS[dataset], '0', 'validation.index'),
-               peter_data.index.values[split_ixs == 1],
-               delimiter=' ', fmt="%d")
+        np.savetxt(os.path.join(DATA_PATHS[dataset], '0', 'validation.index'),
+                   # data.index.values[split_ixs == 1],
+                   np.argwhere(split_ixs == 1).squeeze(),
+                   delimiter=' ', fmt="%d")
 
-    np.savetxt(os.path.join(DATA_PATHS[dataset], '0', 'test.index'),
-               peter_data.index.values[split_ixs == 2],
-               delimiter=' ', fmt="%d")
+        np.savetxt(os.path.join(DATA_PATHS[dataset], '0', 'test.index'),
+                   # data.index.values[split_ixs == 2],
+                   np.argwhere(split_ixs == 2).squeeze(),
+                   delimiter=' ', fmt="%d")
+        
 
-    print('Finished!')
+# def split_data(test_ratio=0.1):
+#     val_ratio = test_ratio
+
+#     dataset = 'amazon-sports'
+#     peter_data = pd.read_pickle(os.path.join(DATA_PATHS[dataset], 'reviews_new.pickle'))
+#     peter_data = pd.DataFrame.from_records(peter_data)
+
+#     peter_data.sort_values(by=[U_COL, TIME_COL], inplace=True)
+#     ucounts = peter_data[U_COL].value_counts().values
+#     uoffsets = ucounts.cumsum()
+#     split_ixs = np.zeros((peter_data.shape[0], ), dtype=int)
+#     if isinstance(test_ratio, float):
+#         assert isinstance(val_ratio, float)
+#         assert test_ratio < 1.0
+#         tst_start_ixs = uoffsets - (ucounts * test_ratio).astype(int)
+#         val_start_ixs = tst_start_ixs - (ucounts * val_ratio).astype(int)
+#     elif isinstance(test_ratio, int):
+#         assert isinstance(val_ratio, int)
+#         assert all(ucounts > (test_ratio + val_ratio))
+#         tst_start_ixs = uoffsets - test_ratio
+#         val_start_ixs = tst_start_ixs - val_ratio
+#     else:
+#         raise TypeError('test_ratio is neither int nor float')
+#     for vix, tix, offset in zip(val_start_ixs, tst_start_ixs, uoffsets):
+#         split_ixs[tix:offset] = 2
+#         split_ixs[vix:tix] = 1
+
+#     np.savetxt(os.path.join(DATA_PATHS[dataset], '0', 'train.index'),
+#                peter_data.index.values[split_ixs == 0],
+#                delimiter=' ', fmt="%d")
+
+#     np.savetxt(os.path.join(DATA_PATHS[dataset], '0', 'validation.index'),
+#                peter_data.index.values[split_ixs == 1],
+#                delimiter=' ', fmt="%d")
+
+#     np.savetxt(os.path.join(DATA_PATHS[dataset], '0', 'test.index'),
+#                peter_data.index.values[split_ixs == 2],
+#                delimiter=' ', fmt="%d")
+
+#     print('Finished!')
 
 # amazon_p5_to_peter()
 
-split_data()
+split_data(['amazon-movies','amazon-toys','amazon-sports'])
+
+
 
 # datasetname = 'beauty'
 # print('Dataset Name:',datasetname)

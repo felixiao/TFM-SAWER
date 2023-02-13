@@ -5,6 +5,7 @@ from tqdm import tqdm,trange
 import random
 import numpy as np
 import os
+import pickle
 
 def check_path(path):
   if not os.path.exists(path):
@@ -37,7 +38,7 @@ class PreprocessData():
     self.peter_data['user_index'] = self.peter_data.apply(lambda row: self.user_dict[row['user']],axis=1)
     self.peter_data['item_index'] = self.peter_data.apply(lambda row: self.item_dict[row['item']],axis=1)
     self.peter_data['hist_item_index'] = self.peter_data.apply(lambda row:self.hist_item_to_index(row,self.item_dict),axis=1)
-    self.Create_Neg_Samples()
+    self.create_neg_samples()
 
   def create_neg_samples(self):
     self.fmlp_data = self.peter_data[['user_index','item_index','hist_item_index']].to_numpy()
@@ -66,7 +67,11 @@ class PreprocessData():
     self.peter_data['neg_samples_index'] = neg_samples_index
     self.peter_data['neg_item_index'] = neg_item_index
     np.save(os.path.join(self.index_dir,self.data_name+'_index'),self.fmlp_data)
-    self.peter_data.to_pickle(os.path.join(self.index_dir,self.data_name+'_index.pickle'))
+    diclist = self.peter_data.to_dict(orient='records')
+    with open(os.path.join(self.index_dir,self.data_name+'_index.pickle'), 'wb') as handle:
+        pickle.dump(diclist, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    # self.peter_data.to_pickle(os.path.join(self.index_dir,self.data_name+'_index.pickle'))
+
     del item_list
     del user_list
     del neg_samples_index
@@ -132,3 +137,8 @@ class PreprocessData():
     histitem_list = [item_dict[i] for i in row['hist_item']]
     histitem_list.append(row['item_index'])
     return histitem_list
+
+if __name__ == '__main__':
+  prepro = PreprocessData(data_file='./Data/Amazon/ToysAndGames/reviews_new.pickle',data_name='toys',index_dir='./Data/Amazon/ToysAndGames')
+  prepro.load_file()
+  prepro.convert_index()

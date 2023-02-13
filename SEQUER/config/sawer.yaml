@@ -20,7 +20,7 @@ endure_times: 5
 rating_reg: 0.1
 context_reg: 1.0
 text_reg: 1.0
-item_reg: 1.0
+item_reg: 0.1
 hist_len: 20
 user_len: 1
 item_len: 0
