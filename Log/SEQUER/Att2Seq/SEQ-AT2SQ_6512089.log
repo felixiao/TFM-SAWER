@@ -1,0 +1,105 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               att2seq
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 False
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+------------------------------------CONFIGS-------------------------------------
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  4
+dropout                                  0.2
+optimizer                                Adam
+lr                                       0.0001
+clip_norm                                5.0
+epochs                                   100
+batch_size                               128
+log_interval                             4
+vocab_size                               20000
+text_len                                 15
+endure_times                             5
+rating_reg                               0.0
+context_reg                              0.0
+text_reg                                 1.0
+item_reg                                 0.0
+hist_len                                 0
+user_len                                 1
+item_len                                 1
+use_feature                              False
+seq_mode                                 0
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       False
+rating_prediction                        False
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-04 16:54:46]: World_Size(Num GPUs): 1
+[2023-01-04 16:54:46]: Init Start
+[2023-01-04 16:54:46]: Init End
+[2023-01-04 16:54:46]: Load Start
+[2023-01-04 16:54:49]: train len:359303
+[2023-01-04 16:54:50]: Load End
+[2023-01-04 16:54:52]: [GPU 0] Device cuda
+[2023-01-04 16:54:52]: [GPU 0] Loading data helper
+[2023-01-04 16:54:52]: [GPU 0] Use Feature: False | src_len: 2
+[2023-01-04 16:54:52]: [GPU 0] Building model ATT2SEQ on device cuda
+[2023-01-04 16:55:00]: Loading snapshot
+Resuming training from snapshot at Epoch 51
+[2023-01-04 16:55:00]: [GPU 0] Epoch 51
+[2023-01-04 17:05:23]: [GPU 0] context ppl 1.0000 | text ppl 536.8185 | rating loss 0.0000 | valid loss 6.2857 on validation
+[2023-01-04 17:05:25]: [GPU 0] Epoch 51 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 17:05:25]: [GPU 0] Epoch 51 Time Used: 624.84
+[2023-01-04 17:05:25]: [GPU 0] Epoch 52
+[2023-01-04 17:15:46]: [GPU 0] context ppl 1.0000 | text ppl 535.3598 | rating loss 0.0000 | valid loss 6.2829 on validation
+[2023-01-04 17:15:49]: [GPU 0] Epoch 52 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 17:15:49]: [GPU 0] Epoch 52 Time Used: 623.22
+[2023-01-04 17:15:49]: [GPU 0] Epoch 53
+[2023-01-04 17:26:07]: [GPU 0] context ppl 1.0000 | text ppl 534.7464 | rating loss 0.0000 | valid loss 6.2818 on validation
+[2023-01-04 17:26:10]: [GPU 0] Epoch 53 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 17:26:10]: [GPU 0] Epoch 53 Time Used: 621.06
+[2023-01-04 17:26:10]: [GPU 0] Epoch 54
+[2023-01-04 17:36:31]: [GPU 0] context ppl 1.0000 | text ppl 533.9006 | rating loss 0.0000 | valid loss 6.2802 on validation
+[2023-01-04 17:36:33]: [GPU 0] Epoch 54 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 17:36:33]: [GPU 0] Epoch 54 Time Used: 623.20
+[2023-01-04 17:36:33]: [GPU 0] Epoch 55
+[2023-01-04 17:46:49]: [GPU 0] context ppl 1.0000 | text ppl 533.8065 | rating loss 0.0000 | valid loss 6.2800 on validation
+[2023-01-04 17:46:51]: [GPU 0] Epoch 55 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 17:46:51]: [GPU 0] Epoch 55 Time Used: 618.20
+[2023-01-04 17:46:51]: [GPU 0] Epoch 56
+[2023-01-04 17:57:09]: [GPU 0] context ppl 1.0000 | text ppl 533.7547 | rating loss 0.0000 | valid loss 6.2799 on validation
+[2023-01-04 17:57:12]: [GPU 0] Epoch 56 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 17:57:12]: [GPU 0] Epoch 56 Time Used: 620.53
+[2023-01-04 17:57:12]: [GPU 0] Epoch 57
+[2023-01-04 18:07:27]: [GPU 0] context ppl 1.0000 | text ppl 533.1799 | rating loss 0.0000 | valid loss 6.2789 on validation
+[2023-01-04 18:07:29]: [GPU 0] Epoch 57 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 18:07:29]: [GPU 0] Epoch 57 Time Used: 617.35
+[2023-01-04 18:07:29]: [GPU 0] Epoch 58
+[2023-01-04 18:17:45]: [GPU 0] context ppl 1.0000 | text ppl 533.0857 | rating loss 0.0000 | valid loss 6.2787 on validation
+[2023-01-04 18:17:47]: [GPU 0] Epoch 58 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 18:17:47]: [GPU 0] Epoch 58 Time Used: 618.45
+[2023-01-04 18:17:47]: [GPU 0] Epoch 59
+[2023-01-04 18:28:03]: [GPU 0] context ppl 1.0000 | text ppl 533.0282 | rating loss 0.0000 | valid loss 6.2786 on validation
+[2023-01-04 18:28:05]: [GPU 0] Epoch 59 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 18:28:05]: [GPU 0] Epoch 59 Time Used: 617.97
+[2023-01-04 18:28:05]: [GPU 0] Epoch 60
+[2023-01-04 18:38:22]: [GPU 0] context ppl 1.0000 | text ppl 532.7799 | rating loss 0.0000 | valid loss 6.2781 on validation
+[2023-01-04 18:38:24]: [GPU 0] Epoch 60 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 18:38:24]: [GPU 0] Epoch 60 Time Used: 618.39
+[2023-01-04 18:38:24]: [GPU 0] Epoch 61
+[2023-01-04 18:48:39]: [GPU 0] context ppl 1.0000 | text ppl 532.6451 | rating loss 0.0000 | valid loss 6.2779 on validation
+[2023-01-04 18:48:41]: [GPU 0] Epoch 61 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 18:48:41]: [GPU 0] Epoch 61 Time Used: 617.28
+[2023-01-04 18:48:41]: [GPU 0] Epoch 62
+[2023-01-04 18:58:57]: [GPU 0] context ppl 1.0000 | text ppl 532.7367 | rating loss 0.0000 | valid loss 6.2780 on validation
+[2023-01-04 18:58:57]: [GPU 0] Endured 1 / 5 time(s) | Learning rate set to 0.00002500
+[2023-01-04 18:58:57]: [GPU 0] Epoch 62 Time Used: 616.47
+[2023-01-04 18:58:57]: [GPU 0] Epoch 63
+[2023-01-04 19:09:13]: [GPU 0] context ppl 1.0000 | text ppl 531.5596 | rating loss 0.0000 | valid loss 6.2758 on validation
+[2023-01-04 19:09:15]: [GPU 0] Epoch 63 | Training snapshot saved at ./SEQUER/checkpoints/att2seq_amazon-movies_0.pt
+[2023-01-04 19:09:15]: [GPU 0] Epoch 63 Time Used: 617.99
+[2023-01-04 19:09:15]: [GPU 0] Epoch 64

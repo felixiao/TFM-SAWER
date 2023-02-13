@@ -1,0 +1,100 @@
+----------------------------------------ARGUMENTS----------------------------------------
+model_name                               peter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     True
+no_generate                              False
+log_interval                             200
+seed                                     1111
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+log_interval                             200
+vocab_size                               20000
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 0
+use_feature                              True
+seq_mode                                 0
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+----------------------------------------ARGUMENTS----------------------------------------
+[2022-12-20 16:51:18.904224]: Loading data ./SEQUER/data/0
+[2022-12-20 16:53:49.907638]: Building model PETER
+[2022-12-20 16:53:52.744142]: epoch 1
+[2022-12-20 16:53:53.419444]: context ppl 15274.6398 | text ppl 12206.8194 | rating loss 21.9820 |     8/    8 batches
+[2022-12-20 16:53:56.325906]: context ppl 14743.0040 | text ppl 15094.9676 | rating loss 5.4884 | valid loss 15.1106 on validation
+[2022-12-20 16:53:56.694342]: epoch 2
+[2022-12-20 16:53:56.911190]: context ppl 11519.1900 | text ppl 9474.6617 | rating loss 4.7970 |     8/    8 batches
+[2022-12-20 16:53:59.811110]: context ppl 4355.6668 | text ppl 3522.0020 | rating loss 1.4888 | valid loss 9.6556 on validation
+[2022-12-20 16:54:00.228581]: epoch 3
+[2022-12-20 16:54:00.444874]: context ppl 2934.6539 | text ppl 2311.0317 | rating loss 10.9874 |     8/    8 batches
+[2022-12-20 16:54:03.347031]: context ppl 2908.2580 | text ppl 2017.6163 | rating loss 14.3275 | valid loss 21.9371 on validation
+[2022-12-20 16:54:03.347170]: Endured 1 time(s)
+[2022-12-20 16:54:03.347261]: Learning rate set to 0.25000000
+[2022-12-20 16:54:03.347294]: epoch 4
+[2022-12-20 16:54:03.563184]: context ppl 1275.2387 | text ppl 942.5465 | rating loss 4.4774 |     8/    8 batches
+[2022-12-20 16:54:06.463738]: context ppl 1679.0735 | text ppl 1136.7444 | rating loss 1.4835 | valid loss 8.5194 on validation
+[2022-12-20 16:54:06.847425]: epoch 5
+[2022-12-20 16:54:07.063682]: context ppl 1093.6128 | text ppl 815.9230 | rating loss 1.0670 |     8/    8 batches
+[2022-12-20 16:54:09.964553]: context ppl 1560.5439 | text ppl 1109.0882 | rating loss 1.4595 | valid loss 8.4708 on validation
+[2022-12-20 16:54:10.367264]: epoch 6
+[2022-12-20 16:54:10.583824]: context ppl 990.3244 | text ppl 741.1646 | rating loss 1.0521 |     8/    8 batches
+[2022-12-20 16:54:13.485377]: context ppl 1465.8777 | text ppl 955.6949 | rating loss 1.4891 | valid loss 8.3515 on validation
+[2022-12-20 16:54:13.875796]: epoch 7
+[2022-12-20 16:54:14.092065]: context ppl 922.3534 | text ppl 657.9361 | rating loss 1.0427 |     8/    8 batches
+[2022-12-20 16:54:16.993106]: context ppl 1444.3070 | text ppl 923.9103 | rating loss 1.4948 | valid loss 8.3234 on validation
+[2022-12-20 16:54:17.399420]: epoch 8
+[2022-12-20 16:54:17.617033]: context ppl 851.0975 | text ppl 594.7191 | rating loss 1.0234 |     8/    8 batches
+[2022-12-20 16:54:20.519011]: context ppl 1437.0158 | text ppl 949.3691 | rating loss 1.4603 | valid loss 8.3161 on validation
+[2022-12-20 16:54:20.917771]: epoch 9
+[2022-12-20 16:54:21.134226]: context ppl 805.7190 | text ppl 558.9516 | rating loss 1.0212 |     8/    8 batches
+[2022-12-20 16:54:24.035421]: context ppl 1328.3733 | text ppl 875.1369 | rating loss 1.4740 | valid loss 8.2483 on validation
+[2022-12-20 16:54:24.439521]: epoch 10
+[2022-12-20 16:54:24.655943]: context ppl 765.3650 | text ppl 518.2552 | rating loss 1.0078 |     8/    8 batches
+[2022-12-20 16:54:27.558473]: context ppl 1249.8634 | text ppl 784.5732 | rating loss 1.5325 | valid loss 8.1976 on validation
+[2022-12-20 16:54:27.972123]: epoch 11
+[2022-12-20 16:54:28.189588]: context ppl 729.8236 | text ppl 489.7803 | rating loss 0.9856 |     8/    8 batches
+[2022-12-20 16:54:31.092391]: context ppl 1325.0024 | text ppl 848.4448 | rating loss 1.4848 | valid loss 8.2282 on validation
+[2022-12-20 16:54:31.100414]: Endured 2 time(s)
+[2022-12-20 16:54:31.100497]: Learning rate set to 0.06250000
+[2022-12-20 16:54:31.100530]: epoch 12
+[2022-12-20 16:54:31.316520]: context ppl 651.8194 | text ppl 425.3042 | rating loss 0.9665 |     8/    8 batches
+[2022-12-20 16:54:34.219812]: context ppl 1153.2578 | text ppl 703.9393 | rating loss 1.4870 | valid loss 8.0437 on validation
+[2022-12-20 16:54:34.660062]: epoch 13
+[2022-12-20 16:54:34.878797]: context ppl 616.7824 | text ppl 402.9965 | rating loss 0.9656 |     8/    8 batches
+[2022-12-20 16:54:37.805931]: context ppl 1148.5960 | text ppl 694.6364 | rating loss 1.4751 | valid loss 8.0184 on validation
+[2022-12-20 16:54:38.220597]: epoch 14
+[2022-12-20 16:54:38.437092]: context ppl 613.6621 | text ppl 389.3093 | rating loss 0.9507 |     8/    8 batches
+[2022-12-20 16:54:41.341585]: context ppl 1142.9047 | text ppl 688.2515 | rating loss 1.5025 | valid loss 8.0366 on validation
+[2022-12-20 16:54:41.346384]: Endured 3 time(s)
+[2022-12-20 16:54:41.346462]: Learning rate set to 0.01562500
+[2022-12-20 16:54:41.346493]: epoch 15
+[2022-12-20 16:54:41.562119]: context ppl 596.0177 | text ppl 379.8492 | rating loss 0.9452 |     8/    8 batches
+[2022-12-20 16:54:44.464159]: context ppl 1135.6734 | text ppl 683.8968 | rating loss 1.4840 | valid loss 8.0118 on validation
+[2022-12-20 16:54:44.891525]: epoch 16
+[2022-12-20 16:54:45.109084]: context ppl 594.8645 | text ppl 373.0983 | rating loss 0.9448 |     8/    8 batches
+[2022-12-20 16:54:48.011259]: context ppl 1132.9816 | text ppl 681.6885 | rating loss 1.4953 | valid loss 8.0199 on validation
+[2022-12-20 16:54:48.016161]: Endured 4 time(s)
+[2022-12-20 16:54:48.016235]: Learning rate set to 0.00390625
+[2022-12-20 16:54:48.016267]: epoch 17
+[2022-12-20 16:54:48.232280]: context ppl 593.1050 | text ppl 372.8344 | rating loss 0.9388 |     8/    8 batches
+[2022-12-20 16:54:51.132917]: context ppl 1132.5214 | text ppl 681.2153 | rating loss 1.4946 | valid loss 8.0185 on validation
+[2022-12-20 16:54:51.140887]: Endured 5 time(s)
+[2022-12-20 16:54:51.140918]: Cannot endure it anymore | Exiting from early stop
+=========================================================================================
+[2022-12-20 16:54:54.157151]: context ppl 1126.0680 | text ppl 677.7785 | rating loss 1.4798 on test | End of training
+[2022-12-20 16:54:54.157219]: Generating text

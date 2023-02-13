@@ -1,0 +1,66 @@
+Namespace(adam_beta1=0.9, adam_beta2=0.999, attention_probs_dropout_prob=0.5, batch_size=512, cuda_condition=True, data_dir='./FMLP/data/', data_file='./FMLP/data/Movie_and_TV_GT5.pickle', data_name='Movie_and_TV_GT5', do_eval=True, epochs=200, full_sort=False, gpu_id='0', hidden_act='gelu', hidden_dropout_prob=0.5, hidden_size=64, initializer_range=0.02, item_size=7361, load_model='FMLPRec-Movie_and_TV_GT5-Dec-06-2022_04-29-08', log_file='./FMLP/output/FMLPRec-Movie_and_TV_GT5-Dec-07-2022_02-43-14.txt', log_freq=1, lr=0.001, max_seq_length=50, model_name='FMLPRec', no_cuda=False, no_filters=False, num_attention_heads=2, num_hidden_layers=4, output_dir='./FMLP/output/', patience=10, seed=42, variance=5, weight_decay=0.0)
+Total Parameters: 621120
+odict_keys(['item_embeddings.weight', 'position_embeddings.weight', 'LayerNorm.weight', 'LayerNorm.bias', 'item_encoder.layer.0.filterlayer.complex_weight', 'item_encoder.layer.0.filterlayer.LayerNorm.weight', 'item_encoder.layer.0.filterlayer.LayerNorm.bias', 'item_encoder.layer.0.intermediate.dense_1.weight', 'item_encoder.layer.0.intermediate.dense_1.bias', 'item_encoder.layer.0.intermediate.dense_2.weight', 'item_encoder.layer.0.intermediate.dense_2.bias', 'item_encoder.layer.0.intermediate.LayerNorm.weight', 'item_encoder.layer.0.intermediate.LayerNorm.bias', 'item_encoder.layer.1.filterlayer.complex_weight', 'item_encoder.layer.1.filterlayer.LayerNorm.weight', 'item_encoder.layer.1.filterlayer.LayerNorm.bias', 'item_encoder.layer.1.intermediate.dense_1.weight', 'item_encoder.layer.1.intermediate.dense_1.bias', 'item_encoder.layer.1.intermediate.dense_2.weight', 'item_encoder.layer.1.intermediate.dense_2.bias', 'item_encoder.layer.1.intermediate.LayerNorm.weight', 'item_encoder.layer.1.intermediate.LayerNorm.bias', 'item_encoder.layer.2.filterlayer.complex_weight', 'item_encoder.layer.2.filterlayer.LayerNorm.weight', 'item_encoder.layer.2.filterlayer.LayerNorm.bias', 'item_encoder.layer.2.intermediate.dense_1.weight', 'item_encoder.layer.2.intermediate.dense_1.bias', 'item_encoder.layer.2.intermediate.dense_2.weight', 'item_encoder.layer.2.intermediate.dense_2.bias', 'item_encoder.layer.2.intermediate.LayerNorm.weight', 'item_encoder.layer.2.intermediate.LayerNorm.bias', 'item_encoder.layer.3.filterlayer.complex_weight', 'item_encoder.layer.3.filterlayer.LayerNorm.weight', 'item_encoder.layer.3.filterlayer.LayerNorm.bias', 'item_encoder.layer.3.intermediate.dense_1.weight', 'item_encoder.layer.3.intermediate.dense_1.bias', 'item_encoder.layer.3.intermediate.dense_2.weight', 'item_encoder.layer.3.intermediate.dense_2.bias', 'item_encoder.layer.3.intermediate.LayerNorm.weight', 'item_encoder.layer.3.intermediate.LayerNorm.bias'])
+odict_keys(['item_embeddings.weight', 'position_embeddings.weight', 'LayerNorm.weight', 'LayerNorm.bias', 'item_encoder.layer.0.filterlayer.complex_weight', 'item_encoder.layer.0.filterlayer.LayerNorm.weight', 'item_encoder.layer.0.filterlayer.LayerNorm.bias', 'item_encoder.layer.0.intermediate.dense_1.weight', 'item_encoder.layer.0.intermediate.dense_1.bias', 'item_encoder.layer.0.intermediate.dense_2.weight', 'item_encoder.layer.0.intermediate.dense_2.bias', 'item_encoder.layer.0.intermediate.LayerNorm.weight', 'item_encoder.layer.0.intermediate.LayerNorm.bias', 'item_encoder.layer.1.filterlayer.complex_weight', 'item_encoder.layer.1.filterlayer.LayerNorm.weight', 'item_encoder.layer.1.filterlayer.LayerNorm.bias', 'item_encoder.layer.1.intermediate.dense_1.weight', 'item_encoder.layer.1.intermediate.dense_1.bias', 'item_encoder.layer.1.intermediate.dense_2.weight', 'item_encoder.layer.1.intermediate.dense_2.bias', 'item_encoder.layer.1.intermediate.LayerNorm.weight', 'item_encoder.layer.1.intermediate.LayerNorm.bias', 'item_encoder.layer.2.filterlayer.complex_weight', 'item_encoder.layer.2.filterlayer.LayerNorm.weight', 'item_encoder.layer.2.filterlayer.LayerNorm.bias', 'item_encoder.layer.2.intermediate.dense_1.weight', 'item_encoder.layer.2.intermediate.dense_1.bias', 'item_encoder.layer.2.intermediate.dense_2.weight', 'item_encoder.layer.2.intermediate.dense_2.bias', 'item_encoder.layer.2.intermediate.LayerNorm.weight', 'item_encoder.layer.2.intermediate.LayerNorm.bias', 'item_encoder.layer.3.filterlayer.complex_weight', 'item_encoder.layer.3.filterlayer.LayerNorm.weight', 'item_encoder.layer.3.filterlayer.LayerNorm.bias', 'item_encoder.layer.3.intermediate.dense_1.weight', 'item_encoder.layer.3.intermediate.dense_1.bias', 'item_encoder.layer.3.intermediate.dense_2.weight', 'item_encoder.layer.3.intermediate.dense_2.bias', 'item_encoder.layer.3.intermediate.LayerNorm.weight', 'item_encoder.layer.3.intermediate.LayerNorm.bias'])
+Load model from ./FMLP/output/FMLPRec-Movie_and_TV_GT5-Dec-06-2022_04-29-08.pt for test!
+FMLPRecModel(
+  (item_embeddings): Embedding(7361, 64, padding_idx=0)
+  (position_embeddings): Embedding(50, 64)
+  (LayerNorm): LayerNorm()
+  (dropout): Dropout(p=0.5, inplace=False)
+  (item_encoder): Encoder(
+    (layer): ModuleList(
+      (0): Layer(
+        (filterlayer): FilterLayer(
+          (out_dropout): Dropout(p=0.5, inplace=False)
+          (LayerNorm): LayerNorm()
+        )
+        (intermediate): Intermediate(
+          (dense_1): Linear(in_features=64, out_features=256, bias=True)
+          (dense_2): Linear(in_features=256, out_features=64, bias=True)
+          (LayerNorm): LayerNorm()
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+      )
+      (1): Layer(
+        (filterlayer): FilterLayer(
+          (out_dropout): Dropout(p=0.5, inplace=False)
+          (LayerNorm): LayerNorm()
+        )
+        (intermediate): Intermediate(
+          (dense_1): Linear(in_features=64, out_features=256, bias=True)
+          (dense_2): Linear(in_features=256, out_features=64, bias=True)
+          (LayerNorm): LayerNorm()
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+      )
+      (2): Layer(
+        (filterlayer): FilterLayer(
+          (out_dropout): Dropout(p=0.5, inplace=False)
+          (LayerNorm): LayerNorm()
+        )
+        (intermediate): Intermediate(
+          (dense_1): Linear(in_features=64, out_features=256, bias=True)
+          (dense_2): Linear(in_features=256, out_features=64, bias=True)
+          (LayerNorm): LayerNorm()
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+      )
+      (3): Layer(
+        (filterlayer): FilterLayer(
+          (out_dropout): Dropout(p=0.5, inplace=False)
+          (LayerNorm): LayerNorm()
+        )
+        (intermediate): Intermediate(
+          (dense_1): Linear(in_features=64, out_features=256, bias=True)
+          (dense_2): Linear(in_features=256, out_features=64, bias=True)
+          (LayerNorm): LayerNorm()
+          (dropout): Dropout(p=0.5, inplace=False)
+        )
+      )
+    )
+  )
+)
+{'Epoch': 0, 'HIT@1': '0.3107', 'NDCG@1': '0.3107', 'HIT@5': '0.6997', 'NDCG@5': '0.5138', 'HIT@10': '0.8663', 'NDCG@10': '0.5680', 'MRR': '0.4834'}
+FMLPRec-Movie_and_TV_GT5-Dec-07-2022_02-43-14
+{'Epoch': 0, 'HIT@1': '0.3107', 'NDCG@1': '0.3107', 'HIT@5': '0.6997', 'NDCG@5': '0.5138', 'HIT@10': '0.8663', 'NDCG@10': '0.5680', 'MRR': '0.4834'}

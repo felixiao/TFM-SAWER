@@ -1,0 +1,49 @@
+----------------------------------------ARGUMENTS----------------------------------------
+data_path                                ./Data/Amazon/MoviesAndTV_New/
+index_dir                                ./Data/Amazon/MoviesAndTV_New/0/
+emsize                                   64
+nhid                                     512
+nlayers                                  2
+dropout                                  0.2
+lr                                       0.0001
+clip                                     5.0
+epochs                                   100
+batch_size                               50
+seed                                     1111
+cuda                                     True
+checkpoint                               ./Result/Amazon/MoviesAndTV_New/Att2Seq/0/
+outf                                     generated.txt
+vocab_size                               20000
+endure_times                             5
+words                                    15
+mode                                     Test
+----------------------------------------ARGUMENTS----------------------------------------
+2023-01-14 17:15:44Loading data
+[2023-01-14 17:15:44]: Loading data Fold ./Data/Amazon/MoviesAndTV_New/0/
+[2023-01-14 17:16:46]: user dict count:7506
+item dict count:7364
+word dict count:103624
+max rating:5
+min rating:1
+[2023-01-14 17:18:10]: Len 359303
+[2023-01-14 17:18:11]: Len 41240
+[2023-01-14 17:18:11]: Len 41240
+=========================================================================================
+2023-01-14 17:18:18text ppl 68.9086 | End of training
+2023-01-14 17:18:18Generating text
+2023-01-14 17:18:28BLEU-1 11.8827
+2023-01-14 17:18:35BLEU-4  0.7841
+2023-01-14 17:18:38USR  0.0745 | USN    3072
+2023-01-14 17:24:20DIV  2.0550
+2023-01-14 17:24:20FCR  0.0598
+2023-01-14 17:24:21FMR  0.0000
+2023-01-14 17:24:27rouge_1/f_score 14.4979
+2023-01-14 17:24:27rouge_1/r_score 13.0305
+2023-01-14 17:24:27rouge_1/p_score 18.8756
+2023-01-14 17:24:27rouge_2/f_score  1.8024
+2023-01-14 17:24:27rouge_2/r_score  1.6749
+2023-01-14 17:24:27rouge_2/p_score  2.3647
+2023-01-14 17:24:27rouge_l/f_score 11.0942
+2023-01-14 17:24:27rouge_l/r_score 11.6224
+2023-01-14 17:24:27rouge_l/p_score 15.7023
+2023-01-14 17:24:27Generated text saved to (./Result/Amazon/MoviesAndTV_New/Att2Seq/0/generated.txt)

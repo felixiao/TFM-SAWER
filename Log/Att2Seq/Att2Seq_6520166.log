@@ -1,0 +1,121 @@
+----------------------------------------ARGUMENTS----------------------------------------
+data_path                                ./Data/Amazon/ToysAndGames/
+index_dir                                ./Data/Amazon/ToysAndGames/0/
+emsize                                   64
+nhid                                     512
+nlayers                                  2
+dropout                                  0.2
+lr                                       0.0001
+clip                                     5.0
+epochs                                   100
+batch_size                               50
+seed                                     1111
+cuda                                     True
+checkpoint                               ./Result/Amazon/ToysAndGames/Att2Seq/0/
+outf                                     generated.txt
+vocab_size                               20000
+endure_times                             5
+words                                    15
+mode                                     Train+Test
+----------------------------------------ARGUMENTS----------------------------------------
+2023-01-15 08:56:42Loading data
+[2023-01-15 08:56:42]: Loading data Fold ./Data/Amazon/ToysAndGames/0/
+[2023-01-15 08:56:46]: user dict count:9011
+item dict count:19488
+word dict count:33331
+max rating:5
+min rating:1
+[2023-01-15 08:56:51]: Len 98925
+[2023-01-15 08:56:51]: Len 7581
+[2023-01-15 08:56:51]: Len 7581
+2023-01-15 08:56:56epoch 1
+2023-01-15 08:57:25text ppl 375.0666 on train
+2023-01-15 08:57:25text ppl 244.4345 on validation
+2023-01-15 08:57:26epoch 2
+2023-01-15 08:57:54text ppl 193.5520 on train
+2023-01-15 08:57:55text ppl 167.2379 on validation
+2023-01-15 08:57:55epoch 3
+2023-01-15 08:58:24text ppl 132.3240 on train
+2023-01-15 08:58:24text ppl 119.5608 on validation
+2023-01-15 08:58:25epoch 4
+2023-01-15 08:58:53text ppl 99.9304 on train
+2023-01-15 08:58:54text ppl 100.9296 on validation
+2023-01-15 08:58:54epoch 5
+2023-01-15 08:59:23text ppl 84.8904 on train
+2023-01-15 08:59:24text ppl 91.7162 on validation
+2023-01-15 08:59:24epoch 6
+2023-01-15 08:59:52text ppl 75.4457 on train
+2023-01-15 08:59:53text ppl 85.5852 on validation
+2023-01-15 08:59:53epoch 7
+2023-01-15 09:00:22text ppl 68.5314 on train
+2023-01-15 09:00:23text ppl 81.9208 on validation
+2023-01-15 09:00:23epoch 8
+2023-01-15 09:00:51text ppl 63.0958 on train
+2023-01-15 09:00:52text ppl 79.0086 on validation
+2023-01-15 09:00:52epoch 9
+2023-01-15 09:01:21text ppl 58.5816 on train
+2023-01-15 09:01:22text ppl 76.0226 on validation
+2023-01-15 09:01:22epoch 10
+2023-01-15 09:01:51text ppl 54.6471 on train
+2023-01-15 09:01:51text ppl 74.5948 on validation
+2023-01-15 09:01:51epoch 11
+2023-01-15 09:02:20text ppl 51.2399 on train
+2023-01-15 09:02:21text ppl 73.3939 on validation
+2023-01-15 09:02:21epoch 12
+2023-01-15 09:02:50text ppl 48.2661 on train
+2023-01-15 09:02:50text ppl 72.4563 on validation
+2023-01-15 09:02:50epoch 13
+2023-01-15 09:03:19text ppl 45.5952 on train
+2023-01-15 09:03:20text ppl 71.4830 on validation
+2023-01-15 09:03:20epoch 14
+2023-01-15 09:03:49text ppl 43.1939 on train
+2023-01-15 09:03:49text ppl 70.6620 on validation
+2023-01-15 09:03:50epoch 15
+2023-01-15 09:04:18text ppl 40.9342 on train
+2023-01-15 09:04:19text ppl 69.9777 on validation
+2023-01-15 09:04:19epoch 16
+2023-01-15 09:04:48text ppl 38.8947 on train
+2023-01-15 09:04:48text ppl 69.7224 on validation
+2023-01-15 09:04:49epoch 17
+2023-01-15 09:05:17text ppl 37.0284 on train
+2023-01-15 09:05:18text ppl 69.6827 on validation
+2023-01-15 09:05:18epoch 18
+2023-01-15 09:05:47text ppl 35.3148 on train
+2023-01-15 09:05:47text ppl 70.4888 on validation
+2023-01-15 09:05:47Endured 1 time(s)
+2023-01-15 09:05:47epoch 19
+2023-01-15 09:06:16text ppl 33.7422 on train
+2023-01-15 09:06:17text ppl 70.9861 on validation
+2023-01-15 09:06:17Endured 2 time(s)
+2023-01-15 09:06:17epoch 20
+2023-01-15 09:06:45text ppl 32.2871 on train
+2023-01-15 09:06:46text ppl 71.3244 on validation
+2023-01-15 09:06:46Endured 3 time(s)
+2023-01-15 09:06:46epoch 21
+2023-01-15 09:07:15text ppl 30.9357 on train
+2023-01-15 09:07:16text ppl 72.0163 on validation
+2023-01-15 09:07:16Endured 4 time(s)
+2023-01-15 09:07:16epoch 22
+2023-01-15 09:07:45text ppl 29.6595 on train
+2023-01-15 09:07:46text ppl 73.2335 on validation
+2023-01-15 09:07:46Endured 5 time(s)
+2023-01-15 09:07:46Cannot endure it anymore | Exiting from early stop
+=========================================================================================
+2023-01-15 09:07:46text ppl 69.5346 | End of training
+2023-01-15 09:07:46Generating text
+2023-01-15 09:07:48BLEU-1  9.7552
+2023-01-15 09:07:49BLEU-4  1.0902
+2023-01-15 09:07:49USR  0.0414 | USN     314
+2023-01-15 09:07:56DIV  0.3285
+2023-01-15 09:07:56FCR  0.0152
+2023-01-15 09:07:56FMR  0.0000
+2023-01-15 09:07:57rouge_1/f_score 11.8262
+2023-01-15 09:07:57rouge_1/r_score 11.0079
+2023-01-15 09:07:57rouge_1/p_score 14.6081
+2023-01-15 09:07:57rouge_2/f_score  2.2927
+2023-01-15 09:07:57rouge_2/r_score  2.1777
+2023-01-15 09:07:57rouge_2/p_score  2.8263
+2023-01-15 09:07:57rouge_l/f_score  9.7116
+2023-01-15 09:07:57rouge_l/r_score 10.2081
+2023-01-15 09:07:57rouge_l/p_score 12.9169
+2023-01-15 09:07:57Generated text saved to (./Result/Amazon/ToysAndGames/Att2Seq/0/generated.txt)

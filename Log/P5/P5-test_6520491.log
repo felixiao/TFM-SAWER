@@ -1,0 +1,25 @@
+['rating_loss', 'sequential_loss', 'explanation_loss', 'review_loss', 'traditional_loss']
+Process Launching at GPU 0
+{'distributed': False, 'multiGPU': False, 'fp16': True, 'train': 'toys', 'valid': 'toys', 'test': 'toys', 'backbone': 't5-small', 'output': './P5/snap/toys-small', 'load': './P5/snap/toys-small.pth', 'batch_size': 24, 'optim': 'adamw', 'warmup_ratio': 0.05, 'lr': 0.001, 'num_workers': 4, 'clip_grad_norm': 1.0, 'losses': 'rating,sequential,explanation,review,traditional', 'epoch': 10, 'local_rank': 0, 'comment': '', 'train_topk': -1, 'valid_topk': -1, 'dropout': 0.1, 'tokenizer': 'p5', 'max_text_length': 512, 'do_lower_case': False, 'word_mask_rate': 0.15, 'gen_max_length': 64, 'weight_decay': 0.01, 'adam_eps': 1e-06, 'gradient_accumulation_steps': 1, 'seed': 1111, 'whole_word_embed': True, 'world_size': 1, 'LOSSES_NAME': ['rating_loss', 'sequential_loss', 'explanation_loss', 'review_loss', 'traditional_loss', 'total_loss'], 'gpu': 0, 'rank': 0, 'run_name': 'Jan15_13-57_GPU1_toys_t5-small_ratingsequentialexplanationreviewtraditional'}
+<class 'tokenization.P5Tokenizer'> t5-small
+Building Model at GPU 0
+Model loaded from  ./P5/snap/toys-small.pth
+<All keys matched successfully>
+Test on Explanation prompt ['3-3']
+Data sources:  ['toys']
+compute_datum_info
+num of samples 431
+----------------------------------------
+BLEU-1  3.3785
+BLEU-4  1.0779
+USR↑  0.0118 | USN↑     122
+rouge_1/f_score 59.4873
+rouge_1/r_score 48.1441
+rouge_1/p_score 83.3343
+rouge_2/f_score 19.0148
+rouge_2/r_score 13.8080
+rouge_2/p_score 39.8084
+rouge_l/f_score 19.9985
+rouge_l/r_score 19.2647
+rouge_l/p_score 66.5975
+----------------------------------------

@@ -1,0 +1,403 @@
+-------------------------PETER ARGUMENTS-------------------------
+data_path            FMLPETER/data/Movie_and_TV_GT5.pickle
+index_dir            FMLPETER/data/0
+checkpoint           FMLPETER/output
+outf                 generated_seed1234.txt
+emsize               512
+nhead                2
+nhid                 2048
+nlayers              2
+dropout              0.2
+lr                   0.01
+clip                 1.0
+epochs               200
+batch_size           256
+seed                 1234
+cuda                 True
+log_interval         324
+max_hist_len         20
+vocab_size           20000
+endure_times         10
+rating_reg           0.1
+context_reg          1.0
+text_reg             1.0
+peter_mask           True
+use_feature          True
+words                15
+mode                 Train+Test
+model_path           FMLPETER/output/model_feat_2022-12-13 17:59:55.pt
+prediction_path      FMLPETER/output/generated_seed1234.txt
+-------------------------PETER ARGUMENTS-------------------------
+[2022-12-13 17:59:55.58]: Loading data
+[2022-12-13 18:02:20.73]: Build Model
+-------------------------FMLP ARGUMENTS-------------------------
+data_dir                       FMLPETER/data/
+output_dir                     FMLPETER/output/
+data_name                      Movie_and_TV_GT5
+do_eval                        True
+load_model                     FMLPRec-Movie_and_TV_GT5-Dec-09-2022_17-02-48
+model_name                     FMLPRec
+hidden_size                    512
+num_hidden_layers              4
+num_attention_heads            2
+hidden_act                     gelu
+attention_probs_dropout_prob   0.5
+hidden_dropout_prob            0.5
+initializer_range              0.02
+max_seq_length                 20
+no_filters                     False
+lr                             0.001
+batch_size                     512
+epochs                         100
+no_cuda                        False
+log_freq                       1
+full_sort                      False
+patience                       5
+seed                           42
+weight_decay                   0.0
+adam_beta1                     0.9
+adam_beta2                     0.99
+gpu_id                         0
+variance                       5
+cuda_condition                 True
+log_file                       FMLPETER/output/FMLPRec-Movie_and_TV_GT5-2022-12-13 18:02:24.03.txt
+-------------------------FMLP ARGUMENTS-------------------------
+Total Parameters: 12232192
+original state odict_keys(['item_embeddings.weight', 'position_embeddings.weight', 'LayerNorm.weight', 'LayerNorm.bias', 'item_encoder.layer.0.filterlayer.complex_weight', 'item_encoder.layer.0.filterlayer.LayerNorm.weight', 'item_encoder.layer.0.filterlayer.LayerNorm.bias', 'item_encoder.layer.0.intermediate.dense_1.weight', 'item_encoder.layer.0.intermediate.dense_1.bias', 'item_encoder.layer.0.intermediate.dense_2.weight', 'item_encoder.layer.0.intermediate.dense_2.bias', 'item_encoder.layer.0.intermediate.LayerNorm.weight', 'item_encoder.layer.0.intermediate.LayerNorm.bias', 'item_encoder.layer.1.filterlayer.complex_weight', 'item_encoder.layer.1.filterlayer.LayerNorm.weight', 'item_encoder.layer.1.filterlayer.LayerNorm.bias', 'item_encoder.layer.1.intermediate.dense_1.weight', 'item_encoder.layer.1.intermediate.dense_1.bias', 'item_encoder.layer.1.intermediate.dense_2.weight', 'item_encoder.layer.1.intermediate.dense_2.bias', 'item_encoder.layer.1.intermediate.LayerNorm.weight', 'item_encoder.layer.1.intermediate.LayerNorm.bias', 'item_encoder.layer.2.filterlayer.complex_weight', 'item_encoder.layer.2.filterlayer.LayerNorm.weight', 'item_encoder.layer.2.filterlayer.LayerNorm.bias', 'item_encoder.layer.2.intermediate.dense_1.weight', 'item_encoder.layer.2.intermediate.dense_1.bias', 'item_encoder.layer.2.intermediate.dense_2.weight', 'item_encoder.layer.2.intermediate.dense_2.bias', 'item_encoder.layer.2.intermediate.LayerNorm.weight', 'item_encoder.layer.2.intermediate.LayerNorm.bias', 'item_encoder.layer.3.filterlayer.complex_weight', 'item_encoder.layer.3.filterlayer.LayerNorm.weight', 'item_encoder.layer.3.filterlayer.LayerNorm.bias', 'item_encoder.layer.3.intermediate.dense_1.weight', 'item_encoder.layer.3.intermediate.dense_1.bias', 'item_encoder.layer.3.intermediate.dense_2.weight', 'item_encoder.layer.3.intermediate.dense_2.bias', 'item_encoder.layer.3.intermediate.LayerNorm.weight', 'item_encoder.layer.3.intermediate.LayerNorm.bias'])
+new state odict_keys(['item_embeddings.weight', 'position_embeddings.weight', 'LayerNorm.weight', 'LayerNorm.bias', 'item_encoder.layer.0.filterlayer.complex_weight', 'item_encoder.layer.0.filterlayer.LayerNorm.weight', 'item_encoder.layer.0.filterlayer.LayerNorm.bias', 'item_encoder.layer.0.intermediate.dense_1.weight', 'item_encoder.layer.0.intermediate.dense_1.bias', 'item_encoder.layer.0.intermediate.dense_2.weight', 'item_encoder.layer.0.intermediate.dense_2.bias', 'item_encoder.layer.0.intermediate.LayerNorm.weight', 'item_encoder.layer.0.intermediate.LayerNorm.bias', 'item_encoder.layer.1.filterlayer.complex_weight', 'item_encoder.layer.1.filterlayer.LayerNorm.weight', 'item_encoder.layer.1.filterlayer.LayerNorm.bias', 'item_encoder.layer.1.intermediate.dense_1.weight', 'item_encoder.layer.1.intermediate.dense_1.bias', 'item_encoder.layer.1.intermediate.dense_2.weight', 'item_encoder.layer.1.intermediate.dense_2.bias', 'item_encoder.layer.1.intermediate.LayerNorm.weight', 'item_encoder.layer.1.intermediate.LayerNorm.bias', 'item_encoder.layer.2.filterlayer.complex_weight', 'item_encoder.layer.2.filterlayer.LayerNorm.weight', 'item_encoder.layer.2.filterlayer.LayerNorm.bias', 'item_encoder.layer.2.intermediate.dense_1.weight', 'item_encoder.layer.2.intermediate.dense_1.bias', 'item_encoder.layer.2.intermediate.dense_2.weight', 'item_encoder.layer.2.intermediate.dense_2.bias', 'item_encoder.layer.2.intermediate.LayerNorm.weight', 'item_encoder.layer.2.intermediate.LayerNorm.bias', 'item_encoder.layer.3.filterlayer.complex_weight', 'item_encoder.layer.3.filterlayer.LayerNorm.weight', 'item_encoder.layer.3.filterlayer.LayerNorm.bias', 'item_encoder.layer.3.intermediate.dense_1.weight', 'item_encoder.layer.3.intermediate.dense_1.bias', 'item_encoder.layer.3.intermediate.dense_2.weight', 'item_encoder.layer.3.intermediate.dense_2.bias', 'item_encoder.layer.3.intermediate.LayerNorm.weight', 'item_encoder.layer.3.intermediate.LayerNorm.bias'])
+Load model from FMLPETER/output/FMLPRec-Movie_and_TV_GT5-Dec-09-2022_17-02-48.pt for test!
+[2022-12-13 18:02:36.49]: epoch 1
+[2022-12-13 18:03:15.29]: context ppl 7608.5241 | text ppl 6382.6360 | rating loss 2.4669 |   324/ 1292 batches
+[2022-12-13 18:03:53.26]: context ppl 1777.5286 | text ppl 1473.9645 | rating loss 1.3725 |   648/ 1292 batches
+[2022-12-13 18:04:31.27]: context ppl 1240.6342 | text ppl 1045.7998 | rating loss 1.4211 |   972/ 1292 batches
+[2022-12-13 18:05:08.74]: context ppl 1056.0142 | text ppl 894.5743 | rating loss 1.4567 |  1292/ 1292 batches
+[2022-12-13 18:05:14.26]: context ppl 941.3979 | text ppl 791.0652 | rating loss 1.3553 | valid loss 8.0287 on validation
+[2022-12-13 18:05:14.85]: epoch 2
+[2022-12-13 18:05:53.47]: context ppl 958.4099 | text ppl 811.0981 | rating loss 1.4002 |   324/ 1292 batches
+[2022-12-13 18:06:31.67]: context ppl 876.2318 | text ppl 740.6605 | rating loss 1.4097 |   648/ 1292 batches
+[2022-12-13 18:07:09.76]: context ppl 828.1073 | text ppl 697.1273 | rating loss 1.4024 |   972/ 1292 batches
+[2022-12-13 18:07:47.25]: context ppl 800.5923 | text ppl 669.7635 | rating loss 1.4029 |  1292/ 1292 batches
+[2022-12-13 18:07:52.79]: context ppl 741.9639 | text ppl 613.6115 | rating loss 1.3527 | valid loss 7.7721 on validation
+[2022-12-13 18:07:53.41]: epoch 3
+[2022-12-13 18:08:31.93]: context ppl 772.5567 | text ppl 640.6378 | rating loss 1.4020 |   324/ 1292 batches
+[2022-12-13 18:09:10.01]: context ppl 761.6028 | text ppl 624.0395 | rating loss 1.3938 |   648/ 1292 batches
+[2022-12-13 18:09:48.06]: context ppl 748.6384 | text ppl 607.3323 | rating loss 1.3971 |   972/ 1292 batches
+[2022-12-13 18:10:25.62]: context ppl 735.6405 | text ppl 590.6330 | rating loss 1.3886 |  1292/ 1292 batches
+[2022-12-13 18:10:31.15]: context ppl 690.8256 | text ppl 543.7689 | rating loss 1.3406 | valid loss 7.6391 on validation
+[2022-12-13 18:10:31.74]: epoch 4
+[2022-12-13 18:11:10.07]: context ppl 725.8720 | text ppl 576.1668 | rating loss 1.3809 |   324/ 1292 batches
+[2022-12-13 18:11:48.15]: context ppl 718.8575 | text ppl 562.8387 | rating loss 1.4040 |   648/ 1292 batches
+[2022-12-13 18:12:26.30]: context ppl 709.2856 | text ppl 547.7787 | rating loss 1.3930 |   972/ 1292 batches
+[2022-12-13 18:13:04.72]: context ppl 709.8458 | text ppl 537.2731 | rating loss 1.3787 |  1292/ 1292 batches
+[2022-12-13 18:13:10.29]: context ppl 669.7861 | text ppl 490.3520 | rating loss 1.3342 | valid loss 7.5293 on validation
+[2022-12-13 18:13:10.82]: epoch 5
+[2022-12-13 18:13:50.05]: context ppl 702.8486 | text ppl 520.3192 | rating loss 1.3770 |   324/ 1292 batches
+[2022-12-13 18:14:28.15]: context ppl 695.8829 | text ppl 499.5568 | rating loss 1.3970 |   648/ 1292 batches
+[2022-12-13 18:15:06.76]: context ppl 691.3977 | text ppl 483.7628 | rating loss 1.3785 |   972/ 1292 batches
+[2022-12-13 18:15:44.69]: context ppl 688.1872 | text ppl 471.6850 | rating loss 1.3819 |  1292/ 1292 batches
+[2022-12-13 18:15:50.24]: context ppl 653.8287 | text ppl 436.1065 | rating loss 1.3309 | valid loss 7.4088 on validation
+[2022-12-13 18:15:50.78]: epoch 6
+[2022-12-13 18:16:29.86]: context ppl 681.9414 | text ppl 457.2986 | rating loss 1.3887 |   324/ 1292 batches
+[2022-12-13 18:17:09.08]: context ppl 681.8830 | text ppl 449.4779 | rating loss 1.3813 |   648/ 1292 batches
+[2022-12-13 18:17:47.91]: context ppl 676.1362 | text ppl 437.3134 | rating loss 1.3833 |   972/ 1292 batches
+[2022-12-13 18:18:25.26]: context ppl 673.6054 | text ppl 427.8737 | rating loss 1.3706 |  1292/ 1292 batches
+[2022-12-13 18:18:30.78]: context ppl 641.9967 | text ppl 400.6527 | rating loss 1.3270 | valid loss 7.3201 on validation
+[2022-12-13 18:18:31.36]: epoch 7
+[2022-12-13 18:19:10.14]: context ppl 671.8030 | text ppl 419.8252 | rating loss 1.3838 |   324/ 1292 batches
+[2022-12-13 18:19:48.83]: context ppl 667.7343 | text ppl 410.4691 | rating loss 1.3730 |   648/ 1292 batches
+[2022-12-13 18:20:27.15]: context ppl 665.9526 | text ppl 404.4724 | rating loss 1.3770 |   972/ 1292 batches
+[2022-12-13 18:21:04.92]: context ppl 660.8532 | text ppl 396.2737 | rating loss 1.3717 |  1292/ 1292 batches
+[2022-12-13 18:21:10.44]: context ppl 633.7561 | text ppl 370.6081 | rating loss 1.3281 | valid loss 7.2432 on validation
+[2022-12-13 18:21:11.01]: epoch 8
+[2022-12-13 18:21:49.79]: context ppl 661.5946 | text ppl 390.6001 | rating loss 1.3787 |   324/ 1292 batches
+[2022-12-13 18:22:28.06]: context ppl 655.4098 | text ppl 381.7627 | rating loss 1.3830 |   648/ 1292 batches
+[2022-12-13 18:23:06.38]: context ppl 657.5219 | text ppl 378.8761 | rating loss 1.3624 |   972/ 1292 batches
+[2022-12-13 18:23:43.96]: context ppl 656.0130 | text ppl 373.1601 | rating loss 1.3627 |  1292/ 1292 batches
+[2022-12-13 18:23:49.47]: context ppl 628.6526 | text ppl 348.3811 | rating loss 1.3273 | valid loss 7.1806 on validation
+[2022-12-13 18:23:50.02]: epoch 9
+[2022-12-13 18:24:28.44]: context ppl 652.3584 | text ppl 366.2446 | rating loss 1.3678 |   324/ 1292 batches
+[2022-12-13 18:25:06.53]: context ppl 651.0765 | text ppl 361.5809 | rating loss 1.3644 |   648/ 1292 batches
+[2022-12-13 18:25:44.58]: context ppl 650.4694 | text ppl 357.3862 | rating loss 1.3718 |   972/ 1292 batches
+[2022-12-13 18:26:22.06]: context ppl 649.0152 | text ppl 352.7689 | rating loss 1.3667 |  1292/ 1292 batches
+[2022-12-13 18:26:27.57]: context ppl 623.4062 | text ppl 328.7832 | rating loss 1.3136 | valid loss 7.1090 on validation
+[2022-12-13 18:26:28.14]: epoch 10
+[2022-12-13 18:27:06.55]: context ppl 646.2156 | text ppl 347.1368 | rating loss 1.3709 |   324/ 1292 batches
+[2022-12-13 18:27:44.56]: context ppl 646.5387 | text ppl 343.9584 | rating loss 1.3658 |   648/ 1292 batches
+[2022-12-13 18:28:22.56]: context ppl 643.9470 | text ppl 339.4338 | rating loss 1.3504 |   972/ 1292 batches
+[2022-12-13 18:29:00.03]: context ppl 645.4714 | text ppl 338.0110 | rating loss 1.3650 |  1292/ 1292 batches
+[2022-12-13 18:29:05.55]: context ppl 619.4852 | text ppl 313.2609 | rating loss 1.3101 | valid loss 7.0571 on validation
+[2022-12-13 18:29:06.11]: epoch 11
+[2022-12-13 18:29:44.48]: context ppl 644.8615 | text ppl 334.1872 | rating loss 1.3604 |   324/ 1292 batches
+[2022-12-13 18:30:22.51]: context ppl 641.1472 | text ppl 329.2129 | rating loss 1.3614 |   648/ 1292 batches
+[2022-12-13 18:31:00.54]: context ppl 640.6299 | text ppl 325.8943 | rating loss 1.3576 |   972/ 1292 batches
+[2022-12-13 18:31:38.03]: context ppl 637.7792 | text ppl 321.3819 | rating loss 1.3515 |  1292/ 1292 batches
+[2022-12-13 18:31:43.54]: context ppl 616.6579 | text ppl 300.8332 | rating loss 1.3031 | valid loss 7.0096 on validation
+[2022-12-13 18:31:44.12]: epoch 12
+[2022-12-13 18:32:22.53]: context ppl 636.5963 | text ppl 318.4678 | rating loss 1.3634 |   324/ 1292 batches
+[2022-12-13 18:33:00.54]: context ppl 637.3130 | text ppl 317.0398 | rating loss 1.3403 |   648/ 1292 batches
+[2022-12-13 18:33:38.71]: context ppl 638.0262 | text ppl 313.9372 | rating loss 1.3598 |   972/ 1292 batches
+[2022-12-13 18:34:16.41]: context ppl 637.3041 | text ppl 311.8505 | rating loss 1.3439 |  1292/ 1292 batches
+[2022-12-13 18:34:21.93]: context ppl 614.2476 | text ppl 289.7666 | rating loss 1.2976 | valid loss 6.9667 on validation
+[2022-12-13 18:34:22.50]: epoch 13
+[2022-12-13 18:35:01.12]: context ppl 634.9093 | text ppl 307.8666 | rating loss 1.3499 |   324/ 1292 batches
+[2022-12-13 18:35:39.32]: context ppl 634.3514 | text ppl 305.7273 | rating loss 1.3460 |   648/ 1292 batches
+[2022-12-13 18:36:17.54]: context ppl 634.3682 | text ppl 303.5031 | rating loss 1.3408 |   972/ 1292 batches
+[2022-12-13 18:36:55.16]: context ppl 633.2718 | text ppl 299.8160 | rating loss 1.3430 |  1292/ 1292 batches
+[2022-12-13 18:37:00.67]: context ppl 612.1414 | text ppl 279.7719 | rating loss 1.2908 | valid loss 6.9248 on validation
+[2022-12-13 18:37:01.24]: epoch 14
+[2022-12-13 18:37:39.74]: context ppl 632.1863 | text ppl 297.3736 | rating loss 1.3531 |   324/ 1292 batches
+[2022-12-13 18:38:17.90]: context ppl 633.6358 | text ppl 296.2255 | rating loss 1.3319 |   648/ 1292 batches
+[2022-12-13 18:38:56.12]: context ppl 629.3251 | text ppl 292.2106 | rating loss 1.3263 |   972/ 1292 batches
+[2022-12-13 18:39:33.76]: context ppl 630.3136 | text ppl 290.6968 | rating loss 1.3434 |  1292/ 1292 batches
+[2022-12-13 18:39:39.29]: context ppl 610.0041 | text ppl 270.6940 | rating loss 1.2847 | valid loss 6.8857 on validation
+[2022-12-13 18:39:39.88]: epoch 15
+[2022-12-13 18:40:18.30]: context ppl 630.3414 | text ppl 288.0105 | rating loss 1.3241 |   324/ 1292 batches
+[2022-12-13 18:40:56.31]: context ppl 629.0902 | text ppl 286.1376 | rating loss 1.3391 |   648/ 1292 batches
+[2022-12-13 18:41:34.35]: context ppl 628.8552 | text ppl 284.6099 | rating loss 1.3346 |   972/ 1292 batches
+[2022-12-13 18:42:11.85]: context ppl 626.8628 | text ppl 282.2667 | rating loss 1.3337 |  1292/ 1292 batches
+[2022-12-13 18:42:17.36]: context ppl 608.7072 | text ppl 263.1193 | rating loss 1.2777 | valid loss 6.8504 on validation
+[2022-12-13 18:42:17.94]: epoch 16
+[2022-12-13 18:42:56.32]: context ppl 629.0551 | text ppl 281.2846 | rating loss 1.3264 |   324/ 1292 batches
+[2022-12-13 18:43:34.36]: context ppl 627.6174 | text ppl 278.5418 | rating loss 1.3253 |   648/ 1292 batches
+[2022-12-13 18:44:12.36]: context ppl 625.6813 | text ppl 276.5824 | rating loss 1.3313 |   972/ 1292 batches
+[2022-12-13 18:44:49.88]: context ppl 623.7999 | text ppl 274.2940 | rating loss 1.3282 |  1292/ 1292 batches
+[2022-12-13 18:44:55.39]: context ppl 606.6378 | text ppl 255.8403 | rating loss 1.2726 | valid loss 6.8172 on validation
+[2022-12-13 18:44:55.91]: epoch 17
+[2022-12-13 18:45:34.33]: context ppl 625.9248 | text ppl 272.9059 | rating loss 1.3311 |   324/ 1292 batches
+[2022-12-13 18:46:12.39]: context ppl 624.2106 | text ppl 271.5813 | rating loss 1.3250 |   648/ 1292 batches
+[2022-12-13 18:46:50.44]: context ppl 624.3501 | text ppl 270.1998 | rating loss 1.3208 |   972/ 1292 batches
+[2022-12-13 18:47:27.91]: context ppl 625.1746 | text ppl 269.1173 | rating loss 1.3144 |  1292/ 1292 batches
+[2022-12-13 18:47:33.42]: context ppl 605.6959 | text ppl 249.7372 | rating loss 1.2668 | valid loss 6.7872 on validation
+[2022-12-13 18:47:34.00]: epoch 18
+[2022-12-13 18:48:12.39]: context ppl 625.0622 | text ppl 267.8891 | rating loss 1.3117 |   324/ 1292 batches
+[2022-12-13 18:48:50.41]: context ppl 625.4864 | text ppl 266.6132 | rating loss 1.3191 |   648/ 1292 batches
+[2022-12-13 18:49:28.43]: context ppl 621.7297 | text ppl 263.1534 | rating loss 1.3191 |   972/ 1292 batches
+[2022-12-13 18:50:05.93]: context ppl 620.5495 | text ppl 261.4921 | rating loss 1.3147 |  1292/ 1292 batches
+[2022-12-13 18:50:11.43]: context ppl 604.6405 | text ppl 244.5437 | rating loss 1.2658 | valid loss 6.7652 on validation
+[2022-12-13 18:50:12.01]: epoch 19
+[2022-12-13 18:50:50.42]: context ppl 620.5027 | text ppl 260.6376 | rating loss 1.3163 |   324/ 1292 batches
+[2022-12-13 18:51:28.45]: context ppl 620.5477 | text ppl 258.6654 | rating loss 1.3124 |   648/ 1292 batches
+[2022-12-13 18:52:06.52]: context ppl 623.4829 | text ppl 260.2614 | rating loss 1.3013 |   972/ 1292 batches
+[2022-12-13 18:52:44.01]: context ppl 621.4930 | text ppl 257.5821 | rating loss 1.3233 |  1292/ 1292 batches
+[2022-12-13 18:52:49.53]: context ppl 603.6005 | text ppl 239.3176 | rating loss 1.2677 | valid loss 6.7455 on validation
+[2022-12-13 18:52:50.11]: epoch 20
+[2022-12-13 18:53:28.53]: context ppl 621.5288 | text ppl 256.3305 | rating loss 1.3123 |   324/ 1292 batches
+[2022-12-13 18:54:06.82]: context ppl 620.2254 | text ppl 254.7573 | rating loss 1.3141 |   648/ 1292 batches
+[2022-12-13 18:54:44.94]: context ppl 618.2689 | text ppl 252.7914 | rating loss 1.3052 |   972/ 1292 batches
+[2022-12-13 18:55:22.49]: context ppl 620.1517 | text ppl 252.3014 | rating loss 1.3111 |  1292/ 1292 batches
+[2022-12-13 18:55:28.01]: context ppl 602.3623 | text ppl 233.9362 | rating loss 1.2524 | valid loss 6.7075 on validation
+[2022-12-13 18:55:28.71]: epoch 21
+[2022-12-13 18:56:07.09]: context ppl 618.3860 | text ppl 250.0497 | rating loss 1.3017 |   324/ 1292 batches
+[2022-12-13 18:56:45.13]: context ppl 618.5523 | text ppl 250.1341 | rating loss 1.3097 |   648/ 1292 batches
+[2022-12-13 18:57:23.19]: context ppl 618.9526 | text ppl 248.7439 | rating loss 1.2982 |   972/ 1292 batches
+[2022-12-13 18:58:00.66]: context ppl 618.7511 | text ppl 247.6274 | rating loss 1.3163 |  1292/ 1292 batches
+[2022-12-13 18:58:06.20]: context ppl 601.9054 | text ppl 229.6910 | rating loss 1.2572 | valid loss 6.6940 on validation
+[2022-12-13 18:58:06.79]: epoch 22
+[2022-12-13 18:58:45.16]: context ppl 620.3929 | text ppl 246.7124 | rating loss 1.3015 |   324/ 1292 batches
+[2022-12-13 18:59:23.18]: context ppl 615.6292 | text ppl 244.5170 | rating loss 1.3094 |   648/ 1292 batches
+[2022-12-13 19:00:01.22]: context ppl 616.7747 | text ppl 244.0693 | rating loss 1.2987 |   972/ 1292 batches
+[2022-12-13 19:00:38.74]: context ppl 616.3659 | text ppl 243.0121 | rating loss 1.3033 |  1292/ 1292 batches
+[2022-12-13 19:00:44.27]: context ppl 600.6100 | text ppl 224.8414 | rating loss 1.2565 | valid loss 6.6719 on validation
+[2022-12-13 19:00:44.84]: epoch 23
+[2022-12-13 19:01:23.31]: context ppl 616.6015 | text ppl 241.5566 | rating loss 1.2976 |   324/ 1292 batches
+[2022-12-13 19:02:01.50]: context ppl 615.9298 | text ppl 240.4627 | rating loss 1.2963 |   648/ 1292 batches
+[2022-12-13 19:02:39.70]: context ppl 614.8870 | text ppl 238.9964 | rating loss 1.3152 |   972/ 1292 batches
+[2022-12-13 19:03:17.32]: context ppl 617.1449 | text ppl 238.9768 | rating loss 1.2940 |  1292/ 1292 batches
+[2022-12-13 19:03:22.85]: context ppl 599.8053 | text ppl 220.6527 | rating loss 1.2507 | valid loss 6.6473 on validation
+[2022-12-13 19:03:23.42]: epoch 24
+[2022-12-13 19:04:01.85]: context ppl 615.5250 | text ppl 237.6093 | rating loss 1.2928 |   324/ 1292 batches
+[2022-12-13 19:04:39.86]: context ppl 614.8465 | text ppl 236.2168 | rating loss 1.3032 |   648/ 1292 batches
+[2022-12-13 19:05:17.90]: context ppl 615.6145 | text ppl 235.6654 | rating loss 1.2939 |   972/ 1292 batches
+[2022-12-13 19:05:55.37]: context ppl 613.8480 | text ppl 232.9328 | rating loss 1.3037 |  1292/ 1292 batches
+[2022-12-13 19:06:00.88]: context ppl 599.7080 | text ppl 217.3101 | rating loss 1.2563 | valid loss 6.6376 on validation
+[2022-12-13 19:06:01.44]: epoch 25
+[2022-12-13 19:06:39.85]: context ppl 613.3891 | text ppl 232.6991 | rating loss 1.2892 |   324/ 1292 batches
+[2022-12-13 19:07:17.85]: context ppl 616.3647 | text ppl 233.4150 | rating loss 1.2922 |   648/ 1292 batches
+[2022-12-13 19:07:55.87]: context ppl 613.4881 | text ppl 230.9543 | rating loss 1.2985 |   972/ 1292 batches
+[2022-12-13 19:08:33.33]: context ppl 612.7792 | text ppl 228.8540 | rating loss 1.3027 |  1292/ 1292 batches
+[2022-12-13 19:08:38.84]: context ppl 598.5959 | text ppl 212.4503 | rating loss 1.3091 | valid loss 6.6678 on validation
+[2022-12-13 19:08:38.84]: Endured 1 time(s)
+[2022-12-13 19:08:38.84]: Learning rate set to 0.00250000
+[2022-12-13 19:08:38.84]: epoch 26
+[2022-12-13 19:09:17.22]: context ppl 614.0868 | text ppl 229.5254 | rating loss 1.2972 |   324/ 1292 batches
+[2022-12-13 19:09:55.22]: context ppl 609.2347 | text ppl 227.1642 | rating loss 1.3024 |   648/ 1292 batches
+[2022-12-13 19:10:33.24]: context ppl 616.7136 | text ppl 230.0332 | rating loss 1.2858 |   972/ 1292 batches
+[2022-12-13 19:11:10.64]: context ppl 611.7790 | text ppl 228.0621 | rating loss 1.2951 |  1292/ 1292 batches
+[2022-12-13 19:11:16.15]: context ppl 598.4391 | text ppl 211.5286 | rating loss 1.2446 | valid loss 6.5990 on validation
+[2022-12-13 19:11:16.70]: epoch 27
+[2022-12-13 19:11:55.10]: context ppl 611.6223 | text ppl 226.8008 | rating loss 1.2969 |   324/ 1292 batches
+[2022-12-13 19:12:33.10]: context ppl 612.7568 | text ppl 227.6130 | rating loss 1.3009 |   648/ 1292 batches
+[2022-12-13 19:13:11.18]: context ppl 616.7091 | text ppl 229.7536 | rating loss 1.2880 |   972/ 1292 batches
+[2022-12-13 19:13:49.02]: context ppl 609.5370 | text ppl 225.6931 | rating loss 1.2860 |  1292/ 1292 batches
+[2022-12-13 19:13:54.54]: context ppl 598.5104 | text ppl 210.4839 | rating loss 1.2457 | valid loss 6.5951 on validation
+[2022-12-13 19:13:55.07]: epoch 28
+[2022-12-13 19:14:33.49]: context ppl 612.5049 | text ppl 227.0704 | rating loss 1.2878 |   324/ 1292 batches
+[2022-12-13 19:15:11.90]: context ppl 612.8417 | text ppl 226.7624 | rating loss 1.2986 |   648/ 1292 batches
+[2022-12-13 19:15:51.13]: context ppl 613.2421 | text ppl 226.3234 | rating loss 1.2973 |   972/ 1292 batches
+[2022-12-13 19:16:30.23]: context ppl 611.3937 | text ppl 225.4203 | rating loss 1.2900 |  1292/ 1292 batches
+[2022-12-13 19:16:35.82]: context ppl 598.0822 | text ppl 209.3060 | rating loss 1.2454 | valid loss 6.5891 on validation
+[2022-12-13 19:16:36.36]: epoch 29
+[2022-12-13 19:17:16.63]: context ppl 612.8061 | text ppl 225.7976 | rating loss 1.2876 |   324/ 1292 batches
+[2022-12-13 19:17:56.49]: context ppl 610.8321 | text ppl 225.0383 | rating loss 1.2890 |   648/ 1292 batches
+[2022-12-13 19:18:36.34]: context ppl 612.1656 | text ppl 225.3464 | rating loss 1.2897 |   972/ 1292 batches
+[2022-12-13 19:19:14.90]: context ppl 612.7486 | text ppl 225.1834 | rating loss 1.3023 |  1292/ 1292 batches
+[2022-12-13 19:19:20.48]: context ppl 598.0307 | text ppl 208.3530 | rating loss 1.2472 | valid loss 6.5864 on validation
+[2022-12-13 19:19:21.04]: epoch 30
+[2022-12-13 19:20:00.88]: context ppl 608.7992 | text ppl 222.9426 | rating loss 1.3002 |   324/ 1292 batches
+[2022-12-13 19:20:40.84]: context ppl 613.2524 | text ppl 225.3184 | rating loss 1.2848 |   648/ 1292 batches
+[2022-12-13 19:21:20.08]: context ppl 613.3731 | text ppl 224.6035 | rating loss 1.2881 |   972/ 1292 batches
+[2022-12-13 19:21:59.12]: context ppl 612.1270 | text ppl 224.3484 | rating loss 1.2955 |  1292/ 1292 batches
+[2022-12-13 19:22:04.68]: context ppl 597.9967 | text ppl 207.2455 | rating loss 1.2478 | valid loss 6.5817 on validation
+[2022-12-13 19:22:05.25]: epoch 31
+[2022-12-13 19:22:45.22]: context ppl 610.6087 | text ppl 223.5292 | rating loss 1.2947 |   324/ 1292 batches
+[2022-12-13 19:23:24.91]: context ppl 613.9063 | text ppl 224.4742 | rating loss 1.2919 |   648/ 1292 batches
+[2022-12-13 19:24:04.04]: context ppl 613.8365 | text ppl 223.7745 | rating loss 1.2868 |   972/ 1292 batches
+[2022-12-13 19:24:42.95]: context ppl 608.6143 | text ppl 221.2566 | rating loss 1.2951 |  1292/ 1292 batches
+[2022-12-13 19:24:48.58]: context ppl 597.7193 | text ppl 206.3623 | rating loss 1.2410 | valid loss 6.5707 on validation
+[2022-12-13 19:24:49.13]: epoch 32
+[2022-12-13 19:25:28.74]: context ppl 612.3680 | text ppl 223.4714 | rating loss 1.2859 |   324/ 1292 batches
+[2022-12-13 19:26:07.52]: context ppl 608.4779 | text ppl 221.2562 | rating loss 1.3027 |   648/ 1292 batches
+[2022-12-13 19:26:47.52]: context ppl 614.0511 | text ppl 222.8498 | rating loss 1.2928 |   972/ 1292 batches
+[2022-12-13 19:27:27.06]: context ppl 611.2017 | text ppl 221.5903 | rating loss 1.2848 |  1292/ 1292 batches
+[2022-12-13 19:27:32.64]: context ppl 597.7833 | text ppl 205.2997 | rating loss 1.2403 | valid loss 6.5648 on validation
+[2022-12-13 19:27:33.17]: epoch 33
+[2022-12-13 19:28:13.27]: context ppl 610.5274 | text ppl 220.7471 | rating loss 1.2865 |   324/ 1292 batches
+[2022-12-13 19:28:53.28]: context ppl 612.4853 | text ppl 221.7946 | rating loss 1.2852 |   648/ 1292 batches
+[2022-12-13 19:29:33.15]: context ppl 610.2315 | text ppl 220.8523 | rating loss 1.2992 |   972/ 1292 batches
+[2022-12-13 19:30:12.71]: context ppl 612.0243 | text ppl 221.6258 | rating loss 1.2914 |  1292/ 1292 batches
+[2022-12-13 19:30:18.28]: context ppl 597.1950 | text ppl 203.9890 | rating loss 1.2415 | valid loss 6.5595 on validation
+[2022-12-13 19:30:18.82]: epoch 34
+[2022-12-13 19:30:59.40]: context ppl 612.5261 | text ppl 221.2734 | rating loss 1.2791 |   324/ 1292 batches
+[2022-12-13 19:31:39.62]: context ppl 612.6397 | text ppl 220.8011 | rating loss 1.2978 |   648/ 1292 batches
+[2022-12-13 19:32:19.72]: context ppl 610.7886 | text ppl 220.2358 | rating loss 1.2899 |   972/ 1292 batches
+[2022-12-13 19:32:58.98]: context ppl 608.5690 | text ppl 218.2407 | rating loss 1.2908 |  1292/ 1292 batches
+[2022-12-13 19:33:04.59]: context ppl 597.0992 | text ppl 203.2369 | rating loss 1.2408 | valid loss 6.5552 on validation
+[2022-12-13 19:33:05.16]: epoch 35
+[2022-12-13 19:33:45.16]: context ppl 612.8183 | text ppl 220.4951 | rating loss 1.2840 |   324/ 1292 batches
+[2022-12-13 19:34:25.15]: context ppl 612.0416 | text ppl 219.7412 | rating loss 1.2922 |   648/ 1292 batches
+[2022-12-13 19:35:04.67]: context ppl 610.0065 | text ppl 218.5216 | rating loss 1.2870 |   972/ 1292 batches
+[2022-12-13 19:35:43.66]: context ppl 608.9978 | text ppl 217.9942 | rating loss 1.2941 |  1292/ 1292 batches
+[2022-12-13 19:35:49.22]: context ppl 597.3002 | text ppl 202.2754 | rating loss 1.2506 | valid loss 6.5603 on validation
+[2022-12-13 19:35:49.22]: Endured 2 time(s)
+[2022-12-13 19:35:49.22]: Learning rate set to 0.00062500
+[2022-12-13 19:35:49.22]: epoch 36
+[2022-12-13 19:36:28.88]: context ppl 611.6064 | text ppl 219.3221 | rating loss 1.2891 |   324/ 1292 batches
+[2022-12-13 19:37:08.45]: context ppl 610.3610 | text ppl 218.8866 | rating loss 1.2914 |   648/ 1292 batches
+[2022-12-13 19:37:48.18]: context ppl 608.8475 | text ppl 217.3475 | rating loss 1.2952 |   972/ 1292 batches
+[2022-12-13 19:38:27.46]: context ppl 610.8962 | text ppl 218.6193 | rating loss 1.2802 |  1292/ 1292 batches
+[2022-12-13 19:38:33.05]: context ppl 596.9550 | text ppl 201.8583 | rating loss 1.2434 | valid loss 6.5509 on validation
+[2022-12-13 19:38:33.61]: epoch 37
+[2022-12-13 19:39:13.74]: context ppl 614.4182 | text ppl 220.2703 | rating loss 1.2873 |   324/ 1292 batches
+[2022-12-13 19:39:53.78]: context ppl 606.5399 | text ppl 216.6208 | rating loss 1.2797 |   648/ 1292 batches
+[2022-12-13 19:40:33.39]: context ppl 608.8402 | text ppl 217.6502 | rating loss 1.3054 |   972/ 1292 batches
+[2022-12-13 19:41:12.48]: context ppl 611.6791 | text ppl 218.3992 | rating loss 1.2869 |  1292/ 1292 batches
+[2022-12-13 19:41:18.09]: context ppl 596.9280 | text ppl 201.6330 | rating loss 1.2427 | valid loss 6.5491 on validation
+[2022-12-13 19:41:18.63]: epoch 38
+[2022-12-13 19:41:58.78]: context ppl 610.7272 | text ppl 218.3375 | rating loss 1.2891 |   324/ 1292 batches
+[2022-12-13 19:42:38.24]: context ppl 610.3036 | text ppl 217.6303 | rating loss 1.2911 |   648/ 1292 batches
+[2022-12-13 19:43:17.06]: context ppl 609.9012 | text ppl 217.7100 | rating loss 1.2971 |   972/ 1292 batches
+[2022-12-13 19:43:55.77]: context ppl 611.1821 | text ppl 218.3413 | rating loss 1.2820 |  1292/ 1292 batches
+[2022-12-13 19:44:01.34]: context ppl 596.9227 | text ppl 201.4588 | rating loss 1.2436 | valid loss 6.5492 on validation
+[2022-12-13 19:44:01.34]: Endured 3 time(s)
+[2022-12-13 19:44:01.34]: Learning rate set to 0.00015625
+[2022-12-13 19:44:01.34]: epoch 39
+[2022-12-13 19:44:41.15]: context ppl 609.6981 | text ppl 217.6712 | rating loss 1.2927 |   324/ 1292 batches
+[2022-12-13 19:45:21.19]: context ppl 614.4375 | text ppl 219.4849 | rating loss 1.2868 |   648/ 1292 batches
+[2022-12-13 19:46:00.94]: context ppl 606.8047 | text ppl 216.3267 | rating loss 1.2948 |   972/ 1292 batches
+[2022-12-13 19:46:40.33]: context ppl 610.2096 | text ppl 217.7577 | rating loss 1.2830 |  1292/ 1292 batches
+[2022-12-13 19:46:45.89]: context ppl 596.9070 | text ppl 201.3581 | rating loss 1.2433 | valid loss 6.5484 on validation
+[2022-12-13 19:46:46.45]: epoch 40
+[2022-12-13 19:47:26.23]: context ppl 609.9903 | text ppl 217.1140 | rating loss 1.2832 |   324/ 1292 batches
+[2022-12-13 19:48:05.87]: context ppl 610.3827 | text ppl 218.0281 | rating loss 1.2903 |   648/ 1292 batches
+[2022-12-13 19:48:45.98]: context ppl 609.6051 | text ppl 216.8355 | rating loss 1.2906 |   972/ 1292 batches
+[2022-12-13 19:49:25.58]: context ppl 612.1884 | text ppl 218.9189 | rating loss 1.2905 |  1292/ 1292 batches
+[2022-12-13 19:49:31.15]: context ppl 596.8736 | text ppl 201.2755 | rating loss 1.2435 | valid loss 6.5482 on validation
+[2022-12-13 19:49:31.71]: epoch 41
+[2022-12-13 19:50:11.39]: context ppl 610.1263 | text ppl 217.3398 | rating loss 1.2840 |   324/ 1292 batches
+[2022-12-13 19:50:51.12]: context ppl 610.9441 | text ppl 217.8746 | rating loss 1.2887 |   648/ 1292 batches
+[2022-12-13 19:51:30.98]: context ppl 607.4600 | text ppl 216.7509 | rating loss 1.2884 |   972/ 1292 batches
+[2022-12-13 19:52:10.16]: context ppl 613.3197 | text ppl 219.0918 | rating loss 1.2908 |  1292/ 1292 batches
+[2022-12-13 19:52:15.74]: context ppl 596.8737 | text ppl 201.2281 | rating loss 1.2446 | valid loss 6.5490 on validation
+[2022-12-13 19:52:15.74]: Endured 4 time(s)
+[2022-12-13 19:52:15.74]: Learning rate set to 0.00003906
+[2022-12-13 19:52:15.74]: epoch 42
+[2022-12-13 19:52:55.59]: context ppl 611.2700 | text ppl 218.0508 | rating loss 1.2930 |   324/ 1292 batches
+[2022-12-13 19:53:35.48]: context ppl 609.0986 | text ppl 217.3803 | rating loss 1.2869 |   648/ 1292 batches
+[2022-12-13 19:54:15.21]: context ppl 610.9645 | text ppl 217.7744 | rating loss 1.2840 |   972/ 1292 batches
+[2022-12-13 19:54:54.64]: context ppl 610.2431 | text ppl 217.6015 | rating loss 1.2900 |  1292/ 1292 batches
+[2022-12-13 19:55:00.25]: context ppl 596.8821 | text ppl 201.2260 | rating loss 1.2432 | valid loss 6.5476 on validation
+[2022-12-13 19:55:00.76]: epoch 43
+[2022-12-13 19:55:41.35]: context ppl 607.9776 | text ppl 216.4547 | rating loss 1.2854 |   324/ 1292 batches
+[2022-12-13 19:56:21.52]: context ppl 611.5738 | text ppl 218.2590 | rating loss 1.2948 |   648/ 1292 batches
+[2022-12-13 19:57:01.49]: context ppl 611.9998 | text ppl 218.8066 | rating loss 1.2893 |   972/ 1292 batches
+[2022-12-13 19:57:40.49]: context ppl 609.9402 | text ppl 217.4214 | rating loss 1.2918 |  1292/ 1292 batches
+[2022-12-13 19:57:46.03]: context ppl 596.8709 | text ppl 201.2014 | rating loss 1.2433 | valid loss 6.5476 on validation
+[2022-12-13 19:57:46.56]: epoch 44
+[2022-12-13 19:58:26.38]: context ppl 611.0941 | text ppl 217.4980 | rating loss 1.2926 |   324/ 1292 batches
+[2022-12-13 19:59:06.35]: context ppl 611.1937 | text ppl 218.3828 | rating loss 1.2916 |   648/ 1292 batches
+[2022-12-13 19:59:46.44]: context ppl 610.4938 | text ppl 217.8913 | rating loss 1.2877 |   972/ 1292 batches
+[2022-12-13 20:00:25.63]: context ppl 608.7907 | text ppl 216.8699 | rating loss 1.2833 |  1292/ 1292 batches
+[2022-12-13 20:00:31.21]: context ppl 596.8689 | text ppl 201.1958 | rating loss 1.2434 | valid loss 6.5477 on validation
+[2022-12-13 20:00:31.21]: Endured 5 time(s)
+[2022-12-13 20:00:31.21]: Learning rate set to 0.00000977
+[2022-12-13 20:00:31.21]: epoch 45
+[2022-12-13 20:01:11.72]: context ppl 610.2222 | text ppl 216.6972 | rating loss 1.2933 |   324/ 1292 batches
+[2022-12-13 20:01:51.49]: context ppl 608.6611 | text ppl 217.0985 | rating loss 1.2875 |   648/ 1292 batches
+[2022-12-13 20:02:30.89]: context ppl 611.5218 | text ppl 218.5320 | rating loss 1.2829 |   972/ 1292 batches
+[2022-12-13 20:03:10.27]: context ppl 610.8261 | text ppl 218.1548 | rating loss 1.2897 |  1292/ 1292 batches
+[2022-12-13 20:03:15.84]: context ppl 596.8689 | text ppl 201.1897 | rating loss 1.2434 | valid loss 6.5476 on validation
+[2022-12-13 20:03:15.84]: Endured 6 time(s)
+[2022-12-13 20:03:15.84]: Learning rate set to 0.00000244
+[2022-12-13 20:03:15.84]: epoch 46
+[2022-12-13 20:03:55.91]: context ppl 611.9013 | text ppl 218.0340 | rating loss 1.2817 |   324/ 1292 batches
+[2022-12-13 20:04:35.67]: context ppl 611.5141 | text ppl 218.3776 | rating loss 1.2870 |   648/ 1292 batches
+[2022-12-13 20:05:15.59]: context ppl 609.9056 | text ppl 217.9739 | rating loss 1.2954 |   972/ 1292 batches
+[2022-12-13 20:05:53.87]: context ppl 608.1796 | text ppl 216.2087 | rating loss 1.2905 |  1292/ 1292 batches
+[2022-12-13 20:05:59.42]: context ppl 596.8686 | text ppl 201.1887 | rating loss 1.2434 | valid loss 6.5476 on validation
+[2022-12-13 20:05:59.42]: Endured 7 time(s)
+[2022-12-13 20:05:59.42]: Learning rate set to 0.00000061
+[2022-12-13 20:05:59.42]: epoch 47
+[2022-12-13 20:06:39.39]: context ppl 613.3837 | text ppl 219.4575 | rating loss 1.2879 |   324/ 1292 batches
+[2022-12-13 20:07:19.03]: context ppl 609.8702 | text ppl 217.2801 | rating loss 1.2841 |   648/ 1292 batches
+[2022-12-13 20:07:57.99]: context ppl 607.6171 | text ppl 215.7002 | rating loss 1.2866 |   972/ 1292 batches
+[2022-12-13 20:08:36.60]: context ppl 610.7546 | text ppl 217.9357 | rating loss 1.2989 |  1292/ 1292 batches
+[2022-12-13 20:08:42.20]: context ppl 596.8686 | text ppl 201.1886 | rating loss 1.2434 | valid loss 6.5476 on validation
+[2022-12-13 20:08:42.20]: Endured 8 time(s)
+[2022-12-13 20:08:42.20]: Learning rate set to 0.00000015
+[2022-12-13 20:08:42.20]: epoch 48
+[2022-12-13 20:09:22.37]: context ppl 609.6775 | text ppl 216.8578 | rating loss 1.2860 |   324/ 1292 batches
+[2022-12-13 20:10:02.16]: context ppl 608.9826 | text ppl 217.0527 | rating loss 1.2867 |   648/ 1292 batches
+[2022-12-13 20:10:42.21]: context ppl 612.0579 | text ppl 218.6585 | rating loss 1.2922 |   972/ 1292 batches
+[2022-12-13 20:11:21.67]: context ppl 611.1334 | text ppl 218.0132 | rating loss 1.2904 |  1292/ 1292 batches
+[2022-12-13 20:11:27.29]: context ppl 596.8686 | text ppl 201.1886 | rating loss 1.2434 | valid loss 6.5476 on validation
+[2022-12-13 20:11:27.29]: Endured 9 time(s)
+[2022-12-13 20:11:27.29]: Learning rate set to 0.00000004
+[2022-12-13 20:11:27.29]: epoch 49
+[2022-12-13 20:12:07.06]: context ppl 609.5928 | text ppl 217.7481 | rating loss 1.2822 |   324/ 1292 batches
+[2022-12-13 20:12:46.49]: context ppl 613.2089 | text ppl 219.1141 | rating loss 1.2786 |   648/ 1292 batches
+[2022-12-13 20:13:26.06]: context ppl 610.9841 | text ppl 217.8127 | rating loss 1.3016 |   972/ 1292 batches
+[2022-12-13 20:14:05.79]: context ppl 608.0330 | text ppl 216.0952 | rating loss 1.2911 |  1292/ 1292 batches
+[2022-12-13 20:14:11.39]: context ppl 596.8686 | text ppl 201.1886 | rating loss 1.2434 | valid loss 6.5476 on validation
+[2022-12-13 20:14:11.39]: Endured 10 time(s)
+[2022-12-13 20:14:11.39]: Cannot endure it anymore | Exiting from early stop
+=========================================================================================
+[2022-12-13 20:14:17.04]: context ppl 603.0116 | text ppl 203.3829 | rating loss 1.2594 on test | End of training
+[2022-12-13 20:14:17.04]: Generating text
+[2022-12-13 20:15:13.25]: RMSE  1.1218
+[2022-12-13 20:15:13.66]: MAE  0.9032
+[2022-12-13 20:15:15.97]: BLEU-1 10.1811
+[2022-12-13 20:15:21.19]: BLEU-4  0.7722
+[2022-12-13 20:15:21.34]: USR  0.0034 | USN     124
+[2022-12-13 20:19:50.34]: DIV  3.5520
+[2022-12-13 20:19:50.37]: FCR  0.0071
+[2022-12-13 20:19:50.38]: FMR  0.2113
+[2022-12-13 20:19:55.13]: rouge_1/f_score 17.4076
+[2022-12-13 20:19:55.13]: rouge_1/r_score 14.2892
+[2022-12-13 20:19:55.13]: rouge_1/p_score 25.4169
+[2022-12-13 20:19:55.13]: rouge_2/f_score  2.5758
+[2022-12-13 20:19:55.13]: rouge_2/r_score  2.2817
+[2022-12-13 20:19:55.13]: rouge_2/p_score  3.5498
+[2022-12-13 20:19:55.13]: rouge_l/f_score 12.9139
+[2022-12-13 20:19:55.13]: rouge_l/r_score 12.8279
+[2022-12-13 20:19:55.13]: rouge_l/p_score 20.6017
+[2022-12-13 20:19:55.20]: Generated text saved to (FMLPETER/output/generated_seed1234.txt)

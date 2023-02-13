@@ -1,0 +1,157 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               sawer
+dataset                                  amazon-toys
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 False
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+------------------------------------CONFIGS-------------------------------------
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+pre_train                                False
+optimizer                                SGD
+scheduler                                steplr
+warmup_epoch                             2
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+load_direct                              False
+continue_train                           False
+log_interval                             4
+vocab_size                               20000
+text_len                                 15
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 1
+item_len                                 0
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      True
+-----------------------------------ARGUMENTS------------------------------------
+[2023-02-13 00:17:08 GPU 0]: World_Size(Num GPUs): 1
+[2023-02-13 00:17:08 GPU 0]: Loading data Fold ./Data/Amazon/ToysAndGames/0
+[2023-02-13 00:17:10 GPU 0]: reviews <built-in method index of list object at 0x7f6be643f380>
+[2023-02-13 00:17:18 GPU 0]: user dict count:19412
+item dict count:11928
+word dict count:405986
+max rating:5.0
+min rating:1.0
+[2023-02-13 00:17:28 GPU 0]: text_reg:1.0, context_reg:1.0, rating_reg:0.1, item_reg:0.1
+[2023-02-13 00:17:28 GPU 0]: Device cuda
+[2023-02-13 00:17:28 GPU 0]: Loading data helper
+[2023-02-13 00:17:28 GPU 0]: Use Feature: True | src_len: 22
+[2023-02-13 00:17:28 GPU 0]: Building model SAWER on device cuda
+[2023-02-13 00:17:29 GPU 0]: Save Mask to ./SEQUER/results/MASK-SAWER_MaskBert.png
+[2023-02-13 00:17:34 GPU 0]: Epoch 0 Start
+[2023-02-13 00:17:55 GPU 0]: context ppl 717.1494 | text ppl 106.8376 | rating loss 0.9926 | seq loss 9.1207 | valid loss 824.9983 on validation
+[2023-02-13 00:17:56 GPU 0]: Epoch 0 | LR 1.0 | Num History 1 | Training snapshot saved at ./SEQUER/checkpoints/sawer_amazon-toys_0.pt
+[2023-02-13 00:17:56 GPU 0]: Epoch 0 End | Time Used: 21.92
+
+[2023-02-13 00:17:56 GPU 0]: Epoch 1 Start
+[2023-02-13 00:18:18 GPU 0]: context ppl 630.5700 | text ppl 71.9050 | rating loss 0.9952 | seq loss 8.9832 | valid loss 703.4728 on validation
+[2023-02-13 00:18:19 GPU 0]: Epoch 1 | LR 1.0 | Num History 2 | Training snapshot saved at ./SEQUER/checkpoints/sawer_amazon-toys_0.pt
+[2023-02-13 00:18:19 GPU 0]: Epoch 1 End | Time Used: 23.01
+
+[2023-02-13 00:18:19 GPU 0]: Epoch 2 Start
+[2023-02-13 00:18:41 GPU 0]: context ppl 626.2879 | text ppl 63.0033 | rating loss 1.0140 | seq loss 8.9450 | valid loss 690.2871 on validation
+[2023-02-13 00:18:41 GPU 0]: Epoch 2 | LR 1.0 | Num History 3 | Training snapshot saved at ./SEQUER/checkpoints/sawer_amazon-toys_0.pt
+[2023-02-13 00:18:41 GPU 0]: Epoch 2 End | Time Used: 22.37
+
+[2023-02-13 00:18:41 GPU 0]: Epoch 3 Start
+[2023-02-13 00:19:03 GPU 0]: context ppl 612.4182 | text ppl 57.2950 | rating loss 1.0425 | seq loss 8.9297 | valid loss 670.7105 on validation
+[2023-02-13 00:19:04 GPU 0]: Epoch 3 | LR 1.0 | Num History 4 | Training snapshot saved at ./SEQUER/checkpoints/sawer_amazon-toys_0.pt
+[2023-02-13 00:19:04 GPU 0]: Epoch 3 End | Time Used: 22.46
+
+[2023-02-13 00:19:04 GPU 0]: Epoch 4 Start
+[2023-02-13 00:19:26 GPU 0]: context ppl 608.2610 | text ppl 52.6059 | rating loss 0.9894 | seq loss 8.9212 | valid loss 661.8580 on validation
+[2023-02-13 00:19:27 GPU 0]: Epoch 4 | LR 1.0 | Num History 5 | Training snapshot saved at ./SEQUER/checkpoints/sawer_amazon-toys_0.pt
+[2023-02-13 00:19:27 GPU 0]: Epoch 4 End | Time Used: 23.02
+
+[2023-02-13 00:19:27 GPU 0]: Epoch 5 Start
+[2023-02-13 00:19:49 GPU 0]: context ppl 599.8871 | text ppl 49.4148 | rating loss 1.0379 | seq loss 8.9208 | valid loss 650.2978 on validation
+[2023-02-13 00:19:49 GPU 0]: Epoch 5 | LR 1.0 | Num History 6 | Training snapshot saved at ./SEQUER/checkpoints/sawer_amazon-toys_0.pt
+[2023-02-13 00:19:49 GPU 0]: Epoch 5 End | Time Used: 22.39
+
+[2023-02-13 00:19:49 GPU 0]: Epoch 6 Start
+[2023-02-13 00:20:11 GPU 0]: context ppl 587.6918 | text ppl 47.6423 | rating loss 1.0235 | seq loss 8.9165 | valid loss 636.3281 on validation
+[2023-02-13 00:20:11 GPU 0]: Epoch 6 | LR 1.0 | Num History 7 | Training snapshot saved at ./SEQUER/checkpoints/sawer_amazon-toys_0.pt
+[2023-02-13 00:20:11 GPU 0]: Epoch 6 End | Time Used: 22.27
+
+[2023-02-13 00:20:11 GPU 0]: Epoch 7 Start
+[2023-02-13 00:20:34 GPU 0]: context ppl 585.2053 | text ppl 46.3927 | rating loss 0.9720 | seq loss 8.9164 | valid loss 632.5868 on validation
+[2023-02-13 00:20:35 GPU 0]: Epoch 7 | LR 1.0 | Num History 8 | Training snapshot saved at ./SEQUER/checkpoints/sawer_amazon-toys_0.pt
+[2023-02-13 00:20:35 GPU 0]: Epoch 7 End | Time Used: 23.08
+
+[2023-02-13 00:20:35 GPU 0]: Epoch 8 Start
+[2023-02-13 00:20:56 GPU 0]: context ppl 586.6666 | text ppl 45.7207 | rating loss 0.9740 | seq loss 8.9180 | valid loss 633.3765 on validation
+[2023-02-13 00:20:56 GPU 0]: Endured 1 / 5 time(s) | Learning rate set to 0.25000000
+[2023-02-13 00:20:56 GPU 0]: Epoch 8 End | Time Used: 21.89
+
+[2023-02-13 00:20:56 GPU 0]: Epoch 9 Start
+[2023-02-13 00:21:18 GPU 0]: context ppl 565.8882 | text ppl 42.4689 | rating loss 0.9672 | seq loss 8.9154 | valid loss 609.3453 on validation
+[2023-02-13 00:21:19 GPU 0]: Epoch 9 | LR 0.25 | Num History 10 | Training snapshot saved at ./SEQUER/checkpoints/sawer_amazon-toys_0.pt
+[2023-02-13 00:21:19 GPU 0]: Epoch 9 End | Time Used: 22.51
+
+[2023-02-13 00:21:19 GPU 0]: Epoch 10 Start
+[2023-02-13 00:21:42 GPU 0]: context ppl 566.4752 | text ppl 42.1486 | rating loss 0.9668 | seq loss 8.9157 | valid loss 609.6120 on validation
+[2023-02-13 00:21:42 GPU 0]: Endured 2 / 5 time(s) | Learning rate set to 0.06250000
+[2023-02-13 00:21:42 GPU 0]: Epoch 10 End | Time Used: 22.56
+
+[2023-02-13 00:21:42 GPU 0]: Epoch 11 Start
+[2023-02-13 00:22:03 GPU 0]: context ppl 568.5118 | text ppl 41.8712 | rating loss 0.9714 | seq loss 8.9170 | valid loss 611.3719 on validation
+[2023-02-13 00:22:03 GPU 0]: Endured 3 / 5 time(s) | Learning rate set to 0.01562500
+[2023-02-13 00:22:03 GPU 0]: Epoch 11 End | Time Used: 21.96
+
+[2023-02-13 00:22:03 GPU 0]: Epoch 12 Start
+[2023-02-13 00:22:25 GPU 0]: context ppl 568.9252 | text ppl 41.8512 | rating loss 0.9695 | seq loss 8.9175 | valid loss 611.7650 on validation
+[2023-02-13 00:22:25 GPU 0]: Endured 4 / 5 time(s) | Learning rate set to 0.00390625
+[2023-02-13 00:22:25 GPU 0]: Epoch 12 End | Time Used: 21.94
+
+[2023-02-13 00:22:25 GPU 0]: Epoch 13 Start
+[2023-02-13 00:22:48 GPU 0]: context ppl 568.5780 | text ppl 41.8511 | rating loss 0.9697 | seq loss 8.9172 | valid loss 611.4178 on validation
+[2023-02-13 00:22:48 GPU 0]: Endured 5 / 5 time(s)| Cannot endure it anymore | Exiting from early stop
+[2023-02-13 00:22:48 GPU 0]: Epoch 13 End | Time Used: 22.58
+
+[2023-02-13 00:22:48 GPU 0]: Training Finished | Time Used: 313.97
+--------------------------------------------------------------------------------
+[2023-02-13 00:22:48 GPU 0]: Building model SAWER on device cuda
+[2023-02-13 00:22:49 GPU 0]: Save Mask to ./SEQUER/results/MASK-SAWER_MaskBert.png
+[2023-02-13 00:22:50 GPU 0]: Resuming training from snapshot at Epoch 9, Num History 10
+=========================================================================================
+[2023-02-13 00:22:50 GPU 0]: context ppl 566.7072 | text ppl 42.9989 | rating loss 0.9349 | seq loss 8.9207 | loss 610.6917 on test |End of training
+[2023-02-13 00:22:50 GPU 0]: Generating text
+[2023-02-13 00:22:55 GPU 0]: RMSE↓  0.9669
+[2023-02-13 00:22:55 GPU 0]: MAE↓  0.7553
+[2023-02-13 00:22:55 GPU 0]: idss_predict 7581, tokens_predict 7581
+[2023-02-13 00:22:55 GPU 0]: BLEU_1↑ 16.3312
+[2023-02-13 00:22:56 GPU 0]: BLEU_4↑  2.0303
+[2023-02-13 00:22:57 GPU 0]: USR↑  0.1243 | USN↑     942
+[2023-02-13 00:23:02 GPU 0]: DIV↓  0.1226
+[2023-02-13 00:23:02 GPU 0]: FCR↑  0.0606
+[2023-02-13 00:23:02 GPU 0]: FMR↑  0.2213
+[2023-02-13 00:23:03 GPU 0]: R1_F↑ 17.3729
+[2023-02-13 00:23:03 GPU 0]: R1_R↑ 16.7150
+[2023-02-13 00:23:03 GPU 0]: R1_P↑ 19.0493
+[2023-02-13 00:23:03 GPU 0]: R2_F↑  3.2111
+[2023-02-13 00:23:03 GPU 0]: R2_R↑  3.1281
+[2023-02-13 00:23:03 GPU 0]: R2_P↑  3.6116
+[2023-02-13 00:23:03 GPU 0]: RL_F↑ 13.9936
+[2023-02-13 00:23:03 GPU 0]: RL_R↑ 14.0351
+[2023-02-13 00:23:03 GPU 0]: RL_P↑ 13.9902
+[2023-02-13 00:23:03 GPU 0]: Saved result to ./SEQUER/results/results.csv
+[2023-02-13 00:23:03 GPU 0]: Generated text saved to ./SEQUER/checkpoints/generated_amazon-toys_0_sawer.txt

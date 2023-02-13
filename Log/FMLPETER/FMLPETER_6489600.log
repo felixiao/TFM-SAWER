@@ -1,0 +1,9 @@
+FMLPETER/data/0 created
+['user', 'item', 'rating', 'predicted', 'feature', 'adj', 'text', 'sco', 'timestamp', 'hist_item', 'hist_feature', 'hist_adj', 'hist_text', 'hist_rating']
+Unique/Total User: 7506 / 441783
+Unique/Total Item: 7360 / 441783
+Index(['user', 'item', 'rating', 'predicted', 'feature', 'adj', 'text', 'sco',
+       'timestamp', 'hist_item', 'hist_feature', 'hist_adj', 'hist_text',
+       'hist_rating'],
+      dtype='object')
+Finished!

@@ -1,0 +1,91 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               peter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 False
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+------------------------------------CONFIGS-------------------------------------
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+pre_train                                False
+optimizer                                SGD
+scheduler                                steplr
+warmup_epoch                             2
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+load_direct                              True
+continue_train                           True
+log_interval                             4
+vocab_size                               20000
+text_len                                 15
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 0
+user_len                                 1
+item_len                                 1
+use_feature                              True
+seq_mode                                 0
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-15 06:18:38]: [GPU 0] World_Size(Num GPUs): 4
+[2023-01-15 06:18:38]: [GPU 0] Loading data Fold ./Data/Amazon/MoviesAndTV_New/0
+[2023-01-15 06:18:38]: [GPU 0] Init Start
+[2023-01-15 06:18:39]: [GPU 0] Init End
+[2023-01-15 06:18:39]: [GPU 0] Load Start
+[2023-01-15 06:18:41]: [GPU 0] train len:359303
+[2023-01-15 06:18:42]: [GPU 0] Load End
+[2023-01-15 06:18:44]: [GPU 0] text_reg:1.0, context_reg:1.0, rating_reg:0.1, item_reg:0.1
+[2023-01-15 06:18:44]: [GPU 0] Device cuda
+[2023-01-15 06:18:44]: [GPU 0] Loading data helper
+[2023-01-15 06:18:44]: [GPU 0] Use Feature: True | src_len: 3
+[2023-01-15 06:18:44]: [GPU 0] Building model PETER on device cuda
+[2023-01-15 06:18:46]: [GPU 0] Save Mask to ./SEQUER/results/MASK_PETER+_PMask.png
+[2023-01-15 06:18:48]: [GPU 0] Loading checkpoint from ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-15 06:18:48]: [GPU 0] Resuming training from snapshot at Epoch 58
+[2023-01-15 06:18:50]: [GPU 0] Epoch 58 Start
+[2023-01-15 06:19:18]: [GPU 0] context ppl 518.8756 | text ppl 49.9353 | rating loss 0.9625 | valid loss 568.9072 on validation
+[2023-01-15 06:19:18]: [GPU 0] Epoch 58 | LR 0.00390625 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-15 06:19:18]: [GPU 0] Epoch 58 End | Time Used: 28.58
+
+[2023-01-15 06:19:18]: [GPU 0] Epoch 59 Start
+[2023-01-15 06:19:46]: [GPU 0] context ppl 518.8797 | text ppl 49.9309 | rating loss 0.9624 | valid loss 568.9068 on validation
+[2023-01-15 06:19:47]: [GPU 0] Epoch 59 | LR 0.00390625 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-15 06:19:47]: [GPU 0] Epoch 59 End | Time Used: 28.24
+
+[2023-01-15 06:19:47]: [GPU 0] Epoch 60 Start
+[2023-01-15 06:20:15]: [GPU 0] context ppl 518.8677 | text ppl 49.9188 | rating loss 0.9623 | valid loss 568.8827 on validation
+[2023-01-15 06:20:15]: [GPU 0] Epoch 60 | LR 0.00390625 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-15 06:20:15]: [GPU 0] Epoch 60 End | Time Used: 28.40
+
+[2023-01-15 06:20:15]: [GPU 0] Epoch 61 Start
+[2023-01-15 06:20:45]: [GPU 0] context ppl 518.8081 | text ppl 49.9058 | rating loss 0.9625 | valid loss 568.8102 on validation
+[2023-01-15 06:20:45]: [GPU 0] Epoch 61 | LR 0.00390625 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-15 06:20:45]: [GPU 0] Epoch 61 End | Time Used: 30.30
+
+[2023-01-15 06:20:45]: [GPU 0] Epoch 62 Start
+[2023-01-15 06:21:13]: [GPU 0] context ppl 518.8541 | text ppl 49.9236 | rating loss 0.9625 | valid loss 568.8739 on validation
+[2023-01-15 06:21:13]: [GPU 0] Endured 1 / 5 time(s) | Learning rate set to 0.00097656
+[2023-01-15 06:21:13]: [GPU 0] Epoch 62 End | Time Used: 28.06
+
+[2023-01-15 06:21:13]: [GPU 0] Epoch 63 Start
+[2023-01-15 06:21:41]: [GPU 0] context ppl 518.7972 | text ppl 49.9104 | rating loss 0.9624 | valid loss 568.8038 on validation
+[2023-01-15 06:21:42]: [GPU 0] Epoch 63 | LR 0.0009765625 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-15 06:21:42]: [GPU 0] Epoch 63 End | Time Used: 28.42
+
+[2023-01-15 06:21:42]: [GPU 0] Epoch 64 Start

@@ -1,0 +1,43 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+log_interval                             702
+seed                                     1111
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+log_interval                             4
+vocab_size                               20000
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2022-12-31 09:20:20.47]: Loading data ./SEQUER/data/0
+[2022-12-31 09:20:20.47]: Init Start
+[2022-12-31 09:20:20.52]: Init End
+[2022-12-31 09:20:20.57]: Load Start
+train len:359303
+[2022-12-31 09:20:23.53]: Load End
+[2022-12-31 09:20:27.61]: Building model FMLPETER
+[2022-12-31 09:20:31.35]: epoch 1

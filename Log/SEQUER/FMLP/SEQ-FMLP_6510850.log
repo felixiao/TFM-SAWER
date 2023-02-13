@@ -1,0 +1,93 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+log_interval                             4
+seed                                     1111
+no_train                                 False
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+log_interval                             4
+vocab_size                               20000
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+World_Size: 4
+[2023-01-01 21:32:26.80]: Loading data ./SEQUER/data/0
+[2023-01-01 21:32:26.80]: Init Start
+[2023-01-01 21:32:26.84]: Init End
+[2023-01-01 21:32:26.89]: Load Start
+train len:359303
+[2023-01-01 21:32:29.91]: Load End
+[GPU 3] Device cuda
+[2023-01-01 21:32:33.89]:  [GPU 3] Loading data helper
+[2023-01-01 21:32:33.89]: Building model FMLPETER
+FMLP Model Load at cuda 3
+FMLPETER Mask: Len=38
+[2023-01-01 21:32:41.14]:  [GPU 3] Epoch 1
+FMLP Device cuda:3
+attn_mask: torch.Size([38, 38]) key_padding_mask: torch.Size([128, 38])
+[2023-01-01 21:32:26.80]: Loading data ./SEQUER/data/0
+[2023-01-01 21:32:26.80]: Init Start
+[2023-01-01 21:32:26.84]: Init End
+[2023-01-01 21:32:26.89]: Load Start
+train len:359303
+[2023-01-01 21:32:29.91]: Load End
+[GPU 2] Device cuda
+[2023-01-01 21:32:33.89]:  [GPU 2] Loading data helper
+[2023-01-01 21:32:33.89]: Building model FMLPETER
+FMLP Model Load at cuda 2
+FMLPETER Mask: Len=38
+[2023-01-01 21:32:41.14]:  [GPU 2] Epoch 1
+FMLP Device cuda:2
+attn_mask: torch.Size([38, 38]) key_padding_mask: torch.Size([128, 38])
+[2023-01-01 21:32:26.79]: Loading data ./SEQUER/data/0
+[2023-01-01 21:32:26.79]: Init Start
+[2023-01-01 21:32:26.83]: Init End
+[2023-01-01 21:32:26.88]: Load Start
+train len:359303
+[2023-01-01 21:32:29.97]: Load End
+[GPU 0] Device cuda
+[2023-01-01 21:32:33.80]:  [GPU 0] Loading data helper
+[2023-01-01 21:32:33.80]: Building model FMLPETER
+FMLP Model Load at cuda 0
+FMLPETER Mask: Len=38
+[2023-01-01 21:32:41.04]:  [GPU 0] Epoch 1
+FMLP Device cuda:0
+attn_mask: torch.Size([38, 38]) key_padding_mask: torch.Size([128, 38])
+[2023-01-01 21:32:26.80]: Loading data ./SEQUER/data/0
+[2023-01-01 21:32:26.80]: Init Start
+[2023-01-01 21:32:26.84]: Init End
+[2023-01-01 21:32:26.89]: Load Start
+train len:359303
+[2023-01-01 21:32:29.90]: Load End
+[GPU 1] Device cuda
+[2023-01-01 21:32:35.14]:  [GPU 1] Loading data helper
+[2023-01-01 21:32:35.14]: Building model FMLPETER
+FMLP Model Load at cuda 1
+FMLPETER Mask: Len=38
+[2023-01-01 21:32:41.04]:  [GPU 1] Epoch 1
+FMLP Device cuda:1
+attn_mask: torch.Size([38, 38]) key_padding_mask: torch.Size([128, 38])

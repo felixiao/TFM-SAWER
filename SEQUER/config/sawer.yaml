@@ -1,0 +1,33 @@
+emsize: 512
+nhead: 2
+nhid: 2048
+nlayers: 2
+dropout: 0.2
+lr: 1.0 # 1.0
+pre_train: False
+optimizer: 'SGD' # SGD, AdamW
+scheduler: 'steplr' # steplr, warmup_cos, warmup_lin
+warmup_epoch: 2
+clip_norm: 1.0 #1.0
+epochs: 100 # 100
+batch_size: 128
+load_direct: True
+continue_train: False
+log_interval: 4
+vocab_size: 20000
+text_len: 15
+endure_times: 5
+rating_reg: 0.1
+context_reg: 1.0
+text_reg: 1.0
+item_reg: 0
+hist_len: 20
+user_len: 1
+item_len: 0
+use_feature: True
+seq_mode: 2 # only the last rating 
+peter_mask: True
+seq_prediction: True
+context_prediction: True
+rating_prediction: True
+nextitem_prediction: False

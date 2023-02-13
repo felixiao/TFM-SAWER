@@ -1,0 +1,14 @@
+Dataset Name: ToysAndGames
+Cols ['user', 'item', 'timestamp', 'rating', 'text', 'sentence']
+#records 238679
+#Attr 253907
+#Feat 253907
+#Sent 253907
+#Word 3142972
+Word: ['Probably', 'best', 'at', '3-4-5', 'rather', 'than', '2', 'because', 'the', 'stickers', 'are', 'small', 'the', 'activity', 'books', 'in', 'this', 'series', 'are', 'better', 'My', '5', 'year', 'old', 'son', 'loves', 'robots', 'these', 'are', 'high', 'quality', 'for', 'the', 'price', '5', 'year', 'old', 'to', 'do', 'on', 'her', 'own', 'and', 'even', 'with', 'supervision', 'it', 'was', 'frustrating', 'The']
+Attr ['year', 'game', 'games', 'price', 'plastic']
+Feat ['old', 'great', 'great', 'worth', 'cheap']
+#attr 2236
+#feat 1349
+#user, ratio 10112 23.603540348101266
+#item, ratio 22012 10.84313101944394

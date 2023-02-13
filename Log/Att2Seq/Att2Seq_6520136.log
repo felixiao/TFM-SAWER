@@ -1,0 +1,115 @@
+----------------------------------------ARGUMENTS----------------------------------------
+data_path                                ./Data/Amazon/SportsAndOutdoors/
+index_dir                                ./Data/Amazon/SportsAndOutdoors/0/
+emsize                                   64
+nhid                                     512
+nlayers                                  2
+dropout                                  0.2
+lr                                       0.0001
+clip                                     5.0
+epochs                                   100
+batch_size                               50
+seed                                     1111
+cuda                                     True
+checkpoint                               ./Result/Amazon/SportsAndOutdoors/Att2Seq/0/
+outf                                     generated.txt
+vocab_size                               20000
+endure_times                             5
+words                                    15
+mode                                     Train+Test
+----------------------------------------ARGUMENTS----------------------------------------
+2023-01-15 07:47:25Loading data
+[2023-01-15 07:47:25]: Loading data Fold ./Data/Amazon/SportsAndOutdoors/0/
+[2023-01-15 07:47:28]: user dict count:14267
+item dict count:25259
+word dict count:36694
+max rating:5
+min rating:1
+[2023-01-15 07:47:33]: Len 111672
+[2023-01-15 07:47:34]: Len 6047
+[2023-01-15 07:47:34]: Len 6047
+2023-01-15 07:47:37epoch 1
+2023-01-15 07:48:11text ppl 409.7604 on train
+2023-01-15 07:48:11text ppl 297.7846 on validation
+2023-01-15 07:48:11epoch 2
+2023-01-15 07:48:44text ppl 230.3828 on train
+2023-01-15 07:48:45text ppl 200.3424 on validation
+2023-01-15 07:48:45epoch 3
+2023-01-15 07:49:18text ppl 161.2212 on train
+2023-01-15 07:49:18text ppl 157.7847 on validation
+2023-01-15 07:49:18epoch 4
+2023-01-15 07:49:51text ppl 131.1938 on train
+2023-01-15 07:49:52text ppl 139.9719 on validation
+2023-01-15 07:49:52epoch 5
+2023-01-15 07:50:25text ppl 114.3967 on train
+2023-01-15 07:50:26text ppl 129.7332 on validation
+2023-01-15 07:50:26epoch 6
+2023-01-15 07:50:59text ppl 102.3956 on train
+2023-01-15 07:51:00text ppl 123.1628 on validation
+2023-01-15 07:51:00epoch 7
+2023-01-15 07:51:34text ppl 92.9071 on train
+2023-01-15 07:51:34text ppl 117.9592 on validation
+2023-01-15 07:51:34epoch 8
+2023-01-15 07:52:08text ppl 85.1643 on train
+2023-01-15 07:52:08text ppl 113.9234 on validation
+2023-01-15 07:52:09epoch 9
+2023-01-15 07:52:42text ppl 78.6342 on train
+2023-01-15 07:52:42text ppl 110.6503 on validation
+2023-01-15 07:52:43epoch 10
+2023-01-15 07:53:16text ppl 73.0867 on train
+2023-01-15 07:53:17text ppl 108.0729 on validation
+2023-01-15 07:53:17epoch 11
+2023-01-15 07:53:50text ppl 68.2194 on train
+2023-01-15 07:53:51text ppl 106.5047 on validation
+2023-01-15 07:53:51epoch 12
+2023-01-15 07:54:24text ppl 63.9511 on train
+2023-01-15 07:54:25text ppl 105.2283 on validation
+2023-01-15 07:54:25epoch 13
+2023-01-15 07:54:58text ppl 60.1423 on train
+2023-01-15 07:54:59text ppl 103.9748 on validation
+2023-01-15 07:54:59epoch 14
+2023-01-15 07:55:32text ppl 56.7239 on train
+2023-01-15 07:55:33text ppl 103.4843 on validation
+2023-01-15 07:55:33epoch 15
+2023-01-15 07:56:06text ppl 53.6425 on train
+2023-01-15 07:56:07text ppl 103.1961 on validation
+2023-01-15 07:56:07epoch 16
+2023-01-15 07:56:41text ppl 50.8244 on train
+2023-01-15 07:56:41text ppl 103.3045 on validation
+2023-01-15 07:56:41Endured 1 time(s)
+2023-01-15 07:56:41epoch 17
+2023-01-15 07:57:15text ppl 48.2028 on train
+2023-01-15 07:57:15text ppl 103.5769 on validation
+2023-01-15 07:57:15Endured 2 time(s)
+2023-01-15 07:57:15epoch 18
+2023-01-15 07:57:48text ppl 45.8349 on train
+2023-01-15 07:57:49text ppl 104.3082 on validation
+2023-01-15 07:57:49Endured 3 time(s)
+2023-01-15 07:57:49epoch 19
+2023-01-15 07:58:22text ppl 43.6106 on train
+2023-01-15 07:58:23text ppl 104.7518 on validation
+2023-01-15 07:58:23Endured 4 time(s)
+2023-01-15 07:58:23epoch 20
+2023-01-15 07:58:56text ppl 41.5166 on train
+2023-01-15 07:58:57text ppl 105.5826 on validation
+2023-01-15 07:58:57Endured 5 time(s)
+2023-01-15 07:58:57Cannot endure it anymore | Exiting from early stop
+=========================================================================================
+2023-01-15 07:58:57text ppl 98.8975 | End of training
+2023-01-15 07:58:57Generating text
+2023-01-15 07:58:59BLEU-1  8.5775
+2023-01-15 07:58:59BLEU-4  0.6339
+2023-01-15 07:58:59USR  0.0318 | USN     192
+2023-01-15 07:59:04DIV  0.1860
+2023-01-15 07:59:04FCR  0.0111
+2023-01-15 07:59:04FMR  0.0000
+2023-01-15 07:59:04rouge_1/f_score 10.5695
+2023-01-15 07:59:04rouge_1/r_score  9.8884
+2023-01-15 07:59:04rouge_1/p_score 14.1433
+2023-01-15 07:59:04rouge_2/f_score  1.5240
+2023-01-15 07:59:04rouge_2/r_score  1.4624
+2023-01-15 07:59:04rouge_2/p_score  2.0558
+2023-01-15 07:59:04rouge_l/f_score  8.3436
+2023-01-15 07:59:04rouge_l/r_score  9.1708
+2023-01-15 07:59:04rouge_l/p_score 11.6340
+2023-01-15 07:59:04Generated text saved to (./Result/Amazon/SportsAndOutdoors/Att2Seq/0/generated.txt)

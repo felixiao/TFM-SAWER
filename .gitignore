@@ -1,0 +1,14 @@
+English-Jar/*
+Data/*
+Result/*
+*.pickle
+*.pkl
+.DS_Store
+PEPLER/GPT2/*
+*.pt
+__pycache__
+SEQUER/checkpoints/*
+FMLPETER/output
+FMLP/output
+*.err
+SEQUER/checkpoints/generated_amazon-movies_0_sawer.txt

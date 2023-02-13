@@ -1,0 +1,129 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+log_interval                             4
+seed                                     1111
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+log_interval                             4
+vocab_size                               20000
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2022-12-31 17:07:13.46]: Loading data ./SEQUER/data/0
+[2022-12-31 17:07:13.46]: Init Start
+[2022-12-31 17:07:13.51]: Init End
+[2022-12-31 17:07:13.55]: Load Start
+train len:359303
+[2022-12-31 17:07:16.53]: Load End
+[2022-12-31 17:07:20.55]: Building model FMLPETER
+[2022-12-31 17:07:24.43]: epoch 1
+[2022-12-31 17:10:41.07]: context ppl 621.6606 | text ppl 100.4264 | rating loss 1.4450 | valid loss 6.0544 on validation
+[2022-12-31 17:10:41.58]:  Epoch Time: 197.15183305740356
+[2022-12-31 17:10:41.58]: epoch 2
+[2022-12-31 17:13:57.03]: context ppl 621.1537 | text ppl 79.9088 | rating loss 1.4283 | valid loss 5.8092 on validation
+[2022-12-31 17:13:57.52]:  Epoch Time: 195.94033455848694
+[2022-12-31 17:13:57.52]: epoch 3
+[2022-12-31 17:17:11.24]: context ppl 603.4657 | text ppl 68.3150 | rating loss 1.4381 | valid loss 5.6622 on validation
+[2022-12-31 17:17:11.78]:  Epoch Time: 194.26162362098694
+[2022-12-31 17:17:11.78]: epoch 4
+[2022-12-31 17:20:26.14]: context ppl 618.6007 | text ppl 65.2426 | rating loss 1.4320 | valid loss 5.6101 on validation
+[2022-12-31 17:20:26.63]:  Epoch Time: 194.84669280052185
+[2022-12-31 17:20:26.63]: epoch 5
+[2022-12-31 17:23:40.07]: context ppl 600.4046 | text ppl 59.2077 | rating loss 1.4311 | valid loss 5.5122 on validation
+[2022-12-31 17:23:40.60]:  Epoch Time: 193.96741843223572
+[2022-12-31 17:23:40.60]: epoch 6
+[2022-12-31 17:26:54.86]: context ppl 600.3922 | text ppl 57.4359 | rating loss 1.4299 | valid loss 5.4806 on validation
+[2022-12-31 17:26:55.34]:  Epoch Time: 194.74425220489502
+[2022-12-31 17:26:55.34]: epoch 7
+[2022-12-31 17:30:09.31]: context ppl 601.7322 | text ppl 55.2301 | rating loss 1.4275 | valid loss 5.4390 on validation
+[2022-12-31 17:30:09.85]:  Epoch Time: 194.5142412185669
+[2022-12-31 17:30:09.85]: epoch 8
+[2022-12-31 17:33:24.84]: context ppl 599.8032 | text ppl 54.6275 | rating loss 1.4278 | valid loss 5.4283 on validation
+[2022-12-31 17:33:25.38]:  Epoch Time: 195.52887105941772
+[2022-12-31 17:33:25.38]: epoch 9
+[2022-12-31 17:36:39.09]: context ppl 600.0277 | text ppl 53.9304 | rating loss 1.4708 | valid loss 5.4585 on validation
+[2022-12-31 17:36:39.09]: Endured 1 time(s)
+[2022-12-31 17:36:39.09]: Learning rate set to 0.25000000
+[2022-12-31 17:36:39.09]:  Epoch Time: 193.70790219306946
+[2022-12-31 17:36:39.09]: epoch 10
+[2022-12-31 17:39:53.31]: context ppl 594.3393 | text ppl 49.3206 | rating loss 1.4276 | valid loss 5.3260 on validation
+[2022-12-31 17:39:53.86]:  Epoch Time: 194.76573777198792
+[2022-12-31 17:39:53.86]: epoch 11
+[2022-12-31 17:43:08.86]: context ppl 593.7061 | text ppl 49.1213 | rating loss 1.4274 | valid loss 5.3217 on validation
+[2022-12-31 17:43:09.40]:  Epoch Time: 195.5477774143219
+[2022-12-31 17:43:09.40]: epoch 12
+[2022-12-31 17:46:23.41]: context ppl 594.3896 | text ppl 48.5691 | rating loss 1.4305 | valid loss 5.3135 on validation
+[2022-12-31 17:46:23.98]:  Epoch Time: 194.57838463783264
+[2022-12-31 17:46:23.98]: epoch 13
+[2022-12-31 17:49:39.41]: context ppl 593.8652 | text ppl 48.3734 | rating loss 1.4305 | valid loss 5.3095 on validation
+[2022-12-31 17:49:39.94]:  Epoch Time: 195.9521803855896
+[2022-12-31 17:49:39.94]: epoch 14
+[2022-12-31 17:52:55.18]: context ppl 593.2656 | text ppl 48.3638 | rating loss 1.4275 | valid loss 5.3063 on validation
+[2022-12-31 17:52:55.74]:  Epoch Time: 195.80489444732666
+[2022-12-31 17:52:55.74]: epoch 15
+[2022-12-31 17:56:12.97]: context ppl 592.5655 | text ppl 48.2964 | rating loss 1.4276 | valid loss 5.3050 on validation
+[2022-12-31 17:56:13.52]:  Epoch Time: 197.77617025375366
+[2022-12-31 17:56:13.52]: epoch 16
+[2022-12-31 17:59:31.14]: context ppl 590.9526 | text ppl 48.0160 | rating loss 1.4289 | valid loss 5.3004 on validation
+[2022-12-31 17:59:31.68]:  Epoch Time: 198.16242814064026
+[2022-12-31 17:59:31.68]: epoch 17
+[2022-12-31 18:02:50.11]: context ppl 589.8923 | text ppl 47.8240 | rating loss 1.4278 | valid loss 5.2953 on validation
+[2022-12-31 18:02:50.69]:  Epoch Time: 199.01468873023987
+[2022-12-31 18:02:50.69]: epoch 18
+[2022-12-31 18:06:08.75]: context ppl 589.1297 | text ppl 47.8764 | rating loss 1.4275 | valid loss 5.2961 on validation
+[2022-12-31 18:06:08.75]: Endured 2 time(s)
+[2022-12-31 18:06:08.75]: Learning rate set to 0.06250000
+[2022-12-31 18:06:08.75]:  Epoch Time: 198.05592226982117
+[2022-12-31 18:06:08.75]: epoch 19
+[2022-12-31 18:09:27.41]: context ppl 587.9073 | text ppl 47.3150 | rating loss 1.4275 | valid loss 5.2844 on validation
+[2022-12-31 18:09:27.94]:  Epoch Time: 199.18884015083313
+[2022-12-31 18:09:27.94]: epoch 20
+[2022-12-31 18:12:46.07]: context ppl 587.3128 | text ppl 47.2288 | rating loss 1.4273 | valid loss 5.2823 on validation
+[2022-12-31 18:12:46.62]:  Epoch Time: 198.6830813884735
+[2022-12-31 18:12:46.62]: epoch 21
+[2022-12-31 18:16:05.28]: context ppl 587.1746 | text ppl 47.2452 | rating loss 1.4279 | valid loss 5.2833 on validation
+[2022-12-31 18:16:05.28]: Endured 3 time(s)
+[2022-12-31 18:16:05.28]: Learning rate set to 0.01562500
+[2022-12-31 18:16:05.28]:  Epoch Time: 198.65810775756836
+[2022-12-31 18:16:05.28]: epoch 22
+[2022-12-31 18:19:23.72]: context ppl 586.7706 | text ppl 47.1359 | rating loss 1.4273 | valid loss 5.2804 on validation
+[2022-12-31 18:19:24.23]:  Epoch Time: 198.94776344299316
+[2022-12-31 18:19:24.23]: epoch 23
+[2022-12-31 18:22:43.27]: context ppl 586.5686 | text ppl 47.1520 | rating loss 1.4273 | valid loss 5.2807 on validation
+[2022-12-31 18:22:43.27]: Endured 4 time(s)
+[2022-12-31 18:22:43.27]: Learning rate set to 0.00390625
+[2022-12-31 18:22:43.27]:  Epoch Time: 199.0467119216919
+[2022-12-31 18:22:43.27]: epoch 24
+[2022-12-31 18:26:01.42]: context ppl 586.5005 | text ppl 47.1270 | rating loss 1.4274 | valid loss 5.2802 on validation
+[2022-12-31 18:26:02.01]:  Epoch Time: 198.73410296440125
+[2022-12-31 18:26:02.01]: epoch 25
+[2022-12-31 18:29:20.13]: context ppl 586.5060 | text ppl 47.1573 | rating loss 1.4274 | valid loss 5.2809 on validation
+[2022-12-31 18:29:20.13]: Endured 5 time(s)
+[2022-12-31 18:29:20.13]: Cannot endure it anymore | Exiting from early stop
+=========================================================================================
+[2022-12-31 18:29:28.39]: context ppl 584.4426 | text ppl 47.0776 | rating loss 1.4164 on test | End of training
+[2022-12-31 18:29:28.39]: Generating text

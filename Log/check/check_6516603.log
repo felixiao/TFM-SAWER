@@ -1,0 +1,14 @@
+Dataset Name: SportsAndOutdoors
+Cols ['user', 'item', 'timestamp', 'rating', 'text', 'sentence']
+#records 350142
+#Attr 229917
+#Feat 229917
+#Sent 229917
+#Word, ratio 2516298 10.944375579013297
+Word: ['Excellent', 'product', 'excellent', 'seller', 'Great', 'product', 'at', 'a', 'great', 'price', 'This', 'band', 'is', 'high', 'quality', 'and', 'the', 'handles', 'are', 'very', 'comfortable', 'this', 'is', 'a', 'well', 'made', 'item', 'and', 'I', 'have', 'found', 'this', 'and', 'other', 'bands', 'are', 'great', 'for', 'many', 'uses', 'in', 'the', 'home', 'and', 'also', 'for', 'travel', '(where', 'taking', 'this']
+Attr ['quality', 'quality', 'ar', 'investment', 'muscles']
+Feat ['better', 'adequate', 'good', 'worth', 'back']
+#attr 2838
+#feat 1607
+#user, ratio 15100 23.188211920529803
+#item, ratio 29719 11.781755779131196

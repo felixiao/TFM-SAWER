@@ -1,0 +1,77 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 True
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+------------------------------------CONFIGS-------------------------------------
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       0.001
+optimizer                                AdamW
+clip_norm                                0
+epochs                                   50
+batch_size                               128
+continue_train                           False
+log_interval                             4
+vocab_size                               20000
+text_len                                 15
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+item_len                                 1
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-11 00:06:00]: World_Size(Num GPUs): 4
+[2023-01-11 00:06:00]: Init Start
+[2023-01-11 00:06:01]: Init End
+[2023-01-11 00:06:01]: Load Start
+[2023-01-11 00:06:03]: train len:359303
+[2023-01-11 00:06:04]: Load End
+[2023-01-11 00:06:07]: [GPU 0] Device cuda
+[2023-01-11 00:06:07]: [GPU 0] Loading data helper
+[2023-01-11 00:06:07]: [GPU 0] Use Feature: True | src_len: 22
+[2023-01-11 00:06:07]: [GPU 0] Building model FMLPETER on device cuda
+[2023-01-11 00:06:09]: [GPU 0] LOAD FLMP MODEL FMLPRec-Movie_and_TV_index-Jan-04-2023_04-12-03_max20item.pt
+[2023-01-11 00:06:12]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-11 00:06:12]: [GPU 0] Building model FMLPETER on device cuda
+[2023-01-11 00:06:14]: [GPU 0] LOAD FLMP MODEL FMLPRec-Movie_and_TV_index-Jan-04-2023_04-12-03_max20item.pt
+[2023-01-11 00:06:15]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+Resuming training from snapshot at Epoch 7
+[2023-01-11 00:06:26]: =========================================================================================
+[2023-01-11 00:06:26]: [GPU 0] context ppl 510.2769 | text ppl 50.4405 | rating loss 1.4215 on test | End of training
+[2023-01-11 00:06:26]: [GPU 0] Generating text
+[2023-01-11 00:08:08]: [GPU 0] RMSE↓  1.1879
+[2023-01-11 00:08:08]: [GPU 0] MAE↓  0.9322
+[2023-01-11 00:08:11]: [GPU 0] BLEU-1↑ 17.7620
+[2023-01-11 00:08:17]: [GPU 0] BLEU-4↑  2.4870
+[2023-01-11 00:08:32]: [GPU 0] USR↑  0.2142 | USN↑    8832
+[2023-01-11 00:13:26]: [GPU 0] DIV↓  1.2569
+[2023-01-11 00:13:27]: [GPU 0] FCR↑  0.2890
+[2023-01-11 00:13:27]: [GPU 0] FMR↑  0.7906
+[2023-01-11 00:13:33]: [GPU 0] rouge_1/f_score 25.9299
+[2023-01-11 00:13:33]: [GPU 0] rouge_1/r_score 22.8146
+[2023-01-11 00:13:33]: [GPU 0] rouge_1/p_score 35.8493
+[2023-01-11 00:13:33]: [GPU 0] rouge_2/f_score  6.3075
+[2023-01-11 00:13:33]: [GPU 0] rouge_2/r_score  5.6825
+[2023-01-11 00:13:33]: [GPU 0] rouge_2/p_score  8.8708
+[2023-01-11 00:13:33]: [GPU 0] rouge_l/f_score 19.3610
+[2023-01-11 00:13:33]: [GPU 0] rouge_l/r_score 20.3427
+[2023-01-11 00:13:33]: [GPU 0] rouge_l/p_score 29.2904

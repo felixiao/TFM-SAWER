@@ -1,0 +1,66 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+log_interval                             4
+seed                                     1111
+no_train                                 True
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+log_interval                             4
+vocab_size                               20000
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+item_len                                 1
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-03 18:03:03]: World_Size(Num GPUs): 1
+[2023-01-03 18:06:03]: [GPU 0] Device cuda
+[2023-01-03 18:06:03]: [GPU 0] Loading data helper
+[2023-01-03 18:06:03]: [GPU 0] Building model FMLPETER
+[2023-01-03 18:06:08]: Save Mask to ./SEQUER/results/mask.png
+[2023-01-03 18:06:18]: =========================================================================================
+[2023-01-03 18:06:18]: [GPU 0] context ppl 593.6209 | text ppl 52.3276 | rating loss 1.4174 on test | End of training
+[2023-01-03 18:06:18]: [GPU 0] Generating text
+[2023-01-03 18:08:03]: [GPU 0] rating shape torch.Size([41240])
+[2023-01-03 18:08:03]: [GPU 0] predicted_rating [(4.0, 3.9946670532226562), (4.0, 3.993776798248291), (5.0, 3.997023105621338), (1.0, 3.9922196865081787), (4.0, 3.995243549346924), (4.0, 3.999361991882324), (5.0, 3.9996354579925537), (4.0, 3.997316360473633), (2.0, 3.9914839267730713), (5.0, 4.001631736755371)]
+[2023-01-03 18:08:04]: [GPU 0] RMSE  1.1905
+[2023-01-03 18:08:04]: [GPU 0] MAE  0.9195
+[2023-01-03 18:08:08]: [GPU 0] BLEU-1  8.6706
+[2023-01-03 18:08:14]: [GPU 0] BLEU-4  0.2599
+[2023-01-03 18:08:17]: [GPU 0] USR  0.0546 | USN    2253
+[2023-01-03 18:13:26]: [GPU 0] DIV  1.3637
+[2023-01-03 18:13:27]: feature_coverage_ratio: len feature_batch=41240, len feature_set = 7744
+[2023-01-03 18:13:27]: [GPU 0] FCR  0.1538
+[2023-01-03 18:13:27]: [GPU 0] FMR  0.0428
+[2023-01-03 18:13:33]: [GPU 0] rouge_1/f_score 10.6645
+[2023-01-03 18:13:33]: [GPU 0] rouge_1/r_score  9.3452
+[2023-01-03 18:13:33]: [GPU 0] rouge_1/p_score 15.0015
+[2023-01-03 18:13:33]: [GPU 0] rouge_2/f_score  0.7805
+[2023-01-03 18:13:33]: [GPU 0] rouge_2/r_score  0.7633
+[2023-01-03 18:13:33]: [GPU 0] rouge_2/p_score  1.0056
+[2023-01-03 18:13:33]: [GPU 0] rouge_l/f_score  7.8120
+[2023-01-03 18:13:33]: [GPU 0] rouge_l/r_score  8.4598
+[2023-01-03 18:13:33]: [GPU 0] rouge_l/p_score 11.7417

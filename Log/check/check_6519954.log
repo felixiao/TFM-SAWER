@@ -1,0 +1,10 @@
+Dataset Name: SportsAndOutdoors
+Cols ['user', 'item', 'timestamp', 'rating', 'text', 'hist_item', 'hist_time', 'hist_item_index', 'item_index', 'user_index', 'neg_samples_index', 'neg_item_index', 'feature', 'adj', 'sco']
+#Records 229917
+#Attr 2386
+#Feat 1367
+#Sent 229917
+#Word, ratio 2576630 11.20678331745804
+#Hist, ratio 3950994 17.184436122600765
+#user, ratio 14267 16.115301044368124
+#item, ratio 25255 9.103821025539498

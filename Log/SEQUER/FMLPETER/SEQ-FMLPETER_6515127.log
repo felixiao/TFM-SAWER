@@ -1,0 +1,83 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 True
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+------------------------------------CONFIGS-------------------------------------
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       0.001
+optimizer                                AdamW
+scheduler                                warmup_cos
+warmup_epoch                             2
+clip_norm                                0
+epochs                                   50
+batch_size                               128
+continue_train                           False
+log_interval                             4
+vocab_size                               20000
+text_len                                 15
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+item_len                                 1
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-11 09:26:24]: [GPU 0] World_Size(Num GPUs): 4
+[2023-01-11 09:26:24]: [GPU 0] Loading data Fold ./Data/Amazon/MoviesAndTV_New/0
+[2023-01-11 09:26:24]: [GPU 0] Init Start
+[2023-01-11 09:26:24]: [GPU 0] Init End
+[2023-01-11 09:26:24]: [GPU 0] Load Start
+[2023-01-11 09:26:27]: [GPU 0] train len:359303
+[2023-01-11 09:26:27]: [GPU 0] Load End
+[2023-01-11 09:26:31]: [GPU 0] text_reg:1.0, context_reg:1.0, rating_reg:0.1, item_reg:0.1
+[2023-01-11 09:26:31]: [GPU 0] Device cuda
+[2023-01-11 09:26:31]: [GPU 0] Loading data helper
+[2023-01-11 09:26:31]: [GPU 0] Use Feature: True | src_len: 22
+[2023-01-11 09:26:31]: [GPU 0] Building model FMLPETER on device cuda
+[2023-01-11 09:26:32]: [GPU 0] LOAD FLMP MODEL FMLPRec-Movie_and_TV_index-Jan-04-2023_04-12-03_max20item.pt
+[2023-01-11 09:26:39]: [GPU 0] Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-11 09:26:39]: [GPU 0] Building model FMLPETER on device cuda
+[2023-01-11 09:26:41]: [GPU 0] LOAD FLMP MODEL FMLPRec-Movie_and_TV_index-Jan-04-2023_04-12-03_max20item.pt
+[2023-01-11 09:26:42]: [GPU 0] Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-11 09:26:42]: [GPU 0] Resuming training from snapshot at Epoch 9
+[2023-01-11 09:26:52]: =========================================================================================
+[2023-01-11 09:26:52]: [GPU 0] context ppl 504.5280 | text ppl 52.2026 | rating loss 1.1532 | loss 556.8460 on test |End of training
+[2023-01-11 09:26:52]: [GPU 0] Generating text
+[2023-01-11 09:28:24]: [GPU 0] RMSE↓  1.0739
+[2023-01-11 09:28:24]: [GPU 0] MAE↓  0.8289
+[2023-01-11 09:28:27]: [GPU 0] BLEU-1↑ 19.0553
+[2023-01-11 09:28:33]: [GPU 0] BLEU-4↑  2.5905
+[2023-01-11 09:28:55]: [GPU 0] USR↑  0.2691 | USN↑   11097
+[2023-01-11 09:34:02]: [GPU 0] DIV↓  1.3360
+[2023-01-11 09:34:04]: [GPU 0] FCR↑  0.3563
+[2023-01-11 09:34:04]: [GPU 0] FMR↑  0.7992
+[2023-01-11 09:34:10]: [GPU 0] R1-F↑ 26.2398
+[2023-01-11 09:34:10]: [GPU 0] R1-R↑ 23.5482
+[2023-01-11 09:34:10]: [GPU 0] R1-P↑ 35.2031
+[2023-01-11 09:34:10]: [GPU 0] R2-F↑  6.4182
+[2023-01-11 09:34:10]: [GPU 0] R2-R↑  5.9393
+[2023-01-11 09:34:10]: [GPU 0] R2-P↑  8.6791
+[2023-01-11 09:34:10]: [GPU 0] RL-F↑ 19.7514
+[2023-01-11 09:34:10]: [GPU 0] RL-R↑ 21.1503
+[2023-01-11 09:34:10]: [GPU 0] RL-P↑ 28.5832
+[2023-01-11 09:34:10]: [GPU 0] Saved result to ./SEQUER/results/results.csv
+[2023-01-11 09:34:10]: [GPU 0] Generated text saved to ./SEQUER/checkpoints/generated_amazon-movies_0_fmlpeter.txt

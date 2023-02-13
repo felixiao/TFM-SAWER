@@ -1,0 +1,127 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 False
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+------------------------------------CONFIGS-------------------------------------
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       0.001
+optimizer                                AdamW
+clip_norm                                0
+epochs                                   50
+batch_size                               128
+continue_train                           False
+log_interval                             4
+vocab_size                               20000
+text_len                                 15
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+item_len                                 1
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-09 14:08:44]: World_Size(Num GPUs): 4
+[2023-01-09 14:08:47]: Init Start
+[2023-01-09 14:08:47]: Init End
+[2023-01-09 14:08:47]: Load Start
+[2023-01-09 14:08:50]: train len:359303
+[2023-01-09 14:08:51]: Load End
+[2023-01-09 14:08:54]: [GPU 0] Device cuda
+[2023-01-09 14:08:54]: [GPU 0] Loading data helper
+[2023-01-09 14:08:54]: [GPU 0] Use Feature: True | src_len: 22
+[2023-01-09 14:08:54]: [GPU 0] Building model FMLPETER on device cuda
+[2023-01-09 14:08:56]: [GPU 0] LOAD FLMP MODEL FMLPRec-Movie_and_TV_index-Jan-04-2023_04-12-03_max20item.pt
+[2023-01-09 14:09:03]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-09 14:09:03]: [GPU 0] Epoch 0
+[2023-01-09 14:08:47]: Init Start
+[2023-01-09 14:08:47]: Init End
+[2023-01-09 14:08:47]: Load Start
+[2023-01-09 14:08:50]: train len:359303
+[2023-01-09 14:08:51]: Load End
+[2023-01-09 14:09:03]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-09 14:08:47]: Init Start
+[2023-01-09 14:08:47]: Init End
+[2023-01-09 14:08:47]: Load Start
+[2023-01-09 14:08:50]: train len:359303
+[2023-01-09 14:08:51]: Load End
+[2023-01-09 14:09:03]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-09 14:08:47]: Init Start
+[2023-01-09 14:08:47]: Init End
+[2023-01-09 14:08:47]: Load Start
+[2023-01-09 14:08:50]: train len:359303
+[2023-01-09 14:08:51]: Load End
+[2023-01-09 14:09:03]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-09 14:10:09]: [GPU 0] context ppl 619.8094 | text ppl 302.8115 | rating loss 1.4390 | valid loss 7.1521 on validation
+[2023-01-09 14:10:09]: [GPU 0] Epoch 0 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 14:10:09]: [GPU 0] Epoch 0 Time Used: 66.15
+[2023-01-09 14:10:09]: [GPU 0] Epoch 1
+[2023-01-09 14:11:15]: [GPU 0] context ppl 584.6002 | text ppl 96.9569 | rating loss 1.4733 | valid loss 6.0475 on validation
+[2023-01-09 14:11:16]: [GPU 0] Epoch 1 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 14:11:16]: [GPU 0] Epoch 1 Time Used: 66.53
+[2023-01-09 14:11:16]: [GPU 0] Epoch 2
+[2023-01-09 14:12:20]: [GPU 0] context ppl 558.8641 | text ppl 70.6236 | rating loss 1.4531 | valid loss 5.7104 on validation
+[2023-01-09 14:12:20]: [GPU 0] Epoch 2 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 14:12:20]: [GPU 0] Epoch 2 Time Used: 64.86
+[2023-01-09 14:12:20]: [GPU 0] Epoch 3
+[2023-01-09 14:13:25]: [GPU 0] context ppl 544.3720 | text ppl 60.4835 | rating loss 1.4636 | valid loss 5.5659 on validation
+[2023-01-09 14:13:25]: [GPU 0] Epoch 3 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 14:13:25]: [GPU 0] Epoch 3 Time Used: 64.90
+[2023-01-09 14:13:25]: [GPU 0] Epoch 4
+[2023-01-09 14:14:30]: [GPU 0] context ppl 533.2311 | text ppl 55.3264 | rating loss 1.4446 | valid loss 5.4579 on validation
+[2023-01-09 14:14:30]: [GPU 0] Epoch 4 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 14:14:30]: [GPU 0] Epoch 4 Time Used: 64.82
+[2023-01-09 14:14:30]: [GPU 0] Epoch 5
+[2023-01-09 14:15:35]: [GPU 0] context ppl 526.0050 | text ppl 52.9961 | rating loss 1.4487 | valid loss 5.4189 on validation
+[2023-01-09 14:15:35]: [GPU 0] Epoch 5 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 14:15:35]: [GPU 0] Epoch 5 Time Used: 64.83
+[2023-01-09 14:15:35]: [GPU 0] Epoch 6
+[2023-01-09 14:16:40]: [GPU 0] context ppl 519.5674 | text ppl 52.0481 | rating loss 1.4420 | valid loss 5.3941 on validation
+[2023-01-09 14:16:40]: [GPU 0] Epoch 6 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 14:16:40]: [GPU 0] Epoch 6 Time Used: 65.16
+[2023-01-09 14:16:40]: [GPU 0] Epoch 7
+[2023-01-09 14:17:45]: [GPU 0] context ppl 515.1078 | text ppl 51.7579 | rating loss 1.4367 | valid loss 5.3833 on validation
+[2023-01-09 14:17:45]: [GPU 0] Epoch 7 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 14:17:45]: [GPU 0] Epoch 7 Time Used: 64.97
+[2023-01-09 14:17:45]: [GPU 0] Epoch 8
+[2023-01-09 14:18:50]: [GPU 0] context ppl 511.4673 | text ppl 51.5356 | rating loss 1.4486 | valid loss 5.3909 on validation
+[2023-01-09 14:18:50]: [GPU 0] Endured 1 / 5 time(s) | Learning rate set to 0.00099331
+[2023-01-09 14:18:50]: [GPU 0] Epoch 8 Time Used: 64.45
+[2023-01-09 14:18:50]: [GPU 0] Epoch 9
+[2023-01-09 14:19:54]: [GPU 0] context ppl 509.9799 | text ppl 51.6100 | rating loss 1.4372 | valid loss 5.3809 on validation
+[2023-01-09 14:19:55]: [GPU 0] Epoch 9 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 14:19:55]: [GPU 0] Epoch 9 Time Used: 65.03
+[2023-01-09 14:19:55]: [GPU 0] Epoch 10
+[2023-01-09 14:21:00]: [GPU 0] context ppl 510.1790 | text ppl 51.9494 | rating loss 1.4349 | valid loss 5.3851 on validation
+[2023-01-09 14:21:00]: [GPU 0] Endured 2 / 5 time(s) | Learning rate set to 0.00098692
+[2023-01-09 14:21:00]: [GPU 0] Epoch 10 Time Used: 65.70
+[2023-01-09 14:21:00]: [GPU 0] Epoch 11
+[2023-01-09 14:22:05]: [GPU 0] context ppl 508.5851 | text ppl 52.0165 | rating loss 1.4406 | valid loss 5.3921 on validation
+[2023-01-09 14:22:05]: [GPU 0] Endured 3 / 5 time(s) | Learning rate set to 0.00098295
+[2023-01-09 14:22:05]: [GPU 0] Epoch 11 Time Used: 64.56
+[2023-01-09 14:22:05]: [GPU 0] Epoch 12
+[2023-01-09 14:23:09]: [GPU 0] context ppl 508.3579 | text ppl 52.8006 | rating loss 1.4375 | valid loss 5.4040 on validation
+[2023-01-09 14:23:09]: [GPU 0] Endured 4 / 5 time(s) | Learning rate set to 0.00097845
+[2023-01-09 14:23:09]: [GPU 0] Epoch 12 Time Used: 64.54
+[2023-01-09 14:23:09]: [GPU 0] Epoch 13
+[2023-01-09 14:24:14]: [GPU 0] context ppl 509.2119 | text ppl 53.4565 | rating loss 1.4365 | valid loss 5.4154 on validation
+[2023-01-09 14:24:14]: [GPU 0] Endured 5 / 5 time(s)| Cannot endure it anymore | Exiting from early stop
+{'train_context_loss': [tensor(7.0331, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.4362, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.3603, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.3124, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.2805, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.2467, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.2181, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.1972, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.1770, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.1568, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.1366, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.1255, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.1046, device='cuda:0', grad_fn=<DivBackward0>), tensor(6.0941, device='cuda:0', grad_fn=<DivBackward0>)], 'train_text_loss': [tensor(6.8028, device='cuda:0', grad_fn=<DivBackward0>), tensor(5.1321, device='cuda:0', grad_fn=<DivBackward0>), tensor(4.4812, device='cuda:0', grad_fn=<DivBackward0>), tensor(4.1807, device='cuda:0', grad_fn=<DivBackward0>), tensor(3.9906, device='cuda:0', grad_fn=<DivBackward0>), tensor(3.8479, device='cuda:0', grad_fn=<DivBackward0>), tensor(3.7476, device='cuda:0', grad_fn=<DivBackward0>), tensor(3.6772, device='cuda:0', grad_fn=<DivBackward0>), tensor(3.6203, device='cuda:0', grad_fn=<DivBackward0>), tensor(3.5704, device='cuda:0', grad_fn=<DivBackward0>), tensor(3.5227, device='cuda:0', grad_fn=<DivBackward0>), tensor(3.4902, device='cuda:0', grad_fn=<DivBackward0>), tensor(3.4556, device='cuda:0', grad_fn=<DivBackward0>), tensor(3.4291, device='cuda:0', grad_fn=<DivBackward0>)], 'train_rating_loss': [tensor(2.2687, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4268, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4283, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4276, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4286, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4180, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4170, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4252, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4304, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4338, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4221, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4176, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4046, device='cuda:0', grad_fn=<DivBackward0>), tensor(1.4150, device='cuda:0', grad_fn=<DivBackward0>)], 'train_loss': [tensor(9.0715, device='cuda:0', grad_fn=<AddBackward0>), tensor(6.5588, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.9095, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.6083, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.4192, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.2659, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.1646, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.1024, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.0507, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.0043, device='cuda:0', grad_fn=<AddBackward0>), tensor(4.9448, device='cuda:0', grad_fn=<AddBackward0>), tensor(4.9078, device='cuda:0', grad_fn=<AddBackward0>), tensor(4.8601, device='cuda:0', grad_fn=<AddBackward0>), tensor(4.8441, device='cuda:0', grad_fn=<AddBackward0>)], 'val_context_loss': [6.429411948525015, 6.37092822266365, 6.3259064040752895, 6.299632847690675, 6.278954919672613, 6.265310668852813, 6.2529965687445594, 6.244376179041155, 6.237283704815041, 6.234371227482704, 6.234761623175369, 6.231632583980764, 6.231185767861041, 6.232864172590461], 'val_text_loss': [5.713110517784881, 4.574266389408352, 4.257364572031075, 4.102369945796223, 4.013251040631654, 3.970217746814169, 3.952167389950165, 3.9465764748252328, 3.9422720476681463, 3.9437144937154507, 3.950270016926452, 3.9515617280880533, 3.966523042960033, 3.9788679625199443], 'val_rating_loss': [1.4390032341362318, 1.4732780938467622, 1.453056887488823, 1.4635777193637407, 1.4446478398995533, 1.448661406264504, 1.4419749435236104, 1.4366813415468145, 1.4486011069683515, 1.4372291076079258, 1.4348594021727805, 1.4405515357895342, 1.4374995573646923, 1.4365326790065007], 'val_loss': [7.152113751921113, 6.047544483255114, 5.710421459519898, 5.565947665159964, 5.457898880531207, 5.418879153078673, 5.394142333473775, 5.383257816372048, 5.390873154636498, 5.380943601323376, 5.385129419099233, 5.3921132638775875, 5.404022600324725, 5.415400641526445]}

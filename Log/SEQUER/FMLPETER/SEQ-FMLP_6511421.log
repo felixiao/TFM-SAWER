@@ -1,0 +1,163 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+log_interval                             4
+seed                                     1111
+no_train                                 True
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+log_interval                             4
+vocab_size                               20000
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+item_len                                 1
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-03 19:32:08]: World_Size(Num GPUs): 4
+
+[2023-01-03 19:32:11]: Init Start
+[2023-01-03 19:32:11]: Init End
+[2023-01-03 19:32:11]: Load Start
+[2023-01-03 19:32:14]: train len:359303
+[2023-01-03 19:32:16]: Load End
+[2023-01-03 19:32:20]: [GPU 2] Device cuda
+[2023-01-03 19:32:20]: [GPU 2] Loading data helper
+[2023-01-03 19:32:20]: [GPU 2] Building model FMLPETER
+[2023-01-03 19:32:26]: Save Mask to ./SEQUER/results/mask.png
+[2023-01-03 19:32:30]: =========================================================================================
+[2023-01-03 19:32:30]: [GPU 2] context ppl 595.4549 | text ppl 54.7843 | rating loss 1.4042 on test | End of training
+[2023-01-03 19:32:30]: [GPU 2] Generating text
+[2023-01-03 19:33:02]: [GPU 2] RMSE  1.1763
+[2023-01-03 19:33:02]: [GPU 2] MAE  0.9126
+[2023-01-03 19:33:03]: [GPU 2] BLEU-1  8.2634
+[2023-01-03 19:33:05]: [GPU 2] BLEU-4  0.2887
+[2023-01-03 19:33:05]: [GPU 2] USR  0.1238 | USN    1276
+[2023-01-03 19:33:24]: [GPU 2] DIV  1.3306
+[2023-01-03 19:33:24]: [GPU 2] FCR  0.1064
+[2023-01-03 19:33:24]: [GPU 2] FMR  0.0408
+[2023-01-03 19:33:25]: [GPU 2] rouge_1/f_score 10.6775
+[2023-01-03 19:33:25]: [GPU 2] rouge_1/r_score  9.2322
+[2023-01-03 19:33:25]: [GPU 2] rouge_1/p_score 15.0930
+[2023-01-03 19:33:25]: [GPU 2] rouge_2/f_score  0.7641
+[2023-01-03 19:33:25]: [GPU 2] rouge_2/r_score  0.6973
+[2023-01-03 19:33:25]: [GPU 2] rouge_2/p_score  1.0489
+[2023-01-03 19:33:25]: [GPU 2] rouge_l/f_score  8.0341
+[2023-01-03 19:33:25]: [GPU 2] rouge_l/r_score  8.4105
+[2023-01-03 19:33:25]: [GPU 2] rouge_l/p_score 12.4353
+[2023-01-03 19:33:25]: [GPU 2] Generated text saved to ./SEQUER/checkpoints/generated_amazon-movies_0_fmlpeter.txt
+
+[2023-01-03 19:32:11]: Init Start
+[2023-01-03 19:32:11]: Init End
+[2023-01-03 19:32:11]: Load Start
+[2023-01-03 19:32:14]: train len:359303
+[2023-01-03 19:32:15]: Load End
+[2023-01-03 19:32:18]: [GPU 3] Device cuda
+[2023-01-03 19:32:18]: [GPU 3] Loading data helper
+[2023-01-03 19:32:18]: [GPU 3] Building model FMLPETER
+[2023-01-03 19:32:26]: Save Mask to ./SEQUER/results/mask.png
+[2023-01-03 19:32:30]: =========================================================================================
+[2023-01-03 19:32:30]: [GPU 3] context ppl 596.2972 | text ppl 54.1697 | rating loss 1.4109 on test | End of training
+[2023-01-03 19:32:30]: [GPU 3] Generating text
+[2023-01-03 19:33:02]: [GPU 3] RMSE  1.1763
+[2023-01-03 19:33:02]: [GPU 3] MAE  0.9126
+[2023-01-03 19:33:03]: [GPU 3] BLEU-1  8.1273
+[2023-01-03 19:33:05]: [GPU 3] BLEU-4  0.2905
+[2023-01-03 19:33:05]: [GPU 3] USR  0.1245 | USN    1284
+[2023-01-03 19:33:24]: [GPU 3] DIV  1.3027
+[2023-01-03 19:33:24]: [GPU 3] FCR  0.1083
+[2023-01-03 19:33:24]: [GPU 3] FMR  0.0412
+[2023-01-03 19:33:26]: [GPU 3] rouge_1/f_score 10.4298
+[2023-01-03 19:33:26]: [GPU 3] rouge_1/r_score  9.0443
+[2023-01-03 19:33:26]: [GPU 3] rouge_1/p_score 14.7505
+[2023-01-03 19:33:26]: [GPU 3] rouge_2/f_score  0.7662
+[2023-01-03 19:33:26]: [GPU 3] rouge_2/r_score  0.6995
+[2023-01-03 19:33:26]: [GPU 3] rouge_2/p_score  1.0718
+[2023-01-03 19:33:26]: [GPU 3] rouge_l/f_score  7.8112
+[2023-01-03 19:33:26]: [GPU 3] rouge_l/r_score  8.1993
+[2023-01-03 19:33:26]: [GPU 3] rouge_l/p_score 12.1638
+[2023-01-03 19:33:26]: [GPU 3] Generated text saved to ./SEQUER/checkpoints/generated_amazon-movies_0_fmlpeter.txt
+
+[2023-01-03 19:32:11]: Init Start
+[2023-01-03 19:32:11]: Init End
+[2023-01-03 19:32:11]: Load Start
+[2023-01-03 19:32:14]: train len:359303
+[2023-01-03 19:32:15]: Load End
+[2023-01-03 19:32:18]: [GPU 0] Device cuda
+[2023-01-03 19:32:18]: [GPU 0] Loading data helper
+[2023-01-03 19:32:18]: [GPU 0] Building model FMLPETER
+[2023-01-03 19:32:26]: Save Mask to ./SEQUER/results/mask.png
+[2023-01-03 19:32:30]: =========================================================================================
+[2023-01-03 19:32:30]: [GPU 0] context ppl 593.8344 | text ppl 54.6841 | rating loss 1.4377 on test | End of training
+[2023-01-03 19:32:30]: [GPU 0] Generating text
+[2023-01-03 19:33:02]: [GPU 0] RMSE  1.1763
+[2023-01-03 19:33:02]: [GPU 0] MAE  0.9126
+[2023-01-03 19:33:03]: [GPU 0] BLEU-1  8.2445
+[2023-01-03 19:33:05]: [GPU 0] BLEU-4  0.2661
+[2023-01-03 19:33:05]: [GPU 0] USR  0.1249 | USN    1288
+[2023-01-03 19:33:24]: [GPU 0] DIV  1.3200
+[2023-01-03 19:33:24]: [GPU 0] FCR  0.1061
+[2023-01-03 19:33:24]: [GPU 0] FMR  0.0393
+[2023-01-03 19:33:26]: [GPU 0] rouge_1/f_score 10.5641
+[2023-01-03 19:33:26]: [GPU 0] rouge_1/r_score  9.1096
+[2023-01-03 19:33:26]: [GPU 0] rouge_1/p_score 14.9929
+[2023-01-03 19:33:26]: [GPU 0] rouge_2/f_score  0.7830
+[2023-01-03 19:33:26]: [GPU 0] rouge_2/r_score  0.7078
+[2023-01-03 19:33:26]: [GPU 0] rouge_2/p_score  1.0660
+[2023-01-03 19:33:26]: [GPU 0] rouge_l/f_score  7.9261
+[2023-01-03 19:33:26]: [GPU 0] rouge_l/r_score  8.2899
+[2023-01-03 19:33:26]: [GPU 0] rouge_l/p_score 12.3070
+[2023-01-03 19:33:26]: [GPU 0] Generated text saved to ./SEQUER/checkpoints/generated_amazon-movies_0_fmlpeter.txt
+
+[2023-01-03 19:32:11]: Init Start
+[2023-01-03 19:32:11]: Init End
+[2023-01-03 19:32:11]: Load Start
+[2023-01-03 19:32:14]: train len:359303
+[2023-01-03 19:32:15]: Load End
+[2023-01-03 19:32:18]: [GPU 1] Device cuda
+[2023-01-03 19:32:18]: [GPU 1] Loading data helper
+[2023-01-03 19:32:18]: [GPU 1] Building model FMLPETER
+[2023-01-03 19:32:26]: Save Mask to ./SEQUER/results/mask.png
+[2023-01-03 19:32:30]: =========================================================================================
+[2023-01-03 19:32:30]: [GPU 1] context ppl 586.8684 | text ppl 53.3606 | rating loss 1.4139 on test | End of training
+[2023-01-03 19:32:30]: [GPU 1] Generating text
+[2023-01-03 19:33:02]: [GPU 1] RMSE  1.1763
+[2023-01-03 19:33:02]: [GPU 1] MAE  0.9126
+[2023-01-03 19:33:03]: [GPU 1] BLEU-1  8.1459
+[2023-01-03 19:33:05]: [GPU 1] BLEU-4  0.2361
+[2023-01-03 19:33:05]: [GPU 1] USR  0.1253 | USN    1292
+[2023-01-03 19:33:24]: [GPU 1] DIV  1.3077
+[2023-01-03 19:33:24]: [GPU 1] FCR  0.1101
+[2023-01-03 19:33:24]: [GPU 1] FMR  0.0405
+[2023-01-03 19:33:26]: [GPU 1] rouge_1/f_score 10.4868
+[2023-01-03 19:33:26]: [GPU 1] rouge_1/r_score  9.0330
+[2023-01-03 19:33:26]: [GPU 1] rouge_1/p_score 14.9346
+[2023-01-03 19:33:26]: [GPU 1] rouge_2/f_score  0.7516
+[2023-01-03 19:33:26]: [GPU 1] rouge_2/r_score  0.6814
+[2023-01-03 19:33:26]: [GPU 1] rouge_2/p_score  1.0404
+[2023-01-03 19:33:26]: [GPU 1] rouge_l/f_score  7.8578
+[2023-01-03 19:33:26]: [GPU 1] rouge_l/r_score  8.2087
+[2023-01-03 19:33:26]: [GPU 1] rouge_l/p_score 12.2400
+[2023-01-03 19:33:26]: [GPU 1] Generated text saved to ./SEQUER/checkpoints/generated_amazon-movies_0_fmlpeter.txt

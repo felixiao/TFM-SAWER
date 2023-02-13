@@ -1,0 +1,14 @@
+Dataset Name: SportsAndOutdoors
+Cols ['user', 'item', 'timestamp', 'rating', 'text', 'sentence']
+             user  ... sentence
+0    A1LACH6MLQWZ  ...      NaN
+1  A2LBF5LI09BS8Z  ...      NaN
+
+[2 rows x 6 columns]
+Dataset Name: MoviesAndTV_New
+Cols ['user', 'item', 'rating', 'predicted', 'feature', 'adj', 'text', 'sco', 'timestamp', 'hist_item', 'hist_feature', 'hist_adj', 'hist_text', 'hist_rating', 'user_index', 'item_index', 'hist_item_index', 'neg_samples_index', 'neg_item_index']
+                    user  ... neg_item_index
+0  A02755422E9NI29TCQ5W3  ...          [537]
+1  A02755422E9NI29TCQ5W3  ...         [4880]
+
+[2 rows x 19 columns]

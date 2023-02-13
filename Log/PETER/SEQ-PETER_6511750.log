@@ -1,0 +1,517 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               peter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 False
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+log_interval                             4
+vocab_size                               20000
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 0
+use_feature                              True
+seq_mode                                 0
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-04 02:31:41]: World_Size(Num GPUs): 4
+[2023-01-04 02:31:43]: Init Start
+[2023-01-04 02:31:43]: Init End
+[2023-01-04 02:31:43]: Load Start
+[2023-01-04 02:31:46]: train len:359303
+[2023-01-04 02:31:47]: Load End
+[2023-01-04 02:31:49]: [GPU 1] Device cuda
+[2023-01-04 02:31:49]: [GPU 1] Loading data helper
+[2023-01-04 02:31:49]: Use Feature: True | src_len: 3
+[2023-01-04 02:31:49]: [GPU 1] Building model PETER on device cuda
+[2023-01-04 02:31:51]: Save Mask to ./SEQUER/results/MASK_PETER+_PMask.png
+[2023-01-04 02:31:53]: [GPU 1] Epoch 1
+[2023-01-04 02:32:22]: [GPU 1] context ppl 782.5140 | text ppl 195.3119 | rating loss 1.5091 | valid loss 6.7837 on validation
+[2023-01-04 02:32:22]: [GPU 1] Epoch 1 Time Used: 29.21
+[2023-01-04 02:32:22]: [GPU 1] Epoch 2
+[2023-01-04 02:32:51]: [GPU 1] context ppl 664.0542 | text ppl 117.8862 | rating loss 1.4318 | valid loss 6.2015 on validation
+[2023-01-04 02:32:51]: [GPU 1] Epoch 2 Time Used: 28.97
+[2023-01-04 02:32:51]: [GPU 1] Epoch 3
+[2023-01-04 02:33:20]: [GPU 1] context ppl 612.4172 | text ppl 93.8184 | rating loss 1.4196 | valid loss 5.9609 on validation
+[2023-01-04 02:33:20]: [GPU 1] Epoch 3 Time Used: 29.47
+[2023-01-04 02:33:20]: [GPU 1] Epoch 4
+[2023-01-04 02:33:52]: [GPU 1] context ppl 644.2996 | text ppl 89.2250 | rating loss 1.4251 | valid loss 5.9162 on validation
+[2023-01-04 02:33:52]: [GPU 1] Epoch 4 Time Used: 31.58
+[2023-01-04 02:33:52]: [GPU 1] Epoch 5
+[2023-01-04 02:34:21]: [GPU 1] context ppl 593.5440 | text ppl 76.8167 | rating loss 1.3241 | valid loss 5.6655 on validation
+[2023-01-04 02:34:21]: [GPU 1] Epoch 5 Time Used: 29.28
+[2023-01-04 02:34:21]: [GPU 1] Epoch 6
+[2023-01-04 02:34:51]: [GPU 1] context ppl 604.3204 | text ppl 72.7486 | rating loss 1.2100 | valid loss 5.4970 on validation
+[2023-01-04 02:34:51]: [GPU 1] Epoch 6 Time Used: 29.67
+[2023-01-04 02:34:51]: [GPU 1] Epoch 7
+[2023-01-04 02:35:19]: [GPU 1] context ppl 570.0697 | text ppl 67.1412 | rating loss 1.1251 | valid loss 5.3319 on validation
+[2023-01-04 02:35:19]: [GPU 1] Epoch 7 Time Used: 28.49
+[2023-01-04 02:35:19]: [GPU 1] Epoch 8
+[2023-01-04 02:35:48]: [GPU 1] context ppl 580.8879 | text ppl 65.3612 | rating loss 1.1396 | valid loss 5.3195 on validation
+[2023-01-04 02:35:48]: [GPU 1] Epoch 8 Time Used: 28.39
+[2023-01-04 02:35:48]: [GPU 1] Epoch 9
+[2023-01-04 02:36:16]: [GPU 1] context ppl 562.9730 | text ppl 61.7211 | rating loss 1.1220 | valid loss 5.2446 on validation
+[2023-01-04 02:36:16]: [GPU 1] Epoch 9 Time Used: 28.44
+[2023-01-04 02:36:16]: [GPU 1] Epoch 10
+[2023-01-04 02:36:45]: [GPU 1] context ppl 560.6435 | text ppl 60.7937 | rating loss 1.0457 | valid loss 5.1532 on validation
+[2023-01-04 02:36:45]: [GPU 1] Epoch 10 Time Used: 28.43
+[2023-01-04 02:36:45]: [GPU 1] Epoch 11
+[2023-01-04 02:37:13]: [GPU 1] context ppl 556.5998 | text ppl 59.0910 | rating loss 1.0663 | valid loss 5.1454 on validation
+[2023-01-04 02:37:13]: [GPU 1] Epoch 11 Time Used: 28.41
+[2023-01-04 02:37:13]: [GPU 1] Epoch 12
+[2023-01-04 02:37:42]: [GPU 1] context ppl 543.0119 | text ppl 56.8698 | rating loss 0.9962 | valid loss 5.0370 on validation
+[2023-01-04 02:37:42]: [GPU 1] Epoch 12 Time Used: 28.45
+[2023-01-04 02:37:42]: [GPU 1] Epoch 13
+[2023-01-04 02:38:11]: [GPU 1] context ppl 541.9443 | text ppl 55.9534 | rating loss 1.0429 | valid loss 5.0674 on validation
+[2023-01-04 02:38:11]: [GPU 1] Epoch 13 Time Used: 29.81
+[2023-01-04 02:38:11]: [GPU 1] Epoch 14
+[2023-01-04 02:38:40]: [GPU 1] context ppl 533.6029 | text ppl 54.5987 | rating loss 1.0163 | valid loss 5.0163 on validation
+[2023-01-04 02:38:40]: [GPU 1] Epoch 14 Time Used: 28.91
+[2023-01-04 02:38:40]: [GPU 1] Epoch 15
+[2023-01-04 02:39:09]: [GPU 1] context ppl 536.1323 | text ppl 54.1439 | rating loss 0.9822 | valid loss 4.9738 on validation
+[2023-01-04 02:39:09]: [GPU 1] Epoch 15 Time Used: 28.99
+[2023-01-04 02:39:09]: [GPU 1] Epoch 16
+[2023-01-04 02:39:38]: [GPU 1] context ppl 526.4994 | text ppl 52.5860 | rating loss 0.9848 | valid loss 4.9472 on validation
+[2023-01-04 02:39:38]: [GPU 1] Epoch 16 Time Used: 29.03
+[2023-01-04 02:39:38]: [GPU 1] Epoch 17
+[2023-01-04 02:40:08]: [GPU 1] context ppl 530.5025 | text ppl 53.2813 | rating loss 0.9801 | valid loss 4.9557 on validation
+[2023-01-04 02:40:08]: [GPU 1] Epoch 17 Time Used: 29.57
+[2023-01-04 02:40:08]: [GPU 1] Epoch 18
+[2023-01-04 02:40:37]: [GPU 1] context ppl 520.4363 | text ppl 51.0612 | rating loss 0.9866 | valid loss 4.9196 on validation
+[2023-01-04 02:40:37]: [GPU 1] Epoch 18 Time Used: 29.45
+[2023-01-04 02:40:37]: [GPU 1] Epoch 19
+[2023-01-04 02:41:07]: [GPU 1] context ppl 517.9178 | text ppl 50.8300 | rating loss 0.9899 | valid loss 4.9184 on validation
+[2023-01-04 02:41:07]: [GPU 1] Epoch 19 Time Used: 29.60
+[2023-01-04 02:41:07]: [GPU 1] Epoch 20
+[2023-01-04 02:41:36]: [GPU 1] context ppl 514.9109 | text ppl 50.0894 | rating loss 0.9722 | valid loss 4.8860 on validation
+[2023-01-04 02:41:36]: [GPU 1] Epoch 20 Time Used: 29.43
+[2023-01-04 02:41:36]: [GPU 1] Epoch 21
+[2023-01-04 02:42:05]: [GPU 1] context ppl 511.7248 | text ppl 49.5596 | rating loss 0.9917 | valid loss 4.8948 on validation
+[2023-01-04 02:42:05]: [GPU 1] Epoch 21 Time Used: 29.05
+[2023-01-04 02:42:05]: [GPU 1] Epoch 22
+[2023-01-04 02:42:36]: [GPU 1] context ppl 509.8934 | text ppl 49.0071 | rating loss 0.9788 | valid loss 4.8708 on validation
+[2023-01-04 02:42:36]: [GPU 1] Epoch 22 Time Used: 30.27
+[2023-01-04 02:42:36]: [GPU 1] Epoch 23
+[2023-01-04 02:43:05]: [GPU 1] context ppl 512.2523 | text ppl 49.4566 | rating loss 0.9761 | valid loss 4.8772 on validation
+[2023-01-04 02:43:05]: [GPU 1] Epoch 23 Time Used: 29.70
+[2023-01-04 02:43:05]: [GPU 1] Epoch 24
+[2023-01-04 02:43:35]: [GPU 1] context ppl 507.6933 | text ppl 48.5026 | rating loss 0.9781 | valid loss 4.8597 on validation
+[2023-01-04 02:43:35]: [GPU 1] Epoch 24 Time Used: 29.55
+[2023-01-04 02:43:35]: [GPU 1] Epoch 25
+[2023-01-04 02:44:04]: [GPU 1] context ppl 505.8012 | text ppl 47.8366 | rating loss 0.9780 | valid loss 4.8458 on validation
+[2023-01-04 02:44:04]: [GPU 1] Epoch 25 Time Used: 29.52
+[2023-01-04 02:44:04]: [GPU 1] Epoch 26
+[2023-01-04 02:44:34]: [GPU 1] context ppl 505.8005 | text ppl 48.1613 | rating loss 0.9830 | valid loss 4.8575 on validation
+[2023-01-04 02:44:34]: [GPU 1] Epoch 26 Time Used: 29.82
+[2023-01-04 02:44:34]: [GPU 1] Epoch 27
+[2023-01-04 02:45:04]: [GPU 1] context ppl 506.8152 | text ppl 47.8938 | rating loss 0.9783 | valid loss 4.8473 on validation
+[2023-01-04 02:45:04]: [GPU 1] Epoch 27 Time Used: 29.51
+[2023-01-04 02:45:04]: [GPU 1] Epoch 28
+[2023-01-04 02:45:33]: [GPU 1] context ppl 514.4535 | text ppl 48.2116 | rating loss 0.9994 | valid loss 4.8750 on validation
+[2023-01-04 02:45:33]: [GPU 1] Epoch 28 Time Used: 29.27
+[2023-01-04 02:45:33]: [GPU 1] Epoch 29
+[2023-01-04 02:46:03]: [GPU 1] context ppl 508.3279 | text ppl 47.8868 | rating loss 0.9836 | valid loss 4.8524 on validation
+[2023-01-04 02:46:03]: [GPU 1] Epoch 29 Time Used: 29.47
+[2023-01-04 02:46:03]: [GPU 1] Epoch 30
+[2023-01-04 02:46:33]: [GPU 1] context ppl 504.8508 | text ppl 48.0217 | rating loss 0.9852 | valid loss 4.8569 on validation
+[2023-01-04 02:46:33]: [GPU 1] Epoch 30 Time Used: 30.84
+[2023-01-04 02:46:33]: [GPU 1] Epoch 31
+[2023-01-04 02:47:03]: [GPU 1] context ppl 509.9328 | text ppl 47.6001 | rating loss 0.9823 | valid loss 4.8452 on validation
+[2023-01-04 02:47:03]: [GPU 1] Epoch 31 Time Used: 29.30
+[2023-01-04 02:47:03]: [GPU 1] Epoch 32
+[2023-01-04 02:47:32]: [GPU 1] context ppl 501.4236 | text ppl 47.3205 | rating loss 0.9760 | valid loss 4.8330 on validation
+[2023-01-04 02:47:32]: [GPU 1] Epoch 32 Time Used: 29.03
+[2023-01-04 02:47:32]: [GPU 1] Epoch 33
+[2023-01-04 02:31:43]: Init Start
+[2023-01-04 02:31:43]: Init End
+[2023-01-04 02:31:43]: Load Start
+[2023-01-04 02:31:46]: train len:359303
+[2023-01-04 02:31:47]: Load End
+[2023-01-04 02:31:49]: [GPU 0] Device cuda
+[2023-01-04 02:31:49]: [GPU 0] Loading data helper
+[2023-01-04 02:31:49]: Use Feature: True | src_len: 3
+[2023-01-04 02:31:49]: [GPU 0] Building model PETER on device cuda
+[2023-01-04 02:31:51]: Save Mask to ./SEQUER/results/MASK_PETER+_PMask.png
+[2023-01-04 02:31:53]: [GPU 0] Epoch 1
+[2023-01-04 02:32:22]: [GPU 0] context ppl 784.6244 | text ppl 194.7918 | rating loss 1.5195 | valid loss 6.7914 on validation
+[2023-01-04 02:32:22]: [GPU 0] Epoch 1 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:32:22]: [GPU 0] Epoch 1 Time Used: 29.57
+[2023-01-04 02:32:22]: [GPU 0] Epoch 2
+[2023-01-04 02:32:51]: [GPU 0] context ppl 666.0146 | text ppl 117.1166 | rating loss 1.4430 | valid loss 6.2062 on validation
+[2023-01-04 02:32:51]: [GPU 0] Epoch 2 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:32:51]: [GPU 0] Epoch 2 Time Used: 28.98
+[2023-01-04 02:32:51]: [GPU 0] Epoch 3
+[2023-01-04 02:33:20]: [GPU 0] context ppl 613.3405 | text ppl 93.0467 | rating loss 1.4230 | valid loss 5.9561 on validation
+[2023-01-04 02:33:21]: [GPU 0] Epoch 3 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:33:21]: [GPU 0] Epoch 3 Time Used: 29.48
+[2023-01-04 02:33:21]: [GPU 0] Epoch 4
+[2023-01-04 02:33:52]: [GPU 0] context ppl 645.0440 | text ppl 88.4117 | rating loss 1.4301 | valid loss 5.9121 on validation
+[2023-01-04 02:33:52]: [GPU 0] Epoch 4 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:33:52]: [GPU 0] Epoch 4 Time Used: 31.60
+[2023-01-04 02:33:52]: [GPU 0] Epoch 5
+[2023-01-04 02:34:21]: [GPU 0] context ppl 594.9416 | text ppl 76.3179 | rating loss 1.3262 | valid loss 5.6611 on validation
+[2023-01-04 02:34:22]: [GPU 0] Epoch 5 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:34:22]: [GPU 0] Epoch 5 Time Used: 29.25
+[2023-01-04 02:34:22]: [GPU 0] Epoch 6
+[2023-01-04 02:34:51]: [GPU 0] context ppl 605.5252 | text ppl 72.2929 | rating loss 1.2137 | valid loss 5.4944 on validation
+[2023-01-04 02:34:51]: [GPU 0] Epoch 6 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:34:51]: [GPU 0] Epoch 6 Time Used: 29.68
+[2023-01-04 02:34:51]: [GPU 0] Epoch 7
+[2023-01-04 02:35:19]: [GPU 0] context ppl 571.7024 | text ppl 66.9476 | rating loss 1.1303 | valid loss 5.3343 on validation
+[2023-01-04 02:35:20]: [GPU 0] Epoch 7 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:35:20]: [GPU 0] Epoch 7 Time Used: 28.47
+[2023-01-04 02:35:20]: [GPU 0] Epoch 8
+[2023-01-04 02:35:48]: [GPU 0] context ppl 582.3481 | text ppl 65.0567 | rating loss 1.1455 | valid loss 5.3207 on validation
+[2023-01-04 02:35:48]: [GPU 0] Epoch 8 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:35:48]: [GPU 0] Epoch 8 Time Used: 28.37
+[2023-01-04 02:35:48]: [GPU 0] Epoch 9
+[2023-01-04 02:36:16]: [GPU 0] context ppl 564.6071 | text ppl 61.6318 | rating loss 1.1205 | valid loss 5.2417 on validation
+[2023-01-04 02:36:17]: [GPU 0] Epoch 9 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:36:17]: [GPU 0] Epoch 9 Time Used: 28.46
+[2023-01-04 02:36:17]: [GPU 0] Epoch 10
+[2023-01-04 02:36:45]: [GPU 0] context ppl 562.1366 | text ppl 60.6562 | rating loss 1.0508 | valid loss 5.1560 on validation
+[2023-01-04 02:36:45]: [GPU 0] Epoch 10 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:36:45]: [GPU 0] Epoch 10 Time Used: 28.45
+[2023-01-04 02:36:45]: [GPU 0] Epoch 11
+[2023-01-04 02:37:13]: [GPU 0] context ppl 557.9552 | text ppl 59.0127 | rating loss 1.0676 | valid loss 5.1454 on validation
+[2023-01-04 02:37:14]: [GPU 0] Epoch 11 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:37:14]: [GPU 0] Epoch 11 Time Used: 28.42
+[2023-01-04 02:37:14]: [GPU 0] Epoch 12
+[2023-01-04 02:37:42]: [GPU 0] context ppl 544.7100 | text ppl 56.8385 | rating loss 0.9957 | valid loss 5.0359 on validation
+[2023-01-04 02:37:42]: [GPU 0] Epoch 12 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:37:42]: [GPU 0] Epoch 12 Time Used: 28.39
+[2023-01-04 02:37:42]: [GPU 0] Epoch 13
+[2023-01-04 02:38:11]: [GPU 0] context ppl 543.0114 | text ppl 55.7825 | rating loss 1.0475 | valid loss 5.0690 on validation
+[2023-01-04 02:38:11]: [GPU 0] Endured 1 / 5 time(s) | Learning rate set to 0.25000000
+[2023-01-04 02:38:11]: [GPU 0] Epoch 13 Time Used: 29.47
+[2023-01-04 02:38:11]: [GPU 0] Epoch 14
+[2023-01-04 02:38:40]: [GPU 0] context ppl 535.7696 | text ppl 53.7341 | rating loss 0.9913 | valid loss 4.9754 on validation
+[2023-01-04 02:38:41]: [GPU 0] Epoch 14 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:38:41]: [GPU 0] Epoch 14 Time Used: 29.30
+[2023-01-04 02:38:41]: [GPU 0] Epoch 15
+[2023-01-04 02:39:09]: [GPU 0] context ppl 534.4745 | text ppl 53.2336 | rating loss 0.9849 | valid loss 4.9596 on validation
+[2023-01-04 02:39:10]: [GPU 0] Epoch 15 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:39:10]: [GPU 0] Epoch 15 Time Used: 28.96
+[2023-01-04 02:39:10]: [GPU 0] Epoch 16
+[2023-01-04 02:39:38]: [GPU 0] context ppl 533.0883 | text ppl 52.9917 | rating loss 0.9853 | valid loss 4.9555 on validation
+[2023-01-04 02:39:39]: [GPU 0] Epoch 16 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:39:39]: [GPU 0] Epoch 16 Time Used: 29.04
+[2023-01-04 02:39:39]: [GPU 0] Epoch 17
+[2023-01-04 02:40:08]: [GPU 0] context ppl 532.5544 | text ppl 52.8921 | rating loss 0.9817 | valid loss 4.9499 on validation
+[2023-01-04 02:40:08]: [GPU 0] Epoch 17 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:40:08]: [GPU 0] Epoch 17 Time Used: 29.61
+[2023-01-04 02:40:08]: [GPU 0] Epoch 18
+[2023-01-04 02:40:37]: [GPU 0] context ppl 531.3659 | text ppl 52.5318 | rating loss 0.9820 | valid loss 4.9434 on validation
+[2023-01-04 02:40:38]: [GPU 0] Epoch 18 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:40:38]: [GPU 0] Epoch 18 Time Used: 29.43
+[2023-01-04 02:40:38]: [GPU 0] Epoch 19
+[2023-01-04 02:41:07]: [GPU 0] context ppl 530.2625 | text ppl 52.3237 | rating loss 0.9815 | valid loss 4.9390 on validation
+[2023-01-04 02:41:07]: [GPU 0] Epoch 19 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:41:07]: [GPU 0] Epoch 19 Time Used: 29.63
+[2023-01-04 02:41:07]: [GPU 0] Epoch 20
+[2023-01-04 02:41:36]: [GPU 0] context ppl 528.9460 | text ppl 52.0474 | rating loss 0.9799 | valid loss 4.9320 on validation
+[2023-01-04 02:41:37]: [GPU 0] Epoch 20 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:41:37]: [GPU 0] Epoch 20 Time Used: 29.40
+[2023-01-04 02:41:37]: [GPU 0] Epoch 21
+[2023-01-04 02:42:05]: [GPU 0] context ppl 528.6236 | text ppl 51.9057 | rating loss 0.9785 | valid loss 4.9280 on validation
+[2023-01-04 02:42:06]: [GPU 0] Epoch 21 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:42:06]: [GPU 0] Epoch 21 Time Used: 29.05
+[2023-01-04 02:42:06]: [GPU 0] Epoch 22
+[2023-01-04 02:42:36]: [GPU 0] context ppl 527.8185 | text ppl 51.7362 | rating loss 0.9792 | valid loss 4.9254 on validation
+[2023-01-04 02:42:36]: [GPU 0] Epoch 22 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:42:36]: [GPU 0] Epoch 22 Time Used: 30.27
+[2023-01-04 02:42:36]: [GPU 0] Epoch 23
+[2023-01-04 02:43:05]: [GPU 0] context ppl 527.6259 | text ppl 51.6375 | rating loss 0.9786 | valid loss 4.9228 on validation
+[2023-01-04 02:43:06]: [GPU 0] Epoch 23 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:43:06]: [GPU 0] Epoch 23 Time Used: 29.70
+[2023-01-04 02:43:06]: [GPU 0] Epoch 24
+[2023-01-04 02:43:35]: [GPU 0] context ppl 527.1074 | text ppl 51.4976 | rating loss 0.9789 | valid loss 4.9205 on validation
+[2023-01-04 02:43:35]: [GPU 0] Epoch 24 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:43:35]: [GPU 0] Epoch 24 Time Used: 29.54
+[2023-01-04 02:43:35]: [GPU 0] Epoch 25
+[2023-01-04 02:44:04]: [GPU 0] context ppl 526.1879 | text ppl 51.2564 | rating loss 0.9778 | valid loss 4.9146 on validation
+[2023-01-04 02:44:05]: [GPU 0] Epoch 25 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:44:05]: [GPU 0] Epoch 25 Time Used: 29.51
+[2023-01-04 02:44:05]: [GPU 0] Epoch 26
+[2023-01-04 02:44:34]: [GPU 0] context ppl 525.6320 | text ppl 51.1730 | rating loss 0.9788 | valid loss 4.9140 on validation
+[2023-01-04 02:44:35]: [GPU 0] Epoch 26 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:44:35]: [GPU 0] Epoch 26 Time Used: 29.86
+[2023-01-04 02:44:35]: [GPU 0] Epoch 27
+[2023-01-04 02:45:04]: [GPU 0] context ppl 524.9017 | text ppl 50.9219 | rating loss 0.9749 | valid loss 4.9052 on validation
+[2023-01-04 02:45:04]: [GPU 0] Epoch 27 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:45:04]: [GPU 0] Epoch 27 Time Used: 29.50
+[2023-01-04 02:45:04]: [GPU 0] Epoch 28
+[2023-01-04 02:45:33]: [GPU 0] context ppl 525.3612 | text ppl 50.9091 | rating loss 0.9778 | valid loss 4.9078 on validation
+[2023-01-04 02:45:33]: [GPU 0] Endured 2 / 5 time(s) | Learning rate set to 0.06250000
+[2023-01-04 02:45:33]: [GPU 0] Epoch 28 Time Used: 28.87
+[2023-01-04 02:45:33]: [GPU 0] Epoch 29
+[2023-01-04 02:46:03]: [GPU 0] context ppl 524.5250 | text ppl 50.7875 | rating loss 0.9759 | valid loss 4.9036 on validation
+[2023-01-04 02:46:03]: [GPU 0] Epoch 29 | Training checkpoint saved at ./SEQUER/checkpoints/peter_amazon-movies_0.pt
+[2023-01-04 02:46:03]: [GPU 0] Epoch 29 Time Used: 29.87
+[2023-01-04 02:46:03]: [GPU 0] Epoch 30
+[2023-01-04 02:46:33]: [GPU 0] context ppl 524.3693 | text ppl 50.7970 | rating loss 0.9764 | valid loss 4.9043 on validation
+[2023-01-04 02:46:33]: [GPU 0] Endured 3 / 5 time(s) | Learning rate set to 0.01562500
+[2023-01-04 02:46:33]: [GPU 0] Epoch 30 Time Used: 30.49
+[2023-01-04 02:46:33]: [GPU 0] Epoch 31
+[2023-01-04 02:47:03]: [GPU 0] context ppl 524.3390 | text ppl 50.7765 | rating loss 0.9764 | valid loss 4.9038 on validation
+[2023-01-04 02:47:03]: [GPU 0] Endured 4 / 5 time(s) | Learning rate set to 0.00390625
+[2023-01-04 02:47:03]: [GPU 0] Epoch 31 Time Used: 29.28
+[2023-01-04 02:47:03]: [GPU 0] Epoch 32
+[2023-01-04 02:47:32]: [GPU 0] context ppl 524.3360 | text ppl 50.7762 | rating loss 0.9764 | valid loss 4.9038 on validation
+[2023-01-04 02:47:32]: [GPU 0] Endured 5 / 5 time(s)| Cannot endure it anymore | Exiting from early stop
+[2023-01-04 02:47:32]: [GPU 0] Building model PETER on device cuda
+[2023-01-04 02:47:33]: Save Mask to ./SEQUER/results/MASK_PETER+_PMask.png
+[2023-01-04 02:47:37]: =========================================================================================
+[2023-01-04 02:47:37]: [GPU 0] context ppl 519.7854 | text ppl 50.2713 | rating loss 0.9616 on test | End of training
+[2023-01-04 02:47:37]: [GPU 0] Generating text
+[2023-01-04 02:47:56]: [GPU 0] RMSE  0.9806
+[2023-01-04 02:47:57]: [GPU 0] MAE  0.7501
+[2023-01-04 02:48:00]: [GPU 0] BLEU-1 18.7644
+[2023-01-04 02:48:06]: [GPU 0] BLEU-4  2.6919
+[2023-01-04 02:48:26]: [GPU 0] USR  0.2383 | USN    9829
+[2023-01-04 02:53:37]: [GPU 0] DIV  1.3092
+[2023-01-04 02:53:38]: [GPU 0] FCR  0.1565
+[2023-01-04 02:53:38]: [GPU 0] FMR  0.7757
+[2023-01-04 02:53:46]: [GPU 0] rouge_1/f_score 25.9597
+[2023-01-04 02:53:46]: [GPU 0] rouge_1/r_score 23.3063
+[2023-01-04 02:53:46]: [GPU 0] rouge_1/p_score 34.9784
+[2023-01-04 02:53:46]: [GPU 0] rouge_2/f_score  6.3073
+[2023-01-04 02:53:46]: [GPU 0] rouge_2/r_score  5.7562
+[2023-01-04 02:53:46]: [GPU 0] rouge_2/p_score  8.6983
+[2023-01-04 02:53:46]: [GPU 0] rouge_l/f_score 19.3570
+[2023-01-04 02:53:46]: [GPU 0] rouge_l/r_score 20.5920
+[2023-01-04 02:53:46]: [GPU 0] rouge_l/p_score 28.4675
+[2023-01-04 02:53:46]: [GPU 0] Generated text saved to ./SEQUER/checkpoints/generated_amazon-movies_0_peter.txt
+[2023-01-04 02:31:43]: Init Start
+[2023-01-04 02:31:43]: Init End
+[2023-01-04 02:31:43]: Load Start
+[2023-01-04 02:31:46]: train len:359303
+[2023-01-04 02:31:47]: Load End
+[2023-01-04 02:31:49]: [GPU 2] Device cuda
+[2023-01-04 02:31:49]: [GPU 2] Loading data helper
+[2023-01-04 02:31:49]: Use Feature: True | src_len: 3
+[2023-01-04 02:31:49]: [GPU 2] Building model PETER on device cuda
+[2023-01-04 02:31:50]: Save Mask to ./SEQUER/results/MASK_PETER+_PMask.png
+[2023-01-04 02:31:53]: [GPU 2] Epoch 1
+[2023-01-04 02:32:22]: [GPU 2] context ppl 786.1371 | text ppl 196.0831 | rating loss 1.5041 | valid loss 6.7827 on validation
+[2023-01-04 02:32:22]: [GPU 2] Epoch 1 Time Used: 29.20
+[2023-01-04 02:32:22]: [GPU 2] Epoch 2
+[2023-01-04 02:32:51]: [GPU 2] context ppl 666.4408 | text ppl 117.3266 | rating loss 1.4378 | valid loss 6.2028 on validation
+[2023-01-04 02:32:51]: [GPU 2] Epoch 2 Time Used: 29.10
+[2023-01-04 02:32:51]: [GPU 2] Epoch 3
+[2023-01-04 02:33:21]: [GPU 2] context ppl 614.5510 | text ppl 93.4220 | rating loss 1.4177 | valid loss 5.9548 on validation
+[2023-01-04 02:33:21]: [GPU 2] Epoch 3 Time Used: 29.46
+[2023-01-04 02:33:21]: [GPU 2] Epoch 4
+[2023-01-04 02:33:52]: [GPU 2] context ppl 647.6422 | text ppl 88.8395 | rating loss 1.4197 | valid loss 5.9066 on validation
+[2023-01-04 02:33:52]: [GPU 2] Epoch 4 Time Used: 31.59
+[2023-01-04 02:33:52]: [GPU 2] Epoch 5
+[2023-01-04 02:34:21]: [GPU 2] context ppl 596.0493 | text ppl 76.3294 | rating loss 1.3275 | valid loss 5.6625 on validation
+[2023-01-04 02:34:21]: [GPU 2] Epoch 5 Time Used: 29.16
+[2023-01-04 02:34:21]: [GPU 2] Epoch 6
+[2023-01-04 02:34:51]: [GPU 2] context ppl 606.5853 | text ppl 72.2077 | rating loss 1.2231 | valid loss 5.5027 on validation
+[2023-01-04 02:34:51]: [GPU 2] Epoch 6 Time Used: 29.66
+[2023-01-04 02:34:51]: [GPU 2] Epoch 7
+[2023-01-04 02:35:19]: [GPU 2] context ppl 572.6237 | text ppl 66.8974 | rating loss 1.1417 | valid loss 5.3448 on validation
+[2023-01-04 02:35:19]: [GPU 2] Epoch 7 Time Used: 28.49
+[2023-01-04 02:35:19]: [GPU 2] Epoch 8
+[2023-01-04 02:35:48]: [GPU 2] context ppl 584.4119 | text ppl 65.1582 | rating loss 1.1649 | valid loss 5.3417 on validation
+[2023-01-04 02:35:48]: [GPU 2] Epoch 8 Time Used: 28.39
+[2023-01-04 02:35:48]: [GPU 2] Epoch 9
+[2023-01-04 02:36:16]: [GPU 2] context ppl 566.0574 | text ppl 61.5059 | rating loss 1.1338 | valid loss 5.2529 on validation
+[2023-01-04 02:36:16]: [GPU 2] Epoch 9 Time Used: 28.44
+[2023-01-04 02:36:16]: [GPU 2] Epoch 10
+[2023-01-04 02:36:45]: [GPU 2] context ppl 563.4387 | text ppl 60.6290 | rating loss 1.0659 | valid loss 5.1706 on validation
+[2023-01-04 02:36:45]: [GPU 2] Epoch 10 Time Used: 28.42
+[2023-01-04 02:36:45]: [GPU 2] Epoch 11
+[2023-01-04 02:37:13]: [GPU 2] context ppl 559.7406 | text ppl 59.1311 | rating loss 1.0763 | valid loss 5.1561 on validation
+[2023-01-04 02:37:13]: [GPU 2] Epoch 11 Time Used: 28.41
+[2023-01-04 02:37:13]: [GPU 2] Epoch 12
+[2023-01-04 02:37:42]: [GPU 2] context ppl 545.9306 | text ppl 56.8782 | rating loss 1.0103 | valid loss 5.0513 on validation
+[2023-01-04 02:37:42]: [GPU 2] Epoch 12 Time Used: 28.45
+[2023-01-04 02:37:42]: [GPU 2] Epoch 13
+[2023-01-04 02:38:11]: [GPU 2] context ppl 545.0059 | text ppl 55.9093 | rating loss 1.0662 | valid loss 5.0899 on validation
+[2023-01-04 02:38:11]: [GPU 2] Epoch 13 Time Used: 29.82
+[2023-01-04 02:38:11]: [GPU 2] Epoch 14
+[2023-01-04 02:38:40]: [GPU 2] context ppl 537.2717 | text ppl 54.7294 | rating loss 1.0380 | valid loss 5.0404 on validation
+[2023-01-04 02:38:40]: [GPU 2] Epoch 14 Time Used: 28.90
+[2023-01-04 02:38:40]: [GPU 2] Epoch 15
+[2023-01-04 02:39:09]: [GPU 2] context ppl 539.3906 | text ppl 54.0957 | rating loss 0.9973 | valid loss 4.9881 on validation
+[2023-01-04 02:39:09]: [GPU 2] Epoch 15 Time Used: 29.00
+[2023-01-04 02:39:09]: [GPU 2] Epoch 16
+[2023-01-04 02:39:38]: [GPU 2] context ppl 530.9231 | text ppl 52.6142 | rating loss 1.0072 | valid loss 4.9701 on validation
+[2023-01-04 02:39:38]: [GPU 2] Epoch 16 Time Used: 29.03
+[2023-01-04 02:39:38]: [GPU 2] Epoch 17
+[2023-01-04 02:40:08]: [GPU 2] context ppl 534.0308 | text ppl 53.1834 | rating loss 0.9927 | valid loss 4.9665 on validation
+[2023-01-04 02:40:08]: [GPU 2] Epoch 17 Time Used: 29.57
+[2023-01-04 02:40:08]: [GPU 2] Epoch 18
+[2023-01-04 02:40:37]: [GPU 2] context ppl 524.0153 | text ppl 51.1368 | rating loss 0.9969 | valid loss 4.9314 on validation
+[2023-01-04 02:40:37]: [GPU 2] Epoch 18 Time Used: 29.45
+[2023-01-04 02:40:37]: [GPU 2] Epoch 19
+[2023-01-04 02:41:07]: [GPU 2] context ppl 521.0726 | text ppl 50.7988 | rating loss 1.0013 | valid loss 4.9291 on validation
+[2023-01-04 02:41:07]: [GPU 2] Epoch 19 Time Used: 29.64
+[2023-01-04 02:41:07]: [GPU 2] Epoch 20
+[2023-01-04 02:41:36]: [GPU 2] context ppl 518.6006 | text ppl 50.1208 | rating loss 0.9863 | valid loss 4.9008 on validation
+[2023-01-04 02:41:36]: [GPU 2] Epoch 20 Time Used: 29.38
+[2023-01-04 02:41:36]: [GPU 2] Epoch 21
+[2023-01-04 02:42:05]: [GPU 2] context ppl 515.7770 | text ppl 49.5411 | rating loss 1.0102 | valid loss 4.9130 on validation
+[2023-01-04 02:42:05]: [GPU 2] Epoch 21 Time Used: 29.05
+[2023-01-04 02:42:05]: [GPU 2] Epoch 22
+[2023-01-04 02:42:36]: [GPU 2] context ppl 514.0644 | text ppl 48.9516 | rating loss 0.9929 | valid loss 4.8837 on validation
+[2023-01-04 02:42:36]: [GPU 2] Epoch 22 Time Used: 30.27
+[2023-01-04 02:42:36]: [GPU 2] Epoch 23
+[2023-01-04 02:43:05]: [GPU 2] context ppl 516.9664 | text ppl 49.4565 | rating loss 0.9928 | valid loss 4.8939 on validation
+[2023-01-04 02:43:05]: [GPU 2] Epoch 23 Time Used: 29.70
+[2023-01-04 02:43:05]: [GPU 2] Epoch 24
+[2023-01-04 02:43:35]: [GPU 2] context ppl 512.0100 | text ppl 48.5344 | rating loss 0.9891 | valid loss 4.8714 on validation
+[2023-01-04 02:43:35]: [GPU 2] Epoch 24 Time Used: 29.55
+[2023-01-04 02:43:35]: [GPU 2] Epoch 25
+[2023-01-04 02:44:04]: [GPU 2] context ppl 509.1289 | text ppl 47.7146 | rating loss 0.9918 | valid loss 4.8570 on validation
+[2023-01-04 02:44:04]: [GPU 2] Epoch 25 Time Used: 29.53
+[2023-01-04 02:44:04]: [GPU 2] Epoch 26
+[2023-01-04 02:44:34]: [GPU 2] context ppl 508.6978 | text ppl 48.0993 | rating loss 1.0024 | valid loss 4.8757 on validation
+[2023-01-04 02:44:34]: [GPU 2] Epoch 26 Time Used: 29.81
+[2023-01-04 02:44:34]: [GPU 2] Epoch 27
+[2023-01-04 02:45:04]: [GPU 2] context ppl 510.6982 | text ppl 47.8064 | rating loss 0.9902 | valid loss 4.8573 on validation
+[2023-01-04 02:45:04]: [GPU 2] Epoch 27 Time Used: 29.51
+[2023-01-04 02:45:04]: [GPU 2] Epoch 28
+[2023-01-04 02:45:33]: [GPU 2] context ppl 519.2354 | text ppl 48.2721 | rating loss 1.0084 | valid loss 4.8852 on validation
+[2023-01-04 02:45:33]: [GPU 2] Epoch 28 Time Used: 29.25
+[2023-01-04 02:45:33]: [GPU 2] Epoch 29
+[2023-01-04 02:46:03]: [GPU 2] context ppl 511.2261 | text ppl 47.7751 | rating loss 0.9921 | valid loss 4.8586 on validation
+[2023-01-04 02:46:03]: [GPU 2] Epoch 29 Time Used: 29.50
+[2023-01-04 02:46:03]: [GPU 2] Epoch 30
+[2023-01-04 02:46:33]: [GPU 2] context ppl 508.4882 | text ppl 48.0668 | rating loss 1.0023 | valid loss 4.8749 on validation
+[2023-01-04 02:46:33]: [GPU 2] Epoch 30 Time Used: 30.85
+[2023-01-04 02:46:33]: [GPU 2] Epoch 31
+[2023-01-04 02:47:03]: [GPU 2] context ppl 512.9057 | text ppl 47.4561 | rating loss 1.0017 | valid loss 4.8615 on validation
+[2023-01-04 02:47:03]: [GPU 2] Epoch 31 Time Used: 29.35
+[2023-01-04 02:47:03]: [GPU 2] Epoch 32
+[2023-01-04 02:47:32]: [GPU 2] context ppl 505.8522 | text ppl 47.4229 | rating loss 0.9901 | valid loss 4.8492 on validation
+[2023-01-04 02:47:32]: [GPU 2] Epoch 32 Time Used: 28.95
+[2023-01-04 02:47:32]: [GPU 2] Epoch 33
+[2023-01-04 02:31:43]: Init Start
+[2023-01-04 02:31:43]: Init End
+[2023-01-04 02:31:43]: Load Start
+[2023-01-04 02:31:46]: train len:359303
+[2023-01-04 02:31:47]: Load End
+[2023-01-04 02:31:49]: [GPU 3] Device cuda
+[2023-01-04 02:31:49]: [GPU 3] Loading data helper
+[2023-01-04 02:31:49]: Use Feature: True | src_len: 3
+[2023-01-04 02:31:49]: [GPU 3] Building model PETER on device cuda
+[2023-01-04 02:31:50]: Save Mask to ./SEQUER/results/MASK_PETER+_PMask.png
+[2023-01-04 02:31:53]: [GPU 3] Epoch 1
+[2023-01-04 02:32:22]: [GPU 3] context ppl 774.5197 | text ppl 191.7110 | rating loss 1.5235 | valid loss 6.7795 on validation
+[2023-01-04 02:32:22]: [GPU 3] Epoch 1 Time Used: 29.20
+[2023-01-04 02:32:22]: [GPU 3] Epoch 2
+[2023-01-04 02:32:51]: [GPU 3] context ppl 658.4929 | text ppl 115.0447 | rating loss 1.4353 | valid loss 6.1806 on validation
+[2023-01-04 02:32:51]: [GPU 3] Epoch 2 Time Used: 28.97
+[2023-01-04 02:32:51]: [GPU 3] Epoch 3
+[2023-01-04 02:33:20]: [GPU 3] context ppl 608.1259 | text ppl 91.2968 | rating loss 1.4279 | valid loss 5.9420 on validation
+[2023-01-04 02:33:20]: [GPU 3] Epoch 3 Time Used: 29.48
+[2023-01-04 02:33:20]: [GPU 3] Epoch 4
+[2023-01-04 02:33:52]: [GPU 3] context ppl 640.3691 | text ppl 86.9131 | rating loss 1.4335 | valid loss 5.8984 on validation
+[2023-01-04 02:33:52]: [GPU 3] Epoch 4 Time Used: 31.58
+[2023-01-04 02:33:52]: [GPU 3] Epoch 5
+[2023-01-04 02:34:21]: [GPU 3] context ppl 588.8959 | text ppl 74.5473 | rating loss 1.3290 | valid loss 5.6405 on validation
+[2023-01-04 02:34:21]: [GPU 3] Epoch 5 Time Used: 29.29
+[2023-01-04 02:34:21]: [GPU 3] Epoch 6
+[2023-01-04 02:34:51]: [GPU 3] context ppl 598.3422 | text ppl 70.4924 | rating loss 1.2167 | valid loss 5.4722 on validation
+[2023-01-04 02:34:51]: [GPU 3] Epoch 6 Time Used: 29.66
+[2023-01-04 02:34:51]: [GPU 3] Epoch 7
+[2023-01-04 02:35:19]: [GPU 3] context ppl 565.3764 | text ppl 65.2067 | rating loss 1.1387 | valid loss 5.3163 on validation
+[2023-01-04 02:35:19]: [GPU 3] Epoch 7 Time Used: 28.50
+[2023-01-04 02:35:19]: [GPU 3] Epoch 8
+[2023-01-04 02:35:48]: [GPU 3] context ppl 577.3754 | text ppl 63.6601 | rating loss 1.1473 | valid loss 5.3008 on validation
+[2023-01-04 02:35:48]: [GPU 3] Epoch 8 Time Used: 28.39
+[2023-01-04 02:35:48]: [GPU 3] Epoch 9
+[2023-01-04 02:36:16]: [GPU 3] context ppl 558.8206 | text ppl 59.9757 | rating loss 1.1428 | valid loss 5.2368 on validation
+[2023-01-04 02:36:16]: [GPU 3] Epoch 9 Time Used: 28.44
+[2023-01-04 02:36:16]: [GPU 3] Epoch 10
+[2023-01-04 02:36:45]: [GPU 3] context ppl 556.8280 | text ppl 59.0877 | rating loss 1.0557 | valid loss 5.1347 on validation
+[2023-01-04 02:36:45]: [GPU 3] Epoch 10 Time Used: 28.42
+[2023-01-04 02:36:45]: [GPU 3] Epoch 11
+[2023-01-04 02:37:13]: [GPU 3] context ppl 553.7749 | text ppl 57.7419 | rating loss 1.0850 | valid loss 5.1409 on validation
+[2023-01-04 02:37:13]: [GPU 3] Epoch 11 Time Used: 28.41
+[2023-01-04 02:37:13]: [GPU 3] Epoch 12
+[2023-01-04 02:37:42]: [GPU 3] context ppl 540.6346 | text ppl 55.5010 | rating loss 1.0080 | valid loss 5.0244 on validation
+[2023-01-04 02:37:42]: [GPU 3] Epoch 12 Time Used: 28.45
+[2023-01-04 02:37:42]: [GPU 3] Epoch 13
+[2023-01-04 02:38:11]: [GPU 3] context ppl 539.1807 | text ppl 54.5837 | rating loss 1.0498 | valid loss 5.0495 on validation
+[2023-01-04 02:38:11]: [GPU 3] Epoch 13 Time Used: 29.81
+[2023-01-04 02:38:11]: [GPU 3] Epoch 14
+[2023-01-04 02:38:40]: [GPU 3] context ppl 531.5782 | text ppl 53.3908 | rating loss 1.0256 | valid loss 5.0032 on validation
+[2023-01-04 02:38:40]: [GPU 3] Epoch 14 Time Used: 28.92
+[2023-01-04 02:38:40]: [GPU 3] Epoch 15
+[2023-01-04 02:39:09]: [GPU 3] context ppl 533.6888 | text ppl 52.7701 | rating loss 0.9942 | valid loss 4.9601 on validation
+[2023-01-04 02:39:09]: [GPU 3] Epoch 15 Time Used: 29.00
+[2023-01-04 02:39:09]: [GPU 3] Epoch 16
+[2023-01-04 02:39:38]: [GPU 3] context ppl 525.4903 | text ppl 51.3829 | rating loss 0.9978 | valid loss 4.9371 on validation
+[2023-01-04 02:39:38]: [GPU 3] Epoch 16 Time Used: 29.09
+[2023-01-04 02:39:38]: [GPU 3] Epoch 17
+[2023-01-04 02:40:08]: [GPU 3] context ppl 528.1500 | text ppl 52.0833 | rating loss 0.9924 | valid loss 4.9453 on validation
+[2023-01-04 02:40:08]: [GPU 3] Epoch 17 Time Used: 29.51
+[2023-01-04 02:40:08]: [GPU 3] Epoch 18
+[2023-01-04 02:40:37]: [GPU 3] context ppl 518.9876 | text ppl 50.0596 | rating loss 0.9965 | valid loss 4.9097 on validation
+[2023-01-04 02:40:37]: [GPU 3] Epoch 18 Time Used: 29.45
+[2023-01-04 02:40:37]: [GPU 3] Epoch 19
+[2023-01-04 02:41:07]: [GPU 3] context ppl 516.6153 | text ppl 49.7094 | rating loss 1.0044 | valid loss 4.9106 on validation
+[2023-01-04 02:41:07]: [GPU 3] Epoch 19 Time Used: 29.60
+[2023-01-04 02:41:07]: [GPU 3] Epoch 20
+[2023-01-04 02:41:36]: [GPU 3] context ppl 514.2827 | text ppl 49.0838 | rating loss 0.9831 | valid loss 4.8766 on validation
+[2023-01-04 02:41:36]: [GPU 3] Epoch 20 Time Used: 29.42
+[2023-01-04 02:41:36]: [GPU 3] Epoch 21
+[2023-01-04 02:42:05]: [GPU 3] context ppl 510.8734 | text ppl 48.4607 | rating loss 1.0005 | valid loss 4.8813 on validation
+[2023-01-04 02:42:05]: [GPU 3] Epoch 21 Time Used: 29.07
+[2023-01-04 02:42:05]: [GPU 3] Epoch 22
+[2023-01-04 02:42:36]: [GPU 3] context ppl 509.2028 | text ppl 47.9833 | rating loss 0.9906 | valid loss 4.8614 on validation
+[2023-01-04 02:42:36]: [GPU 3] Epoch 22 Time Used: 30.25
+[2023-01-04 02:42:36]: [GPU 3] Epoch 23
+[2023-01-04 02:43:05]: [GPU 3] context ppl 512.0690 | text ppl 48.3770 | rating loss 0.9880 | valid loss 4.8670 on validation
+[2023-01-04 02:43:05]: [GPU 3] Epoch 23 Time Used: 29.71
+[2023-01-04 02:43:05]: [GPU 3] Epoch 24
+[2023-01-04 02:43:35]: [GPU 3] context ppl 506.9519 | text ppl 47.4567 | rating loss 0.9857 | valid loss 4.8455 on validation
+[2023-01-04 02:43:35]: [GPU 3] Epoch 24 Time Used: 29.68
+[2023-01-04 02:43:35]: [GPU 3] Epoch 25
+[2023-01-04 02:44:04]: [GPU 3] context ppl 505.5490 | text ppl 46.8110 | rating loss 0.9878 | valid loss 4.8339 on validation
+[2023-01-04 02:44:04]: [GPU 3] Epoch 25 Time Used: 29.40
+[2023-01-04 02:44:04]: [GPU 3] Epoch 26
+[2023-01-04 02:44:34]: [GPU 3] context ppl 505.2635 | text ppl 47.1051 | rating loss 0.9953 | valid loss 4.8477 on validation
+[2023-01-04 02:44:34]: [GPU 3] Epoch 26 Time Used: 29.95
+[2023-01-04 02:44:34]: [GPU 3] Epoch 27
+[2023-01-04 02:45:04]: [GPU 3] context ppl 506.3586 | text ppl 46.8736 | rating loss 0.9886 | valid loss 4.8360 on validation
+[2023-01-04 02:45:04]: [GPU 3] Epoch 27 Time Used: 29.40
+[2023-01-04 02:45:04]: [GPU 3] Epoch 28
+[2023-01-04 02:45:33]: [GPU 3] context ppl 514.5598 | text ppl 47.2851 | rating loss 1.0124 | valid loss 4.8686 on validation
+[2023-01-04 02:45:33]: [GPU 3] Epoch 28 Time Used: 29.22
+[2023-01-04 02:45:33]: [GPU 3] Epoch 29
+[2023-01-04 02:46:03]: [GPU 3] context ppl 507.4713 | text ppl 46.7616 | rating loss 0.9915 | valid loss 4.8365 on validation
+[2023-01-04 02:46:03]: [GPU 3] Epoch 29 Time Used: 29.50
+[2023-01-04 02:46:03]: [GPU 3] Epoch 30
+[2023-01-04 02:46:33]: [GPU 3] context ppl 505.0532 | text ppl 47.0408 | rating loss 0.9906 | valid loss 4.8416 on validation
+[2023-01-04 02:46:33]: [GPU 3] Epoch 30 Time Used: 30.84
+[2023-01-04 02:46:33]: [GPU 3] Epoch 31
+[2023-01-04 02:47:03]: [GPU 3] context ppl 508.7598 | text ppl 46.6315 | rating loss 0.9920 | valid loss 4.8343 on validation
+[2023-01-04 02:47:03]: [GPU 3] Epoch 31 Time Used: 29.30
+[2023-01-04 02:47:03]: [GPU 3] Epoch 32
+[2023-01-04 02:47:32]: [GPU 3] context ppl 501.3941 | text ppl 46.4936 | rating loss 0.9843 | valid loss 4.8236 on validation
+[2023-01-04 02:47:32]: [GPU 3] Epoch 32 Time Used: 29.03
+[2023-01-04 02:47:32]: [GPU 3] Epoch 33

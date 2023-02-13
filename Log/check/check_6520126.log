@@ -1,0 +1,10 @@
+Dataset Name: ToysAndGames
+Cols ['user', 'item', 'timestamp', 'rating', 'text', 'hist_item', 'hist_time', 'hist_rating', 'hist_item_index', 'hist_feature', 'hist_adj', 'hist_text', 'item_index', 'user_index', 'neg_samples_index', 'neg_item_index', 'feature', 'adj', 'sco']
+#Records 114087
+#Feat 1738
+#Adj 1081
+#Sent 114087
+#Word, ratio 1326187 11.6243480852332
+#Hist, ratio 2220165 19.460280312393174
+#user, ratio 9011 12.660858950172011
+#item, ratio 19484 5.855419831656744

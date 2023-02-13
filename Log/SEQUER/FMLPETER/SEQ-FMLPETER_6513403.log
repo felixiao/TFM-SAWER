@@ -1,0 +1,123 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 False
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+------------------------------------CONFIGS-------------------------------------
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       0.01
+optimizer                                SGD
+clip_norm                                1.0
+epochs                                   40
+batch_size                               64
+continue_train                           True
+log_interval                             4
+vocab_size                               20000
+text_len                                 15
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+item_len                                 1
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-09 05:42:01]: World_Size(Num GPUs): 4
+[2023-01-09 05:42:04]: Init Start
+[2023-01-09 05:42:04]: Init End
+[2023-01-09 05:42:04]: Load Start
+[2023-01-09 05:42:07]: train len:359303
+[2023-01-09 05:42:07]: Load End
+[2023-01-09 05:42:11]: [GPU 0] Device cuda
+[2023-01-09 05:42:11]: [GPU 0] Loading data helper
+[2023-01-09 05:42:11]: [GPU 0] Use Feature: True | src_len: 22
+[2023-01-09 05:42:11]: [GPU 0] Building model FMLPETER on device cuda
+[2023-01-09 05:42:12]: [GPU 0] LOAD FLMP MODEL FMLPRec-Movie_and_TV_index-Jan-04-2023_04-12-03_max20item.pt
+[2023-01-09 05:42:17]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-09 05:42:17]: [GPU 0] Loading checkpoint from ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+Resuming training from snapshot at Epoch 8
+[2023-01-09 05:42:18]: [GPU 0] Epoch 8
+[2023-01-09 05:42:04]: Init Start
+[2023-01-09 05:42:04]: Init End
+[2023-01-09 05:42:04]: Load Start
+[2023-01-09 05:42:07]: train len:359303
+[2023-01-09 05:42:07]: Load End
+[2023-01-09 05:42:17]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+Resuming training from snapshot at Epoch 8
+[2023-01-09 05:42:04]: Init Start
+[2023-01-09 05:42:04]: Init End
+[2023-01-09 05:42:04]: Load Start
+[2023-01-09 05:42:07]: train len:359303
+[2023-01-09 05:42:07]: Load End
+[2023-01-09 05:42:17]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+Resuming training from snapshot at Epoch 8
+[2023-01-09 05:42:04]: Init Start
+[2023-01-09 05:42:04]: Init End
+[2023-01-09 05:42:04]: Load Start
+[2023-01-09 05:42:07]: train len:359303
+[2023-01-09 05:42:07]: Load End
+[2023-01-09 05:42:17]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+Resuming training from snapshot at Epoch 8
+[2023-01-09 05:43:50]: [GPU 0] context ppl 512.2889 | text ppl 54.7173 | rating loss 1.4379 | valid loss 5.4400 on validation
+[2023-01-09 05:43:50]: [GPU 0] Epoch 8 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 05:43:50]: [GPU 0] Epoch 8 Time Used: 92.43
+[2023-01-09 05:43:50]: [GPU 0] Epoch 9
+[2023-01-09 05:45:21]: [GPU 0] context ppl 509.7059 | text ppl 53.9469 | rating loss 1.4331 | valid loss 5.4211 on validation
+[2023-01-09 05:45:21]: [GPU 0] Epoch 9 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 05:45:21]: [GPU 0] Epoch 9 Time Used: 90.97
+[2023-01-09 05:45:21]: [GPU 0] Epoch 10
+[2023-01-09 05:46:52]: [GPU 0] context ppl 508.8862 | text ppl 53.7291 | rating loss 1.4330 | valid loss 5.4169 on validation
+[2023-01-09 05:46:52]: [GPU 0] Epoch 10 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 05:46:52]: [GPU 0] Epoch 10 Time Used: 91.39
+[2023-01-09 05:46:52]: [GPU 0] Epoch 11
+[2023-01-09 05:48:23]: [GPU 0] context ppl 509.0866 | text ppl 53.7371 | rating loss 1.4339 | valid loss 5.4180 on validation
+[2023-01-09 05:48:23]: [GPU 0] Endured 1 / 5 time(s) | Learning rate set to 0.00993171
+[2023-01-09 05:48:23]: [GPU 0] Epoch 11 Time Used: 90.72
+[2023-01-09 05:48:23]: [GPU 0] Epoch 12
+[2023-01-09 05:49:54]: [GPU 0] context ppl 508.6447 | text ppl 53.5753 | rating loss 1.4344 | valid loss 5.4155 on validation
+[2023-01-09 05:49:54]: [GPU 0] Epoch 12 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 05:49:54]: [GPU 0] Epoch 12 Time Used: 91.25
+[2023-01-09 05:49:54]: [GPU 0] Epoch 13
+[2023-01-09 05:51:24]: [GPU 0] context ppl 508.5342 | text ppl 53.5519 | rating loss 1.4338 | valid loss 5.4145 on validation
+[2023-01-09 05:51:24]: [GPU 0] Epoch 13 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 05:51:24]: [GPU 0] Epoch 13 Time Used: 89.97
+[2023-01-09 05:51:24]: [GPU 0] Epoch 14
+[2023-01-09 05:52:54]: [GPU 0] context ppl 508.8165 | text ppl 53.5970 | rating loss 1.4330 | valid loss 5.4145 on validation
+[2023-01-09 05:52:54]: [GPU 0] Endured 2 / 5 time(s) | Learning rate set to 0.00957847
+[2023-01-09 05:52:54]: [GPU 0] Epoch 14 Time Used: 89.64
+[2023-01-09 05:52:54]: [GPU 0] Epoch 15
+[2023-01-09 05:54:24]: [GPU 0] context ppl 508.6104 | text ppl 53.5083 | rating loss 1.4329 | valid loss 5.4127 on validation
+[2023-01-09 05:54:24]: [GPU 0] Epoch 15 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 05:54:24]: [GPU 0] Epoch 15 Time Used: 90.00
+[2023-01-09 05:54:24]: [GPU 0] Epoch 16
+[2023-01-09 05:55:53]: [GPU 0] context ppl 508.4880 | text ppl 53.3564 | rating loss 1.4329 | valid loss 5.4099 on validation
+[2023-01-09 05:55:54]: [GPU 0] Epoch 16 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 05:55:54]: [GPU 0] Epoch 16 Time Used: 89.85
+[2023-01-09 05:55:54]: [GPU 0] Epoch 17
+[2023-01-09 05:57:23]: [GPU 0] context ppl 508.2505 | text ppl 53.4426 | rating loss 1.4346 | valid loss 5.4132 on validation
+[2023-01-09 05:57:23]: [GPU 0] Endured 3 / 5 time(s) | Learning rate set to 0.00894484
+[2023-01-09 05:57:23]: [GPU 0] Epoch 17 Time Used: 89.18
+[2023-01-09 05:57:23]: [GPU 0] Epoch 18
+[2023-01-09 05:58:52]: [GPU 0] context ppl 507.9939 | text ppl 53.3870 | rating loss 1.4332 | valid loss 5.4108 on validation
+[2023-01-09 05:58:52]: [GPU 0] Endured 4 / 5 time(s) | Learning rate set to 0.00867757
+[2023-01-09 05:58:52]: [GPU 0] Epoch 18 Time Used: 89.06
+[2023-01-09 05:58:52]: [GPU 0] Epoch 19
+[2023-01-09 06:00:22]: [GPU 0] context ppl 508.2717 | text ppl 53.4209 | rating loss 1.4330 | valid loss 5.4112 on validation
+[2023-01-09 06:00:22]: [GPU 0] Endured 5 / 5 time(s)| Cannot endure it anymore | Exiting from early stop

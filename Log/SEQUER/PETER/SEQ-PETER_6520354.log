@@ -1,0 +1,149 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               peter
+dataset                                  amazon-sports
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 False
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+------------------------------------CONFIGS-------------------------------------
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+pre_train                                False
+optimizer                                SGD
+scheduler                                steplr
+warmup_epoch                             2
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+load_direct                              True
+continue_train                           True
+log_interval                             4
+vocab_size                               20000
+text_len                                 15
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 0
+user_len                                 1
+item_len                                 1
+use_feature                              True
+seq_mode                                 0
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-15 11:01:31]: [GPU 0] World_Size(Num GPUs): 4
+[2023-01-15 11:01:31]: [GPU 0] Loading data Fold ./Data/Amazon/SportsAndOutdoors/0
+[2023-01-15 11:01:31]: [GPU 0] Init Start
+[2023-01-15 11:01:31]: [GPU 0] Init End
+[2023-01-15 11:01:31]: [GPU 0] Load Start
+[2023-01-15 11:01:32]: [GPU 0] train len:111672
+[2023-01-15 11:01:32]: [GPU 0] Load End
+[2023-01-15 11:01:32]: [GPU 0] text_reg:1.0, context_reg:1.0, rating_reg:0.1, item_reg:0.1
+[2023-01-15 11:01:32]: [GPU 0] Device cuda
+[2023-01-15 11:01:32]: [GPU 0] Loading data helper
+[2023-01-15 11:01:32]: [GPU 0] Use Feature: True | src_len: 3
+[2023-01-15 11:01:32]: [GPU 0] Building model PETER on device cuda
+[2023-01-15 11:01:35]: [GPU 0] Save Mask to ./SEQUER/results/MASK_PETER+_PMask.png
+[2023-01-15 11:01:37]: [GPU 0] Epoch 0 Start
+[2023-01-15 11:01:47]: [GPU 0] context ppl 701.5518 | text ppl 283.6036 | rating loss 0.8819 | valid loss 985.2437 on validation
+[2023-01-15 11:01:47]: [GPU 0] Epoch 0 | LR 1.0 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:01:47]: [GPU 0] Epoch 0 End | Time Used: 10.43
+
+[2023-01-15 11:01:47]: [GPU 0] Epoch 1 Start
+[2023-01-15 11:01:57]: [GPU 0] context ppl 685.2199 | text ppl 195.3482 | rating loss 0.8128 | valid loss 880.6494 on validation
+[2023-01-15 11:01:57]: [GPU 0] Epoch 1 | LR 1.0 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:01:57]: [GPU 0] Epoch 1 End | Time Used: 9.89
+
+[2023-01-15 11:01:57]: [GPU 0] Epoch 2 Start
+[2023-01-15 11:02:06]: [GPU 0] context ppl 626.6443 | text ppl 137.8654 | rating loss 0.8039 | valid loss 764.5901 on validation
+[2023-01-15 11:02:07]: [GPU 0] Epoch 2 | LR 1.0 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:02:07]: [GPU 0] Epoch 2 End | Time Used: 9.76
+
+[2023-01-15 11:02:07]: [GPU 0] Epoch 3 Start
+[2023-01-15 11:02:16]: [GPU 0] context ppl 620.6830 | text ppl 110.0907 | rating loss 0.8377 | valid loss 730.8575 on validation
+[2023-01-15 11:02:17]: [GPU 0] Epoch 3 | LR 1.0 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:02:17]: [GPU 0] Epoch 3 End | Time Used: 9.78
+
+[2023-01-15 11:02:17]: [GPU 0] Epoch 4 Start
+[2023-01-15 11:02:26]: [GPU 0] context ppl 600.3329 | text ppl 95.3013 | rating loss 0.8740 | valid loss 695.7217 on validation
+[2023-01-15 11:02:27]: [GPU 0] Epoch 4 | LR 1.0 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:02:27]: [GPU 0] Epoch 4 End | Time Used: 10.18
+
+[2023-01-15 11:02:27]: [GPU 0] Epoch 5 Start
+[2023-01-15 11:02:36]: [GPU 0] context ppl 604.2594 | text ppl 89.1478 | rating loss 0.7991 | valid loss 693.4871 on validation
+[2023-01-15 11:02:37]: [GPU 0] Epoch 5 | LR 1.0 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:02:37]: [GPU 0] Epoch 5 End | Time Used: 9.71
+
+[2023-01-15 11:02:37]: [GPU 0] Epoch 6 Start
+[2023-01-15 11:02:46]: [GPU 0] context ppl 610.8571 | text ppl 79.0929 | rating loss 0.8629 | valid loss 690.0363 on validation
+[2023-01-15 11:02:46]: [GPU 0] Epoch 6 | LR 1.0 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:02:46]: [GPU 0] Epoch 6 End | Time Used: 9.64
+
+[2023-01-15 11:02:46]: [GPU 0] Epoch 7 Start
+[2023-01-15 11:02:55]: [GPU 0] context ppl 589.0048 | text ppl 75.2107 | rating loss 0.8253 | valid loss 664.2980 on validation
+[2023-01-15 11:02:56]: [GPU 0] Epoch 7 | LR 1.0 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:02:56]: [GPU 0] Epoch 7 End | Time Used: 9.64
+
+[2023-01-15 11:02:56]: [GPU 0] Epoch 8 Start
+[2023-01-15 11:03:05]: [GPU 0] context ppl 593.2916 | text ppl 72.2758 | rating loss 0.7988 | valid loss 665.6472 on validation
+[2023-01-15 11:03:05]: [GPU 0] Endured 1 / 5 time(s) | Learning rate set to 0.25000000
+[2023-01-15 11:03:05]: [GPU 0] Epoch 8 End | Time Used: 9.09
+
+[2023-01-15 11:03:05]: [GPU 0] Epoch 9 Start
+[2023-01-15 11:03:14]: [GPU 0] context ppl 562.2617 | text ppl 65.7134 | rating loss 0.8000 | valid loss 628.0551 on validation
+[2023-01-15 11:03:15]: [GPU 0] Epoch 9 | LR 0.25 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:03:15]: [GPU 0] Epoch 9 End | Time Used: 9.62
+
+[2023-01-15 11:03:15]: [GPU 0] Epoch 10 Start
+[2023-01-15 11:03:24]: [GPU 0] context ppl 559.6494 | text ppl 64.9642 | rating loss 0.8046 | valid loss 624.6940 on validation
+[2023-01-15 11:03:24]: [GPU 0] Epoch 10 | LR 0.25 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:03:24]: [GPU 0] Epoch 10 End | Time Used: 9.59
+
+[2023-01-15 11:03:24]: [GPU 0] Epoch 11 Start
+[2023-01-15 11:03:34]: [GPU 0] context ppl 563.1291 | text ppl 64.7762 | rating loss 0.7977 | valid loss 627.9851 on validation
+[2023-01-15 11:03:34]: [GPU 0] Endured 2 / 5 time(s) | Learning rate set to 0.06250000
+[2023-01-15 11:03:34]: [GPU 0] Epoch 11 End | Time Used: 9.25
+
+[2023-01-15 11:03:34]: [GPU 0] Epoch 12 Start
+[2023-01-15 11:03:43]: [GPU 0] context ppl 558.8438 | text ppl 63.5475 | rating loss 0.7974 | valid loss 622.4711 on validation
+[2023-01-15 11:03:43]: [GPU 0] Epoch 12 | LR 0.0625 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:03:43]: [GPU 0] Epoch 12 End | Time Used: 9.77
+
+[2023-01-15 11:03:43]: [GPU 0] Epoch 13 Start
+[2023-01-15 11:03:52]: [GPU 0] context ppl 559.3391 | text ppl 63.3690 | rating loss 0.7992 | valid loss 622.7881 on validation
+[2023-01-15 11:03:52]: [GPU 0] Endured 3 / 5 time(s) | Learning rate set to 0.01562500
+[2023-01-15 11:03:52]: [GPU 0] Epoch 13 End | Time Used: 9.19
+
+[2023-01-15 11:03:52]: [GPU 0] Epoch 14 Start
+[2023-01-15 11:04:02]: [GPU 0] context ppl 558.8611 | text ppl 63.2948 | rating loss 0.7985 | valid loss 622.2357 on validation
+[2023-01-15 11:04:02]: [GPU 0] Epoch 14 | LR 0.015625 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:04:02]: [GPU 0] Epoch 14 End | Time Used: 9.72
+
+[2023-01-15 11:04:02]: [GPU 0] Epoch 15 Start
+[2023-01-15 11:04:11]: [GPU 0] context ppl 558.7474 | text ppl 63.2383 | rating loss 0.7986 | valid loss 622.0655 on validation
+[2023-01-15 11:04:12]: [GPU 0] Epoch 15 | LR 0.015625 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:04:12]: [GPU 0] Epoch 15 End | Time Used: 9.62
+
+[2023-01-15 11:04:12]: [GPU 0] Epoch 16 Start
+[2023-01-15 11:04:21]: [GPU 0] context ppl 558.8527 | text ppl 63.2061 | rating loss 0.7982 | valid loss 622.1386 on validation
+[2023-01-15 11:04:21]: [GPU 0] Endured 4 / 5 time(s) | Learning rate set to 0.00390625
+[2023-01-15 11:04:21]: [GPU 0] Epoch 16 End | Time Used: 9.59
+
+[2023-01-15 11:04:21]: [GPU 0] Epoch 17 Start
+[2023-01-15 11:04:31]: [GPU 0] context ppl 558.8068 | text ppl 63.1662 | rating loss 0.7982 | valid loss 622.0528 on validation
+[2023-01-15 11:04:31]: [GPU 0] Epoch 17 | LR 0.00390625 | Training snapshot saved at ./SEQUER/checkpoints/peter_amazon-sports_0.pt
+[2023-01-15 11:04:31]: [GPU 0] Epoch 17 End | Time Used: 9.72
+
+[2023-01-15 11:04:31]: [GPU 0] Epoch 18 Start

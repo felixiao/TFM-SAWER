@@ -1,0 +1,22 @@
+Dataset Name: MoviesAndTV_New
+Cols ['user', 'item', 'rating', 'template', 'predicted']
+template 0    (classic, when, i suppose the best thing about...
+1    (movie, fantastic, this is a fantastic movie f...
+2    (all, of,  all the questions of the santa stor...
+Name: template, dtype: object
+predicted 0    television
+1        thrill
+2     animation
+Name: predicted, dtype: object
+#records 441783
+#Attr 441783
+#Feat 441783
+#Sent 441783
+#Word, ratio 6247560 14.141693999090052
+Word: ['i', 'suppose', 'the', 'best', 'thing', 'about', 'this', 'type', 'of', 'christmas', 'classic', 'is', 'that', 'when', 'people', 'my', 'age', 'view', 'it', 'they', 'can', 'escape', 'back', 'to', 'their', 'innocent', 'youth', 'for', 'a', 'short', 'while', 'this', 'is', 'a', 'fantastic', 'movie', 'for', 'kids', 'and', 'adults', 'of', 'all', 'ages', '', 'all', 'the', 'questions', 'of', 'the', 'santa']
+Feat ['watch', 'moments', 'television', '', 'and']
+Adj ['when', 'silly', 'old', 'to', 'guess']
+#feat 9649
+#adj 8981
+#user, ratio 7506 58.857314148681056
+#item, ratio 7360 60.024864130434786

@@ -1,0 +1,52 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 True
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+------------------------------------CONFIGS-------------------------------------
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       0.001
+optimizer                                AdamW
+warmup_epoch                             2
+clip_norm                                0
+epochs                                   50
+batch_size                               128
+continue_train                           False
+log_interval                             4
+vocab_size                               20000
+text_len                                 15
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+item_len                                 1
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-11 01:15:42]: World_Size(Num GPUs): 4
+[2023-01-11 01:15:46]: Init Start
+[2023-01-11 01:15:46]: Init End
+[2023-01-11 01:15:46]: Load Start
+[2023-01-11 01:15:48]: train len:359303
+[2023-01-11 01:15:49]: Load End
+[2023-01-11 01:16:00]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-11 01:16:03]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+Resuming training from snapshot at Epoch 7
+[2023-01-11 01:16:15]: =========================================================================================

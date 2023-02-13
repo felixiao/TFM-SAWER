@@ -1,0 +1,33 @@
+emsize: 512
+nhead: 2
+nhid: 2048
+nlayers: 4
+dropout: 0.2
+lr: 0.0001
+pre_train: False
+optimizer: 'AdamW'
+scheduler: 'steplr' # steplr, warmup_cos, warmup_lin
+warmup_epoch: 2
+clip_norm: 5.0
+epochs: 100
+batch_size: 128
+load_direct: True
+continue_train: False
+log_interval: 2
+vocab_size: 20000
+text_len: 15
+endure_times: 5
+rating_reg: 0.0
+context_reg: 0.0
+text_reg: 1.0
+item_reg: 0.0
+hist_len: 0
+user_len: 1
+item_len: 1
+use_feature: False
+seq_mode: 0 # only the last rating 
+peter_mask: True
+seq_prediction: True
+context_prediction: False
+rating_prediction: False
+nextitem_prediction: False

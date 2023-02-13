@@ -1,0 +1,72 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+log_interval                             4
+seed                                     1111
+no_train                                 True
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+log_interval                             4
+vocab_size                               20000
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+item_len                                 1
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-02 17:46:12]: World_Size: 1
+train len:359303
+[2023-01-02 17:46:20]: [GPU 0] Device cuda
+[2023-01-02 17:46:20]: [GPU 0] Loading data helper
+[2023-01-02 17:46:20]: [GPU 0] Building model FMLPETER
+FMLPETER Mask: Len=38
+[2023-01-02 17:46:35]: =========================================================================================
+[2023-01-02 17:46:35]: [GPU 0] context ppl 591.1251 | text ppl 52.0250 | rating loss 1.4165 on test | End of training
+[2023-01-02 17:46:35]: [GPU 0] Generating text
+[2023-01-02 17:46:35]: [GPU 0] bos:torch.Size([1, 128]),text:torch.Size([2, 128])
+[2023-01-02 17:46:35]: [GPU 0] word_prob:torch.Size([1, 128, 20004]), word_idx:torch.Size([1, 128])
+
+[2023-01-02 17:46:35]: [GPU 0] text:tensor([1352,    0,    4], device='cuda:0')
+[2023-01-02 17:46:35]: [GPU 0] word_prob:torch.Size([2, 128, 20004]), word_idx:torch.Size([2, 128])
+
+[2023-01-02 17:46:35]: [GPU 0] text:tensor([1352,    0,    4,    4, 1352], device='cuda:0')
+[2023-01-02 17:46:35]: [GPU 0] word_prob:torch.Size([4, 128, 20004]), word_idx:torch.Size([4, 128])
+
+[2023-01-02 17:46:35]: [GPU 0] text:tensor([1352,    0,    4,    4, 1352,    4, 1352, 1352,   28], device='cuda:0')
+[2023-01-02 17:46:35]: [GPU 0] word_prob:torch.Size([8, 128, 20004]), word_idx:torch.Size([8, 128])
+
+[2023-01-02 17:46:35]: [GPU 0] text:tensor([1352,    0,    4,    4, 1352,    4, 1352, 1352,   28,    4, 1352, 1352,
+          28,   15,   28,   28,   46], device='cuda:0')
+[2023-01-02 17:46:35]: [GPU 0] word_prob:torch.Size([16, 128, 20004]), word_idx:torch.Size([16, 128])
+
+[2023-01-02 17:46:35]: [GPU 0] text:tensor([1352,    0,    4,    4, 1352,    4, 1352, 1352,   28,    4, 1352, 1352,
+          28,   15,   28,   28,   46,    4, 1352, 1352,   28,   15,   28,   28,
+          46,   65,   28,   28,  172,    6,   46,   46,    1], device='cuda:0')
+
+1352,    0,    4
+1352,    0,    4,    4, 1352
+1352,    0,    4,    4, 1352,    4, 1352, 1352,   28
+1352,    0,    4,    4, 1352,    4, 1352, 1352,   28,    4, 1352, 1352, 28,   15,   28,   28,   46
+1352,    0,    4,    4, 1352,    4, 1352, 1352,   28,    4, 1352, 1352, 28,   15,   28,   28,   46,    4, 1352, 1352,   28,   15,   28,   28, 46,   65,   28,   28,  172,    6,   46,   46,    1

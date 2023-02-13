@@ -1,0 +1,123 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               fmlpeter
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 False
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+------------------------------------CONFIGS-------------------------------------
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       0.001
+optimizer                                AdamW
+clip_norm                                0
+epochs                                   50
+batch_size                               128
+continue_train                           False
+log_interval                             4
+vocab_size                               20000
+text_len                                 15
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 0
+item_len                                 1
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      False
+-----------------------------------ARGUMENTS------------------------------------
+[2023-01-09 12:19:35]: World_Size(Num GPUs): 4
+[2023-01-09 12:19:38]: Init Start
+[2023-01-09 12:19:38]: Init End
+[2023-01-09 12:19:38]: Load Start
+[2023-01-09 12:19:41]: train len:359303
+[2023-01-09 12:19:41]: Load End
+[2023-01-09 12:19:45]: [GPU 0] Device cuda
+[2023-01-09 12:19:45]: [GPU 0] Loading data helper
+[2023-01-09 12:19:45]: [GPU 0] Use Feature: True | src_len: 22
+[2023-01-09 12:19:45]: [GPU 0] Building model FMLPETER on device cuda
+[2023-01-09 12:19:47]: [GPU 0] LOAD FLMP MODEL FMLPRec-Movie_and_TV_index-Jan-04-2023_04-12-03_max20item.pt
+[2023-01-09 12:19:53]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-09 12:19:54]: [GPU 0] Epoch 0
+[2023-01-09 12:19:38]: Init Start
+[2023-01-09 12:19:38]: Init End
+[2023-01-09 12:19:38]: Load Start
+[2023-01-09 12:19:42]: train len:359303
+[2023-01-09 12:19:43]: Load End
+[2023-01-09 12:19:53]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-09 12:19:38]: Init Start
+[2023-01-09 12:19:38]: Init End
+[2023-01-09 12:19:38]: Load Start
+[2023-01-09 12:19:41]: train len:359303
+[2023-01-09 12:19:42]: Load End
+[2023-01-09 12:19:53]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-09 12:19:38]: Init Start
+[2023-01-09 12:19:38]: Init End
+[2023-01-09 12:19:38]: Load Start
+[2023-01-09 12:19:41]: train len:359303
+[2023-01-09 12:19:41]: Load End
+[2023-01-09 12:19:53]: Save Mask to ./SEQUER/results/MASK-FMLP-PETER.png
+[2023-01-09 12:20:59]: [GPU 0] context ppl 621.2408 | text ppl 309.4726 | rating loss 1.4543 | valid loss 7.1891 on validation
+[2023-01-09 12:21:00]: [GPU 0] Epoch 0 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 12:21:00]: [GPU 0] Epoch 0 Time Used: 66.17
+[2023-01-09 12:21:00]: [GPU 0] Epoch 1
+[2023-01-09 12:22:06]: [GPU 0] context ppl 585.4472 | text ppl 98.6334 | rating loss 1.4794 | valid loss 6.0708 on validation
+[2023-01-09 12:22:06]: [GPU 0] Epoch 1 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 12:22:06]: [GPU 0] Epoch 1 Time Used: 66.68
+[2023-01-09 12:22:06]: [GPU 0] Epoch 2
+[2023-01-09 12:23:12]: [GPU 0] context ppl 560.1287 | text ppl 71.1568 | rating loss 1.4498 | valid loss 5.7147 on validation
+[2023-01-09 12:23:12]: [GPU 0] Epoch 2 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 12:23:12]: [GPU 0] Epoch 2 Time Used: 65.92
+[2023-01-09 12:23:12]: [GPU 0] Epoch 3
+[2023-01-09 12:24:18]: [GPU 0] context ppl 543.0045 | text ppl 60.1064 | rating loss 1.4517 | valid loss 5.5478 on validation
+[2023-01-09 12:24:18]: [GPU 0] Epoch 3 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 12:24:18]: [GPU 0] Epoch 3 Time Used: 65.77
+[2023-01-09 12:24:18]: [GPU 0] Epoch 4
+[2023-01-09 12:25:23]: [GPU 0] context ppl 531.7697 | text ppl 54.2640 | rating loss 1.4398 | valid loss 5.4336 on validation
+[2023-01-09 12:25:24]: [GPU 0] Epoch 4 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 12:25:24]: [GPU 0] Epoch 4 Time Used: 65.57
+[2023-01-09 12:25:24]: [GPU 0] Epoch 5
+[2023-01-09 12:26:29]: [GPU 0] context ppl 524.9742 | text ppl 52.4754 | rating loss 1.4460 | valid loss 5.4064 on validation
+[2023-01-09 12:26:30]: [GPU 0] Epoch 5 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 12:26:30]: [GPU 0] Epoch 5 Time Used: 65.83
+[2023-01-09 12:26:30]: [GPU 0] Epoch 6
+[2023-01-09 12:27:35]: [GPU 0] context ppl 518.8818 | text ppl 51.3933 | rating loss 1.4451 | valid loss 5.3846 on validation
+[2023-01-09 12:27:35]: [GPU 0] Epoch 6 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 12:27:35]: [GPU 0] Epoch 6 Time Used: 65.72
+[2023-01-09 12:27:35]: [GPU 0] Epoch 7
+[2023-01-09 12:28:41]: [GPU 0] context ppl 514.4317 | text ppl 50.8466 | rating loss 1.4396 | valid loss 5.3684 on validation
+[2023-01-09 12:28:41]: [GPU 0] Epoch 7 | Training snapshot saved at ./SEQUER/checkpoints/fmlpeter_amazon-movies_0.pt
+[2023-01-09 12:28:41]: [GPU 0] Epoch 7 Time Used: 65.79
+[2023-01-09 12:28:41]: [GPU 0] Epoch 8
+[2023-01-09 12:29:46]: [GPU 0] context ppl 510.9155 | text ppl 50.7019 | rating loss 1.4496 | valid loss 5.3755 on validation
+[2023-01-09 12:29:46]: [GPU 0] Endured 1 / 5 time(s) | Learning rate set to 0.00099331
+[2023-01-09 12:29:46]: [GPU 0] Epoch 8 Time Used: 65.08
+[2023-01-09 12:29:46]: [GPU 0] Epoch 9
+[2023-01-09 12:30:51]: [GPU 0] context ppl 509.5475 | text ppl 51.1645 | rating loss 1.4371 | valid loss 5.3722 on validation
+[2023-01-09 12:30:51]: [GPU 0] Endured 2 / 5 time(s) | Learning rate set to 0.00099038
+[2023-01-09 12:30:51]: [GPU 0] Epoch 9 Time Used: 65.08
+[2023-01-09 12:30:51]: [GPU 0] Epoch 10
+[2023-01-09 12:31:58]: [GPU 0] context ppl 509.7191 | text ppl 51.9488 | rating loss 1.4350 | valid loss 5.3853 on validation
+[2023-01-09 12:31:58]: [GPU 0] Endured 3 / 5 time(s) | Learning rate set to 0.00098692
+[2023-01-09 12:31:58]: [GPU 0] Epoch 10 Time Used: 66.71
+[2023-01-09 12:31:58]: [GPU 0] Epoch 11
+[2023-01-09 12:33:03]: [GPU 0] context ppl 509.5196 | text ppl 52.2286 | rating loss 1.4393 | valid loss 5.3949 on validation
+[2023-01-09 12:33:03]: [GPU 0] Endured 4 / 5 time(s) | Learning rate set to 0.00098295
+[2023-01-09 12:33:03]: [GPU 0] Epoch 11 Time Used: 64.93
+[2023-01-09 12:33:03]: [GPU 0] Epoch 12
+[2023-01-09 12:34:08]: [GPU 0] context ppl 506.5904 | text ppl 52.3957 | rating loss 1.4340 | valid loss 5.3928 on validation
+[2023-01-09 12:34:08]: [GPU 0] Endured 5 / 5 time(s)| Cannot endure it anymore | Exiting from early stop
+[tensor(9.5368, device='cuda:0', grad_fn=<AddBackward0>), tensor(6.5934, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.9254, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.6083, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.4042, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.2487, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.1496, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.0906, device='cuda:0', grad_fn=<AddBackward0>), tensor(5.0371, device='cuda:0', grad_fn=<AddBackward0>), tensor(4.9958, device='cuda:0', grad_fn=<AddBackward0>), tensor(4.9400, device='cuda:0', grad_fn=<AddBackward0>), tensor(4.9092, device='cuda:0', grad_fn=<AddBackward0>), tensor(4.8599, device='cuda:0', grad_fn=<AddBackward0>)]

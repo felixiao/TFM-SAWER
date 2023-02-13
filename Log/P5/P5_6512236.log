@@ -1,0 +1,266 @@
+Configurations
+{'adam_beta1': 0.9,
+ 'adam_beta2': 0.999,
+ 'adam_eps': 1e-06,
+ 'backbone': 't5-small',
+ 'batch_size': 32,
+ 'clip_grad_norm': 1.0,
+ 'comment': '',
+ 'distributed': True,
+ 'do_lower_case': False,
+ 'dropout': 0.1,
+ 'dry': False,
+ 'epoch': 10,
+ 'fp16': False,
+ 'from_scratch': False,
+ 'gen_max_length': 64,
+ 'gradient_accumulation_steps': 1,
+ 'load': None,
+ 'local_rank': 0,
+ 'log_train_accuracy': False,
+ 'losses': 'traditional',
+ 'lr': 0.001,
+ 'max_text_length': 512,
+ 'multiGPU': True,
+ 'num_beams': 1,
+ 'num_workers': 4,
+ 'optim': 'adamw',
+ 'optimizer': 'adamw',
+ 'output': './P5/snap/beauty-small-group5-part1',
+ 'seed': 1111,
+ 'submit': False,
+ 'test': None,
+ 'test_only': False,
+ 'tokenizer': 'p5',
+ 'train': 'beauty',
+ 'valid': 'beauty',
+ 'valid_batch_size': None,
+ 'warmup_ratio': 0.05,
+ 'weight_decay': 0.01,
+ 'whole_word_embed': True}
+Configurations
+{'adam_beta1': 0.9,
+ 'adam_beta2': 0.999,
+ 'adam_eps': 1e-06,
+ 'backbone': 't5-small',
+ 'batch_size': 32,
+ 'clip_grad_norm': 1.0,
+ 'comment': '',
+ 'distributed': True,
+ 'do_lower_case': False,
+ 'dropout': 0.1,
+ 'dry': False,
+ 'epoch': 10,
+ 'fp16': False,
+ 'from_scratch': False,
+ 'gen_max_length': 64,
+ 'gradient_accumulation_steps': 1,
+ 'load': None,
+ 'local_rank': 0,
+ 'log_train_accuracy': False,
+ 'losses': 'traditional',
+ 'lr': 0.001,
+ 'max_text_length': 512,
+ 'multiGPU': True,
+ 'num_beams': 1,
+ 'num_workers': 4,
+ 'optim': 'adamw',
+ 'optimizer': 'adamw',
+ 'output': './P5/snap/beauty-small-group5-part1',
+ 'seed': 1111,
+ 'submit': False,
+ 'test': None,
+ 'test_only': False,
+ 'tokenizer': 'p5',
+ 'train': 'beauty',
+ 'valid': 'beauty',
+ 'valid_batch_size': None,
+ 'warmup_ratio': 0.05,
+ 'weight_decay': 0.01,
+ 'whole_word_embed': True}
+Configurations
+{'adam_beta1': 0.9,
+ 'adam_beta2': 0.999,
+ 'adam_eps': 1e-06,
+ 'backbone': 't5-small',
+ 'batch_size': 32,
+ 'clip_grad_norm': 1.0,
+ 'comment': '',
+ 'distributed': True,
+ 'do_lower_case': False,
+ 'dropout': 0.1,
+ 'dry': False,
+ 'epoch': 10,
+ 'fp16': False,
+ 'from_scratch': False,
+ 'gen_max_length': 64,
+ 'gradient_accumulation_steps': 1,
+ 'load': None,
+ 'local_rank': 0,
+ 'log_train_accuracy': False,
+ 'losses': 'traditional',
+ 'lr': 0.001,
+ 'max_text_length': 512,
+ 'multiGPU': True,
+ 'num_beams': 1,
+ 'num_workers': 4,
+ 'optim': 'adamw',
+ 'optimizer': 'adamw',
+ 'output': './P5/snap/beauty-small-group5-part1',
+ 'seed': 1111,
+ 'submit': False,
+ 'test': None,
+ 'test_only': False,
+ 'tokenizer': 'p5',
+ 'train': 'beauty',
+ 'valid': 'beauty',
+ 'valid_batch_size': None,
+ 'warmup_ratio': 0.05,
+ 'weight_decay': 0.01,
+ 'whole_word_embed': True}
+Configurations
+{'adam_beta1': 0.9,
+ 'adam_beta2': 0.999,
+ 'adam_eps': 1e-06,
+ 'backbone': 't5-small',
+ 'batch_size': 32,
+ 'clip_grad_norm': 1.0,
+ 'comment': '',
+ 'distributed': True,
+ 'do_lower_case': False,
+ 'dropout': 0.1,
+ 'dry': False,
+ 'epoch': 10,
+ 'fp16': False,
+ 'from_scratch': False,
+ 'gen_max_length': 64,
+ 'gradient_accumulation_steps': 1,
+ 'load': None,
+ 'local_rank': 0,
+ 'log_train_accuracy': False,
+ 'losses': 'traditional',
+ 'lr': 0.001,
+ 'max_text_length': 512,
+ 'multiGPU': True,
+ 'num_beams': 1,
+ 'num_workers': 4,
+ 'optim': 'adamw',
+ 'optimizer': 'adamw',
+ 'output': './P5/snap/beauty-small-group5-part1',
+ 'seed': 1111,
+ 'submit': False,
+ 'test': None,
+ 'test_only': False,
+ 'tokenizer': 'p5',
+ 'train': 'beauty',
+ 'valid': 'beauty',
+ 'valid_batch_size': None,
+ 'warmup_ratio': 0.05,
+ 'weight_decay': 0.01,
+ 'whole_word_embed': True}
+['traditional_loss']
+Process Launching at GPU 2
+['traditional_loss']
+Process Launching at GPU 0
+['traditional_loss']
+['traditional_loss']
+Process Launching at GPU 1
+Process Launching at GPU 3
+Building train loader at GPU 0
+Building train loader at GPU 3
+Building train loader at GPU 2
+Building train loader at GPU 1
+Data sources:  Data sources: ['beauty'] 
+['beauty']
+Data sources:  ['beauty']
+Data sources:  ['beauty']
+compute_datum_info
+compute_datum_info
+compute_datum_info
+compute_datum_info
+Building val loader at GPU 2
+Data sources:  ['beauty']
+Building val loader at GPU 3
+Building val loader at GPU 1
+Building val loader at GPU 0
+Data sources:  ['beauty']
+Data sources:  ['beauty']
+Data sources:  ['beauty']
+compute_datum_info
+compute_datum_info
+compute_datum_info
+compute_datum_info
+Building Model at GPU 2
+Building Model at GPU 3
+Building Model at GPU 1
+Building Model at GPU 0
+Model Launching at GPU 2
+Model Launching at GPU 0
+Model Launching at GPU 1
+Model Launching at GPU 3
+Building Optimizer
+Batch per epoch: 17472
+Total Iters: 174720
+Warmup ratio: 0.05
+Warm up Iters: 8736
+It took 2.3s
+Train Loss: 0.403
+total_loss (2236300): 0.403 traditional_loss (2236300): 0.403 
+
+Valid Loss: 0.336
+total_loss (22364): 0.336 traditional_loss (22364): 0.336 
+
+Train Loss: 0.327
+total_loss (2236300): 0.327 traditional_loss (2236300): 0.327 
+
+Valid Loss: 0.332
+total_loss (22364): 0.332 traditional_loss (22364): 0.332 
+
+Train Loss: 0.324
+total_loss (2236300): 0.324 traditional_loss (2236300): 0.324 
+
+Valid Loss: 0.330
+total_loss (22364): 0.330 traditional_loss (22364): 0.330 
+
+Train Loss: 0.320
+total_loss (2236300): 0.320 traditional_loss (2236300): 0.320 
+
+Valid Loss: 0.327
+total_loss (22364): 0.327 traditional_loss (22364): 0.327 
+
+Train Loss: 0.318
+total_loss (2236300): 0.318 traditional_loss (2236300): 0.318 
+
+Valid Loss: 0.330
+total_loss (22364): 0.330 traditional_loss (22364): 0.330 
+
+Train Loss: 0.315
+total_loss (2236300): 0.315 traditional_loss (2236300): 0.315 
+
+Valid Loss: 0.330
+total_loss (22364): 0.330 traditional_loss (22364): 0.330 
+
+Train Loss: 0.312
+total_loss (2236300): 0.312 traditional_loss (2236300): 0.312 
+
+Valid Loss: 0.327
+total_loss (22364): 0.327 traditional_loss (22364): 0.327 
+
+Train Loss: 0.309
+total_loss (2236300): 0.309 traditional_loss (2236300): 0.309 
+
+Valid Loss: 0.330
+total_loss (22364): 0.330 traditional_loss (22364): 0.330 
+
+Train Loss: 0.306
+total_loss (2236300): 0.306 traditional_loss (2236300): 0.306 
+
+Valid Loss: 0.325
+total_loss (22364): 0.325 traditional_loss (22364): 0.325 
+
+Train Loss: 0.303
+total_loss (2236300): 0.303 traditional_loss (2236300): 0.303 
+
+Valid Loss: 0.328
+total_loss (22364): 0.328 traditional_loss (22364): 0.328 
+
