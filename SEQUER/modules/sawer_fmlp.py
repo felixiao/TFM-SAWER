@@ -7,13 +7,13 @@ import logging
 
 from utils import log_info
 from modules.base import PositionalEncoding, TransformerEncoderLayer, TransformerEncoder, \
-    generate_sequer_mask,generate_fmlpeter_mask, generate_fmlpeter_mask_new, generate_sawer_mask, generate_sawer_mask_new, \
-    MLPETER,MLP
+    generate_sawer_mask, MLPETER, MLP
+
 from modules.peter import BaseModel
 from modules.fmlp_modules import FMLPRecModel, FMLP_Args
 from torch.nn.parallel import DistributedDataParallel as DDP
 
-def load_fmlp(gpu_id,multi_gpu=False):
+def load_fmlp(gpu_id,multi_gpu=True):
     args = FMLP_Args(gpu_id)
     # check the unique item count
     args.item_size = 7360 + 1
@@ -52,18 +52,18 @@ class SAWER(BaseModel):
         self.multi_gpu = multi_gpu
         self.gpu_id = gpu_id
 
+        self.nuser = nuser
+        self.nitem = nitem
+        self.ntoken = ntoken
+        log_info(f'[SAWER] nuser {nuser} | nitem {nitem} | ntoken {ntoken}',gpu_id=gpu_id)
+
         self.pos_encoder = PositionalEncoding(self.emsize, dropout)  # emsize: word embedding size
         encoder_layers = TransformerEncoderLayer(self.emsize, nhead, nhid, dropout)  # nhid: dim_feedforward, one basic layer, including multi-head attention and FFN
         self.transformer_encoder = TransformerEncoder(encoder_layers, nlayers)  # loop over the one above
         self.recommender = MLP(self.emsize)
 
         self.fmlp_model = load_fmlp(gpu_id,multi_gpu)
-        # self.attn_mask = generate_fmlpeter_mask(src_len, tgt_len,use_feat=self.use_feat,plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-FMLP-PETER.png'))
-        # self.attn_mask = generate_fmlpeter_mask_new(src_len, tgt_len,use_feat=self.use_feat,plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-FMLP-PETER_new.png'))
         self.attn_mask = generate_sawer_mask(src_len, tgt_len,use_feat=self.use_feat,ver='Bert',plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-SAWER_MaskBert.png'))
-        # self.attn_mask = generate_sawer_mask(src_len, tgt_len,use_feat=self.use_feat,ver='Bert2',plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-SAWER_MaskBert2.png'))
-        # self.attn_mask = generate_sawer_mask(src_len, tgt_len,use_feat=self.use_feat,ver='3',plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-SAWER_Mask3.png'))
-        # self.attn_mask = generate_sawer_mask(src_len, tgt_len,use_feat=self.use_feat,ver='4',plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-SAWER_Mask4.png'))
         self.init_weights()
         # self.user_embeddings = None
         self.item_embeddings = None
@@ -74,9 +74,6 @@ class SAWER(BaseModel):
         return log_context_dis
 
     def predict_rating(self, hidden):
-        # rating = self.recommender(hidden[1:HIST_LEN+2])  # (batch_size, seq_len)
-        # rating = self.recommender(hidden[HIST_LEN+1:HIST_LEN+2])  # (batch_size, seq_len)
-        # rating = self.recommender(hidden[self.hist_len-1])  # (batch_size, seq_len)
         rating = self.recommender(hidden[self.hist_len])  # (batch_size, seq_len)
         # log_info(f'[predict_rating] hidden shape: {hidden.shape} rating shape: {rating.shape}',gpu_id=self.gpu_id,level=LOG_DEBUG_DETAIL)
         #1 全部 hist item 和对应得分， 得出当前得分
@@ -84,7 +81,11 @@ class SAWER(BaseModel):
         return rating
 
     def predict_next(self, hidden):
-        log_next_item = func.log_softmax(torch.matmul(hidden[:self.hist_len-1], self.fmlp_model.module.item_embeddings.weight.T), dim=-1)
+        log_info(f'PredNext: {hidden.shape}',gpu_id=self.gpu_id)
+        if self.multi_gpu:
+            log_next_item = func.log_softmax(torch.matmul(hidden[:self.hist_len-1], self.fmlp_model.module.item_embeddings.weight.T), dim=-1)
+        else:
+            log_next_item = func.log_softmax(torch.matmul(hidden[:self.hist_len-1], self.fmlp_model.item_embeddings.weight.T), dim=-1)
         # print(f'next item:{log_next_item.shape}, {log_next_item}')
         return log_next_item
 
@@ -136,7 +137,7 @@ class SAWER(BaseModel):
         
         w_src = self.word_embeddings(text)  # (total_len - ui_len - hist_len, batch_size, emsize)
 
-        # log_info(f'User:{u_src.shape}, Item:{i_src.shape}, Word:{w_src.shape}',gpu_id=self.gpu_id,level=LOG_INFO)
+        log_info(f'Hist: {h_src.shape}, Item:{i_src.shape}, User:{u_src.shape}, Word:{w_src.shape}',gpu_id=self.gpu_id)
         
         src = torch.cat([h_src,i_src, u_src, w_src], 0)  # (total_len, batch_size, emsize)
         # src = torch.cat([i_src, w_src], 0)  # (total_len, batch_size, emsize)

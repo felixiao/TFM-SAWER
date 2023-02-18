@@ -1,0 +1,67 @@
+-----------------------------------ARGUMENTS------------------------------------
+model_name                               sawer
+dataset                                  amazon-movies
+fold                                     0
+cuda                                     True
+test                                     False
+no_generate                              False
+seed                                     1111
+no_train                                 False
+log_file                                 ./Log/SEQ-FMLP_PETER.log
+------------------------------------CONFIGS-------------------------------------
+emsize                                   512
+nhead                                    2
+nhid                                     2048
+nlayers                                  2
+dropout                                  0.2
+lr                                       1.0
+pre_train                                False
+optimizer                                SGD
+scheduler                                steplr
+warmup_epoch                             2
+clip_norm                                1.0
+epochs                                   100
+batch_size                               128
+load_direct                              True
+continue_train                           False
+log_interval                             4
+vocab_size                               20000
+text_len                                 15
+endure_times                             5
+rating_reg                               0.1
+context_reg                              1.0
+text_reg                                 1.0
+item_reg                                 0.1
+hist_len                                 20
+user_len                                 1
+item_len                                 0
+use_feature                              True
+seq_mode                                 2
+peter_mask                               True
+seq_prediction                           True
+context_prediction                       True
+rating_prediction                        True
+nextitem_prediction                      True
+-----------------------------------ARGUMENTS------------------------------------
+[2023-02-14 02:15:36 GPU 0]: World_Size(Num GPUs): 1
+[2023-02-14 02:15:36 GPU 0]: Loading data Fold ./Data/Amazon/MoviesAndTV_New/0
+[2023-02-14 02:15:36 GPU 0]: Init Start
+[2023-02-14 02:15:36 GPU 0]: Init End
+[2023-02-14 02:15:36 GPU 0]: Load Start
+[2023-02-14 02:15:39 GPU 0]: train len:359303
+[2023-02-14 02:15:39 GPU 0]: Load End
+[2023-02-14 02:15:42 GPU 0]: text_reg:1.0, context_reg:1.0, rating_reg:0.1, item_reg:0.1
+[2023-02-14 02:15:42 GPU 0]: Device cuda
+[2023-02-14 02:15:42 GPU 0]: Loading data helper
+[2023-02-14 02:15:42 GPU 0]: Use Feature: True | src_len: 22
+[2023-02-14 02:15:42 GPU 0]: Building model SAWER on device cuda
+[2023-02-14 02:15:42 GPU 0]: [SAWER] nuser 7506 | nitem 7364 | ntoken 20004
+[2023-02-14 02:15:42 GPU 0]: LOAD FLMP MODEL FMLPRec-Movie_and_TV_index-Jan-04-2023_04-12-03_max20item.pt
+[2023-02-14 02:15:47 GPU 0]: Save Mask to ./SEQUER/results/MASK-SAWER_MaskBert.png
+[2023-02-14 02:15:47 GPU 0]: Epoch 0 Start
+[2023-02-14 02:15:47 GPU 0]: Hist: torch.Size([19, 128, 512]), Item:torch.Size([1, 128, 512]), User:torch.Size([1, 128, 512]), Word:torch.Size([17, 128, 512])
+[2023-02-14 02:15:47 GPU 0]: PredNext: torch.Size([38, 128, 512])
+[2023-02-14 02:15:47 GPU 0]: [compute_loss] item loss: Pred torch.Size([19, 128, 7361]) Label torch.Size([128, 19])
+[2023-02-14 02:15:47 GPU 0]: Hist: torch.Size([19, 128, 512]), Item:torch.Size([1, 128, 512]), User:torch.Size([1, 128, 512]), Word:torch.Size([17, 128, 512])
+[2023-02-14 02:15:47 GPU 0]: PredNext: torch.Size([38, 128, 512])
+[2023-02-14 02:15:47 GPU 0]: [compute_loss] item loss: Pred torch.Size([19, 128, 7361]) Label torch.Size([128, 19])

@@ -30,4 +30,4 @@ peter_mask: True
 seq_prediction: True
 context_prediction: True
 rating_prediction: True
-nextitem_prediction: True
+nextitem_prediction: False

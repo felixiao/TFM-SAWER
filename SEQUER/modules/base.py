@@ -5,6 +5,7 @@ import torch.nn as nn
 import torch.nn.functional as func
 from typing import Tuple, Optional
 from torch import Tensor
+import numpy as np
 
 from constants import *
 from utils import plot_mask,log_info
@@ -308,22 +309,19 @@ def generate_peter_mask(src_len, tgt_len,use_feat,plot=False,filename=RES_PATH+'
     log_info(f'MASK_PETER Mask: Len={total_len}',level=LOG_DEBUG)
     if plot:
         label = f'| 1 User | 2 : Item | {"" if not use_feat else "3 : Feature (Opt) | "}{mask.shape[1]-tgt_len+1}-{mask.shape[1]}: Word Seq (w/ bos/eos) |'
-        plot_mask(mask,filename,label=label)
+        xlabels = ['U','I']
+        if use_feat:
+            xlabels.append('F')
+        ylabels = xlabels.copy()
+        wlabels = np.arange(1, TXT_LEN+1, 1)
+        wlabels = ['W'+str(x) for x in wlabels]
+        xlabels.append('<b>')
+        xlabels = xlabels+ wlabels
+        ylabels = ylabels+ wlabels
+        ylabels.append('<e>')
+        plot_mask(mask,filename,label=label,title='PETER Attention Mask',xticks=xlabels,yticks=ylabels)
     return mask
 
-def generate_sawer_mask_new(src_len, tgt_len,use_feat,plot=False,filename=RES_PATH+'/MASK_SWAER_MASK2.png'):
-    total_len = src_len + tgt_len
-    mask = generate_square_subsequent_mask(total_len)
-    mask[HIST_LEN-1, HIST_LEN] =False
-    mask[HIST_LEN+1:,:HIST_LEN-1] = True
-    
-    log_info(f'MASK_SAWER_1 Mask: Len={total_len}',level=LOG_DEBUG)
-    if plot:
-        # label = f'| 1-{src_len-2 if use_feat else src_len-1}: History Item | {src_len-1 if use_feat else src_len}: Current Item | {"" if not use_feat else str(src_len)+" : Feature (Opt) | "}{mask.shape[1]-tgt_len+1}-{mask.shape[1]}: Word Seq (w/ bos/eos) |'
-        label = f'| 1-{src_len-2 if use_feat else src_len-1}: History Item | {src_len-1 if use_feat else src_len}:User | {"" if not use_feat else str(src_len)+" : Feature (Opt) | "}{mask.shape[1]-tgt_len+1}-{mask.shape[1]}: Word Seq (w/ bos/eos) |'
-        plot_mask(mask,filename,label=label)
-        
-    return mask
 
 def generate_sawer_mask(src_len, tgt_len,use_feat,ver='1',plot=False,filename=RES_PATH+'/MASK_SWAER_MASK.png'):
     total_len = src_len + tgt_len
@@ -355,15 +353,41 @@ def generate_sawer_mask(src_len, tgt_len,use_feat,ver='1',plot=False,filename=RE
         else:
             mask[:src_len, :src_len] = False  # allow to attend for user and item
     
-    log_info(f'MASK_SAWER_1 Mask {ver}: Len={total_len}',level=LOG_DEBUG)
+    log_info(f'MASK_SAWER Mask {ver}: Len={total_len}',level=LOG_DEBUG)
     if plot:
         # label = f'| 1-{src_len-2 if use_feat else src_len-1}: History Item | {src_len-1 if use_feat else src_len}: Current Item | {"" if not use_feat else str(src_len)+" : Feature (Opt) | "}{mask.shape[1]-tgt_len+1}-{mask.shape[1]}: Word Seq (w/ bos/eos) |'
         if ver == '5':
             label = f'| 1 User | 2-{src_len-1 if use_feat else src_len}: History Item | {"" if not use_feat else str(src_len)+" : Feature (Opt) | "}{mask.shape[1]-tgt_len+1}-{mask.shape[1]}: Word Seq (w/ bos/eos) |'
-            plot_mask(mask,filename,label=label,ver='UI')
+            
+            xlabels = np.arange(1, HIST_LEN+1, 1)
+            xlabels = ['I'+str(x) for x in xlabels]
+            xlabels.insert(0,'U')
+            xlabels.append('F')
+            ylabels = xlabels.copy()
+
+            xlabels.append('<b>')
+            wlabels = np.arange(1, TXT_LEN+1, 1)
+            wlabels = ['W'+str(x) for x in wlabels]
+            xlabels = xlabels+ wlabels
+            ylabels = ylabels+ wlabels
+            ylabels.append('<e>')
+            
+            plot_mask(mask,filename,label=label,title=f'SAWER Attention Mask (U-I) V_BERT',xticks=xlabels,yticks=ylabels)
         else:
             label = f'| 1-{src_len-2 if use_feat else src_len-1}: History Item | {src_len-1 if use_feat else src_len}:User | {"" if not use_feat else str(src_len)+" : Feature (Opt) | "}{mask.shape[1]-tgt_len+1}-{mask.shape[1]}: Word Seq (w/ bos/eos) |'
-            plot_mask(mask,filename,label=label,ver='IU')
+            xlabels = np.arange(1, HIST_LEN+1, 1)
+            xlabels = ['I'+str(x) for x in xlabels]
+            xlabels.append('U')
+            xlabels.append('F')
+            ylabels = xlabels.copy()
+
+            xlabels.append('<b>')
+            wlabels = np.arange(1, TXT_LEN+1, 1)
+            wlabels = ['W'+str(x) for x in wlabels]
+            xlabels = xlabels+ wlabels
+            ylabels = ylabels+ wlabels
+            ylabels.append('<e>')
+            plot_mask(mask,filename,label=label,title=f'SAWER Attention Mask (I-U) V_{ver}',xticks=xlabels,yticks=ylabels)
         
     return mask
 

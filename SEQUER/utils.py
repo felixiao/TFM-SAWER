@@ -392,34 +392,18 @@ def ids2tokens(ids, word2idx, idx2word):
         tokens.append(idx2word[i])
     return tokens
 
-def plot_mask(mask,filename,label='',ver='IU'):
+def plot_mask(mask,filename,label='',title='Attention Mask',xticks='',yticks=''):
     plt.figure(figsize=(15, 15))
     revmask = (mask==False)
-
-    xlabels = np.arange(1, HIST_LEN+1, 1)
-    xlabels = ['I'+str(x) for x in xlabels]
-    if ver == 'IU':
-        xlabels.append('U')
-    else:
-        xlabels.insert(0,'U')
-    xlabels.append('F')
-    ylabels = xlabels.copy()
-
-    xlabels.append('<b>')
-    wlabels = np.arange(1, TXT_LEN+1, 1)
-    wlabels = ['W'+str(x) for x in wlabels]
-    xlabels = xlabels+ wlabels
-    ylabels = ylabels+ wlabels
-    ylabels.append('<e>')
     
     ax = sns.heatmap(revmask,cbar=False,linewidths=0.1,linecolor='red',square=True,
         # xticklabels=np.arange(1, revmask.shape[1]+1, 1),
-        xticklabels=xlabels,
-        yticklabels=ylabels)
+        xticklabels=xticks,
+        yticklabels=yticks)
     ax.set(xlabel=label+'\nSource', ylabel="Target")
     ax.xaxis.tick_top()
     
-    plt.title('Attention Mask')
+    plt.title(title)
     plt.tight_layout()
     plt.savefig(filename)
     plt.close()

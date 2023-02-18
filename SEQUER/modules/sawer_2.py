@@ -7,7 +7,7 @@ import logging
 
 from utils import log_info
 from modules.base import PositionalEncoding, TransformerEncoderLayer, TransformerEncoder, \
-    generate_sequer_mask,generate_fmlpeter_mask, generate_fmlpeter_mask_new, generate_sawer_mask, generate_sawer_mask_new, \
+    generate_sequer_mask,generate_fmlpeter_mask, generate_fmlpeter_mask_new, generate_sawer_mask, \
     MLPETER,MLP
 from modules.peter import BaseModel
 from modules.fmlp_modules import FMLPRecModel, FMLP_Args
@@ -58,12 +58,7 @@ class SAWER(BaseModel):
         self.recommender = MLP(self.emsize)
 
         # self.fmlp_model = load_fmlp(gpu_id,multi_gpu)
-        # self.attn_mask = generate_fmlpeter_mask(src_len, tgt_len,use_feat=self.use_feat,plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-FMLP-PETER.png'))
-        # self.attn_mask = generate_fmlpeter_mask_new(src_len, tgt_len,use_feat=self.use_feat,plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-FMLP-PETER_new.png'))
         self.attn_mask = generate_sawer_mask(src_len, tgt_len,use_feat=self.use_feat,ver='5',plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-SAWER2_MaskBert.png'))
-        # self.attn_mask = generate_sawer_mask(src_len, tgt_len,use_feat=self.use_feat,ver='2',plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-SAWER_Mask2.png'))
-        # self.attn_mask = generate_sawer_mask(src_len, tgt_len,use_feat=self.use_feat,ver='3',plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-SAWER_Mask3.png'))
-        # self.attn_mask = generate_sawer_mask(src_len, tgt_len,use_feat=self.use_feat,ver='4',plot= gpu_id==0,filename=os.path.join(RES_PATH,'MASK-SAWER_Mask4.png'))
         self.init_weights()
         # self.user_embeddings = None
         # self.item_embeddings = None
@@ -74,10 +69,6 @@ class SAWER(BaseModel):
         return log_context_dis
 
     def predict_rating(self, hidden):
-        # rating = self.recommender(hidden[1:HIST_LEN+2])  # (batch_size, seq_len)
-        # rating = self.recommender(hidden[HIST_LEN+1:HIST_LEN+2])  # (batch_size, seq_len)
-        # rating = self.recommender(hidden[self.hist_len-1])  # (batch_size, seq_len)
-
         rating = self.recommender(hidden[0])  # @User (batch_size, seq_len)
 
         # log_info(f'[predict_rating] hidden shape: {hidden.shape} rating shape: {rating.shape}',gpu_id=self.gpu_id,level=LOG_DEBUG_DETAIL)
@@ -88,7 +79,7 @@ class SAWER(BaseModel):
     def predict_next(self, hidden):
         # log_info(f'predict_next : {hidden[:self.hist_len].shape}',gpu_id=self.gpu_id)
         #  [20, 128, 7364]                                  [20, 128, 512]                       [512,7364]
-        log_next_item = func.log_softmax(torch.matmul(hidden[1:self.hist_len+1], self.item_embeddings.weight.T), dim=-1)
+        log_next_item = func.log_softmax(torch.matmul(hidden[1:self.hist_len], self.item_embeddings.weight.T), dim=-1)
         # log_info(f'next item:{log_next_item.shape}',gpu_id=self.gpu_id)
         return log_next_item
 

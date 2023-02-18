@@ -7,7 +7,7 @@ import logging
 
 from utils import log_info
 from modules.base import PositionalEncoding, TransformerEncoderLayer, TransformerEncoder, \
-    generate_sequer_mask,generate_fmlpeter_mask, generate_fmlpeter_mask_new, generate_sawer_mask, generate_sawer_mask_new, \
+    generate_sequer_mask,generate_fmlpeter_mask, generate_fmlpeter_mask_new, generate_sawer_mask, \
     MLPETER,MLP
 from modules.peter import BaseModel
 from modules.fmlp_modules import FMLPRecModel, FMLP_Args
@@ -88,7 +88,7 @@ class SAWER(BaseModel):
     def predict_next(self, hidden):
         # log_info(f'predict_next : {hidden[:self.hist_len].shape}',gpu_id=self.gpu_id)
         #  [20, 128, 7364]                                  [20, 128, 512]                       [512,7364]
-        log_next_item = func.log_softmax(torch.matmul(hidden[:self.hist_len], self.item_embeddings.weight.T), dim=-1)
+        log_next_item = func.log_softmax(torch.matmul(hidden[:self.hist_len-1], self.item_embeddings.weight.T), dim=-1)
         # log_info(f'next item:{log_next_item.shape}',gpu_id=self.gpu_id)
         return log_next_item
 

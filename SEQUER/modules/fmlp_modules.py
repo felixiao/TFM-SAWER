@@ -386,7 +386,7 @@ class FMLPRecModel(nn.Module):
         extended_attention_mask = attention_mask.unsqueeze(1).unsqueeze(2) # torch.int64
         max_len = attention_mask.size(-1)
         attn_shape = (1, max_len, max_len)
-        subsequent_mask = torch.triu(torch.ones(attn_shape), diagonal=1) # torch.uint8
+        subsequent_mask = torch.triu(torch.ones(attn_shape,device=device), diagonal=1) # torch.uint8
         subsequent_mask = (subsequent_mask == 0).unsqueeze(1)
         subsequent_mask = subsequent_mask.long()
 
