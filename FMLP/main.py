@@ -101,8 +101,8 @@ def main():
             trainer.load(args.checkpoint_path)
             print(f"Load model from {args.checkpoint_path} for test!")
             model.item_embeddings.register_forward_hook(get_activation('item_embeddings'))
-            output = model(x)
-            activation['item_embeddings']
+            # output = model(x)
+            # activation['item_embeddings']
             # print(model)
             scores, result_info = trainer.test(0, full_sort=args.full_sort)
 
