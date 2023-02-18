@@ -16,9 +16,9 @@ from utils import EarlyStopping, check_path, set_seed, get_local_time, get_seq_d
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", default="./data/", type=str)
+    parser.add_argument("--data_dir", default="./Data/Amazon/MoviesAndTV_New/", type=str)
     parser.add_argument("--output_dir", default="output/", type=str)
-    parser.add_argument("--data_name", default="Movie_and_TV_GT5", type=str)
+    parser.add_argument("--data_name", default="reviews_new", type=str)
     parser.add_argument("--do_eval", action="store_true")
     parser.add_argument("--load_model", default=None, type=str)
 
