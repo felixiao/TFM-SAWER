@@ -140,13 +140,15 @@ class SAWER(BaseModel):
         log_info(f'Hist: {h_src.shape}, Item:{i_src.shape}, User:{u_src.shape}, Word:{w_src.shape}',gpu_id=self.gpu_id)
         
         src = torch.cat([h_src,i_src, u_src, w_src], 0)  # (total_len, batch_size, emsize)
+
         # src = torch.cat([i_src, w_src], 0)  # (total_len, batch_size, emsize)
         src = src * math.sqrt(self.emsize)
         src = self.pos_encoder(src)
         # every time we run the transformer encoder, we obtain a different output for the same input
-        
+        log_info(f'SRC: {src.shape}',gpu_id=self.gpu_id)
         hidden, attns = self.transformer_encoder(src, attn_mask, key_padding_mask)  # (total_len, batch_size, emsize) vs. (nlayers, batch_size, total_len_tgt, total_len_src)
         rating, log_context_dis, log_next_item, log_word_prob = self.predict_tasks(hidden)
+        log_info(f'hidden: {hidden.shape}',gpu_id=self.gpu_id)
         
         # log_info(f'[forward] rating shape:{rating.shape}, rating:{rating}',gpu_id=self.gpu_id)
         if 'filter_last' in kwargs.keys() and kwargs['filter_last']:

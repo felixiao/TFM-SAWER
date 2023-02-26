@@ -44,7 +44,7 @@ class FMLP_Args():
         self.output_dir='FMLPETER/output/'
         self.data_name = 'reviews_new'
         self.do_eval= True
-        self.load_model='FMLPRec-Movie_and_TV_index-Jan-04-2023_04-12-03_max20item.pt'
+        self.load_model='FMLPRec-reviews_new-Feb-18-2023_18-48-19.pt'
         
         self.model_name = 'FMLPRec'
         self.hidden_size = 512 # 64
@@ -313,6 +313,7 @@ class Intermediate(nn.Module):
 
         hidden_states = self.dense_2(hidden_states)
         hidden_states = self.dropout(hidden_states)
+        print(f'Intermediate: Hidden {hidden_states.shape}, input: {input_tensor.shape}')
         hidden_states = self.LayerNorm(hidden_states + input_tensor)
 
         return hidden_states
@@ -396,12 +397,14 @@ class FMLPRecModel(nn.Module):
         extended_attention_mask = extended_attention_mask.to(dtype=next(self.parameters()).dtype) # fp16 compatibility
         extended_attention_mask = (1.0 - extended_attention_mask) * -10000.0
 
+        print(f'input IDs: {input_ids.shape}')
         sequence_emb = self.add_position_embedding(input_ids)
-
+        
         item_encoded_layers = self.item_encoder(sequence_emb,
                                                 extended_attention_mask,
                                                 output_all_encoded_layers=True,
                                                 )
+        print(f'item enc: {len(item_encoded_layers)}')
         sequence_output = item_encoded_layers[-1]
 
         return sequence_output
