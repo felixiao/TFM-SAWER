@@ -1,0 +1,10 @@
+epochs: 100
+batch_size: 128
+log_interval: 200
+vocab_size: 20000
+endure_times: 5
+hist_len: 0
+use_feature: False
+seq_mode: 0
+optim: "adamw"
+lr: 0.001

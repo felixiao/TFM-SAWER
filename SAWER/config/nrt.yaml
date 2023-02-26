@@ -1,0 +1,13 @@
+emsize: 300
+hidden_size: 400
+nlayers_rr: 4
+lr: 0.0001
+epochs: 100
+batch_size: 200
+#log_interval: "all"
+vocab_size: 20000
+endure_times: 5
+optim: "adam"
+rating_reg: 1
+text_reg: 1
+#l2_reg: 0.0001
